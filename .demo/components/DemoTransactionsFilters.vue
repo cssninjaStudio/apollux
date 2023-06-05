@@ -110,7 +110,7 @@ const paymentMethods = ref([''])
             >
               <Icon name="lucide:calendar" class="w-4 h-4" />
               <span>Creation date</span>
-              <Icon name="lucide:chevron-right" class="w-4 h-4 ml-auto" />
+              <Icon name="lucide:chevron-right" class="w-4 h-4 ms-auto" />
             </button>
             <!--Menu item-->
             <button
@@ -126,7 +126,7 @@ const paymentMethods = ref([''])
             >
               <Icon name="lucide:search" class="w-4 h-4" />
               <span>Keywords</span>
-              <Icon name="lucide:chevron-right" class="w-4 h-4 ml-auto" />
+              <Icon name="lucide:chevron-right" class="w-4 h-4 ms-auto" />
             </button>
             <!--Menu item-->
             <button
@@ -142,7 +142,7 @@ const paymentMethods = ref([''])
             >
               <Icon name="lucide:loader" class="w-4 h-4" />
               <span>Status</span>
-              <Icon name="lucide:chevron-right" class="w-4 h-4 ml-auto" />
+              <Icon name="lucide:chevron-right" class="w-4 h-4 ms-auto" />
             </button>
             <!--Menu item-->
             <button
@@ -158,7 +158,7 @@ const paymentMethods = ref([''])
             >
               <Icon name="lucide:piggy-bank" class="w-4 h-4" />
               <span>Accounts</span>
-              <Icon name="lucide:chevron-right" class="w-4 h-4 ml-auto" />
+              <Icon name="lucide:chevron-right" class="w-4 h-4 ms-auto" />
             </button>
             <!--Menu item-->
             <button
@@ -174,7 +174,7 @@ const paymentMethods = ref([''])
             >
               <Icon name="lucide:credit-card" class="w-4 h-4" />
               <span>Payment</span>
-              <Icon name="lucide:chevron-right" class="w-4 h-4 ml-auto" />
+              <Icon name="lucide:chevron-right" class="w-4 h-4 ms-auto" />
             </button>
           </div>
 

@@ -54,7 +54,7 @@ useHead({
         v-model="request.recipient.name"
         placeholder="Ex: John Doe"
         :classes="{
-          input: '!p-4 !pl-12 !h-12',
+          input: '!p-4 !ps-12 !h-12',
           icon: '!h-12 !w-12',
         }"
       />

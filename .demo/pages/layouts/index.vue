@@ -87,7 +87,7 @@ function statusColor(itemStatus: string) {
           No filters applied
         </span>
 
-        <div class="ml-auto">
+        <div class="ms-auto">
           <BaseButton shape="full" color="muted" condensed>
             <Icon name="lucide:download" class="w-4 h-4" />
             <span>Export All</span>

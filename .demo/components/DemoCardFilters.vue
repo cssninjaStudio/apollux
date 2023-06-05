@@ -111,7 +111,7 @@ const timeCategoryTo = ref('')
             >
               <Icon name="lucide:credit-card" class="w-4 h-4" />
               <span>Card type</span>
-              <Icon name="lucide:chevron-right" class="w-4 h-4 ml-auto" />
+              <Icon name="lucide:chevron-right" class="w-4 h-4 ms-auto" />
             </button>
             <!--Menu item-->
             <button
@@ -127,7 +127,7 @@ const timeCategoryTo = ref('')
             >
               <Icon name="lucide:user" class="w-4 h-4" />
               <span>Cardholder</span>
-              <Icon name="lucide:chevron-right" class="w-4 h-4 ml-auto" />
+              <Icon name="lucide:chevron-right" class="w-4 h-4 ms-auto" />
             </button>
             <!--Menu item-->
             <button
@@ -143,7 +143,7 @@ const timeCategoryTo = ref('')
             >
               <Icon name="lucide:loader" class="w-4 h-4" />
               <span>Status</span>
-              <Icon name="lucide:chevron-right" class="w-4 h-4 ml-auto" />
+              <Icon name="lucide:chevron-right" class="w-4 h-4 ms-auto" />
             </button>
             <!--Menu item-->
             <button
@@ -159,7 +159,7 @@ const timeCategoryTo = ref('')
             >
               <Icon name="lucide:banknote" class="w-4 h-4" />
               <span>Spendings</span>
-              <Icon name="lucide:chevron-right" class="w-4 h-4 ml-auto" />
+              <Icon name="lucide:chevron-right" class="w-4 h-4 ms-auto" />
             </button>
             <!--Menu item-->
             <button
@@ -175,7 +175,7 @@ const timeCategoryTo = ref('')
             >
               <Icon name="lucide:calendar" class="w-4 h-4" />
               <span>Creation date</span>
-              <Icon name="lucide:chevron-right" class="w-4 h-4 ml-auto" />
+              <Icon name="lucide:chevron-right" class="w-4 h-4 ms-auto" />
             </button>
           </div>
 

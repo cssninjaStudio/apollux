@@ -57,7 +57,7 @@ const password = ref(true)
                 <h3 class="font-heading text-xs text-muted-400">Password</h3>
                 <span>Change password</span>
               </div>
-              <Icon name="lucide:edit-3" class="ml-auto w-4 h-4" />
+              <Icon name="lucide:edit-3" class="ms-auto w-4 h-4" />
               <BaseText
                 size="xs"
                 weight="semibold"
@@ -79,7 +79,7 @@ const password = ref(true)
                 </h3>
                 <span>Generate codes</span>
               </div>
-              <Icon name="lucide:edit-3" class="ml-auto w-4 h-4" />
+              <Icon name="lucide:edit-3" class="ms-auto w-4 h-4" />
               <BaseText
                 size="xs"
                 weight="semibold"
@@ -140,7 +140,7 @@ const password = ref(true)
                 </BaseHeading>
                 <BaseText size="sm">Setup 2 factor</BaseText>
               </div>
-              <Icon name="lucide:edit-3" class="ml-auto w-4 h-4" />
+              <Icon name="lucide:edit-3" class="ms-auto w-4 h-4" />
               <BaseText
                 size="xs"
                 weight="semibold"
@@ -167,7 +167,7 @@ const password = ref(true)
                 </BaseHeading>
                 <BaseText size="sm">Setup key</BaseText>
               </div>
-              <Icon name="lucide:edit-3" class="ml-auto w-4 h-4" />
+              <Icon name="lucide:edit-3" class="ms-auto w-4 h-4" />
               <BaseText
                 size="xs"
                 weight="semibold"
@@ -194,7 +194,7 @@ const password = ref(true)
                 </BaseHeading>
                 <BaseText size="sm">Phone number</BaseText>
               </div>
-              <Icon name="lucide:edit-3" class="ml-auto w-4 h-4" />
+              <Icon name="lucide:edit-3" class="ms-auto w-4 h-4" />
               <BaseText
                 size="xs"
                 weight="semibold"

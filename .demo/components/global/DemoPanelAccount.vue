@@ -135,7 +135,7 @@ function useDemoAreaBalance() {
           </BaseParagraph>
         </div>
         <!--Balance-->
-        <div class="py-6 pr-4 text-right">
+        <div class="py-6 pe-4 text-right">
           <BaseParagraph size="xs" class="text-muted-400 mb-1">
             Account balance
           </BaseParagraph>
@@ -149,7 +149,7 @@ function useDemoAreaBalance() {
         </div>
       </div>
       <!--Content-->
-      <div class="space-y-4 py-6 pr-4">
+      <div class="space-y-4 py-6 pe-4">
         <!--Item-->
         <div class="flex items-center justify-between">
           <div class="flex items-center gap-2">

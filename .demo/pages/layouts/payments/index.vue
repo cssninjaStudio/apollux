@@ -84,7 +84,7 @@ const scheduled = computed(() => {
               </BaseText>
             </div>
             <div
-              class="flex flex-col md:flex-row items-center gap-6 md:ml-auto"
+              class="flex flex-col md:flex-row items-center gap-6 md:ms-auto"
             >
               <div>
                 <span
@@ -152,7 +152,7 @@ const scheduled = computed(() => {
               </BaseText>
             </div>
             <div
-              class="flex flex-col md:flex-row items-center gap-6 md:ml-auto"
+              class="flex flex-col md:flex-row items-center gap-6 md:ms-auto"
             >
               <div>
                 <span

@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { PaymentReceive, StepData } from '../../../types';
+import type { PaymentReceive, StepData } from '../../../types'
 
 definePageMeta({
   title: 'Receive - Step 1',
@@ -67,7 +67,7 @@ useHead({
             <div
               class="flex items-center justify-center w-5 h-5 border border-muted-200 rounded-full"
             ></div>
-            <div class="flex flex-col ml-6">
+            <div class="flex flex-col ms-6">
               <BaseText
                 weight="medium"
                 class="text-muted-800 dark:text-muted-100"
@@ -75,7 +75,7 @@ useHead({
                 Bank transfer
               </BaseText>
             </div>
-            <div class="flex flex-col w-32 ml-auto">
+            <div class="flex flex-col w-32 ms-auto">
               <BaseText
                 weight="medium"
                 class="text-muted-800 dark:text-muted-100"
@@ -106,7 +106,7 @@ useHead({
             <div
               class="flex items-center justify-center w-5 h-5 border border-muted-200 rounded-full"
             ></div>
-            <div class="flex flex-col ml-6">
+            <div class="flex flex-col ms-6">
               <BaseText
                 weight="medium"
                 class="text-muted-800 dark:text-muted-100"
@@ -114,7 +114,7 @@ useHead({
                 Payment link
               </BaseText>
             </div>
-            <div class="flex flex-col w-32 ml-auto">
+            <div class="flex flex-col w-32 ms-auto">
               <BaseText
                 weight="medium"
                 class="text-muted-800 dark:text-muted-100"
@@ -145,7 +145,7 @@ useHead({
             <div
               class="flex items-center justify-center w-5 h-5 border border-muted-200 rounded-full"
             ></div>
-            <div class="flex flex-col ml-6">
+            <div class="flex flex-col ms-6">
               <BaseText
                 weight="medium"
                 class="text-muted-800 dark:text-muted-100"
@@ -153,7 +153,7 @@ useHead({
                 Wire
               </BaseText>
             </div>
-            <div class="flex flex-col w-32 ml-auto">
+            <div class="flex flex-col w-32 ms-auto">
               <BaseText
                 weight="medium"
                 class="text-muted-800 dark:text-muted-100"

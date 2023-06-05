@@ -196,7 +196,7 @@ useHead({
                   ${{ request.account.balance.toFixed(2) }}
                 </BaseText>
               </div>
-              <div class="ml-auto pr-4">
+              <div class="ms-auto pe-4">
                 <BaseText
                   size="xs"
                   class="block text-muted-800 dark:text-muted-200"

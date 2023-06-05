@@ -82,8 +82,13 @@ function openCardPanel(id: number, cards: any) {
           No filters applied
         </BaseText>
 
-        <div class="ml-auto">
-          <BaseButton shape="full" color="muted" condensed>
+        <div class="ms-auto">
+          <BaseButton
+            to="/layouts/card/new"
+            shape="full"
+            color="muted"
+            condensed
+          >
             <Icon name="lucide:plus" class="w-4 h-4" />
             <span>New Card</span>
           </BaseButton>
@@ -141,7 +146,7 @@ function openCardPanel(id: number, cards: any) {
             </td>
             <td class="p-4">
               <div
-                class="flex items-center gap-2 mr-5 md:mr-0 text-muted-500 dark:text-muted-300"
+                class="flex items-center gap-2 me-5 md:me-0 text-muted-500 dark:text-muted-300"
               >
                 <Icon name="lucide:credit-card" class="w-5 h-5" />
                 <BaseText size="sm" weight="medium" lead="none">

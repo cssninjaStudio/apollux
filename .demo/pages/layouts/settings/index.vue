@@ -61,7 +61,7 @@ definePageMeta({
                 </BaseHeading>
                 <BaseText size="sm">kendrawilson@gmail.com</BaseText>
               </div>
-              <Icon name="lucide:edit-3" class="ml-auto w-4 h-4" />
+              <Icon name="lucide:edit-3" class="ms-auto w-4 h-4" />
               <BaseText
                 size="xs"
                 weight="semibold"
@@ -88,7 +88,7 @@ definePageMeta({
                 </BaseHeading>
                 <BaseText size="sm">Kendra Wilson</BaseText>
               </div>
-              <Icon name="lucide:edit-3" class="ml-auto w-4 h-4" />
+              <Icon name="lucide:edit-3" class="ms-auto w-4 h-4" />
               <BaseText
                 size="xs"
                 weight="semibold"
@@ -115,7 +115,7 @@ definePageMeta({
                 </BaseHeading>
                 <BaseText size="sm">Kendra Wilson</BaseText>
               </div>
-              <Icon name="lucide:edit-3" class="ml-auto w-4 h-4" />
+              <Icon name="lucide:edit-3" class="ms-auto w-4 h-4" />
               <BaseText
                 size="xs"
                 weight="semibold"
@@ -176,7 +176,7 @@ definePageMeta({
                 </BaseHeading>
                 <BaseText size="sm">08/23/1986</BaseText>
               </div>
-              <Icon name="lucide:edit-3" class="ml-auto w-4 h-4" />
+              <Icon name="lucide:edit-3" class="ms-auto w-4 h-4" />
               <BaseText
                 size="xs"
                 weight="semibold"
@@ -203,7 +203,7 @@ definePageMeta({
                 </BaseHeading>
                 <BaseText size="sm">+1 559 454 15</BaseText>
               </div>
-              <Icon name="lucide:edit-3" class="ml-auto w-4 h-4" />
+              <Icon name="lucide:edit-3" class="ms-auto w-4 h-4" />
               <BaseText
                 size="xs"
                 weight="semibold"
@@ -231,7 +231,7 @@ definePageMeta({
                 <BaseParagraph size="sm">47, Victorian Av.</BaseParagraph>
                 <BaseParagraph size="sm">Suite G3, New York, NY</BaseParagraph>
               </div>
-              <Icon name="lucide:edit-3" class="ml-auto w-4 h-4" />
+              <Icon name="lucide:edit-3" class="ms-auto w-4 h-4" />
               <BaseText
                 size="xs"
                 weight="semibold"

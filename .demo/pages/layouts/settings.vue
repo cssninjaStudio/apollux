@@ -42,7 +42,7 @@ const isTokens = computed(() => {
           <div class="md:col-span-3 lg:col-span-3">
             <!--Tabs-->
             <div class="h-full border-r border-muted-200 dark:border-muted-800">
-              <ul class="-mr-0.5 xs:flex xs:gap-4 font-sans">
+              <ul class="-me-0.5 xs:flex xs:gap-4 font-sans">
                 <li>
                   <NuxtLink
                     to="/layouts/settings"

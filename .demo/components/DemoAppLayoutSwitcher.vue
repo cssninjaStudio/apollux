@@ -314,7 +314,7 @@ const primaryPresets = [
                 <BaseText size="xs" class="text-muted-400"
                   >Pick a shade</BaseText
                 >
-                <div class="ml-auto flex items-center justify-end gap-2">
+                <div class="ms-auto flex items-center justify-end gap-2">
                   <button
                     type="button"
                     class="block h-6 w-6 rounded-full bg-gray-200 dark:bg-gray-900"

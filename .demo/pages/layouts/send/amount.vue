@@ -102,7 +102,7 @@ function setBalanceLimit() {
           placeholder="0.00"
           :classes="{
             input:
-              '!pl-14 !py-2 !h-14 !text-4xl !leading-5 !border-t-0 !border-l-0  !border-r-0 !border-b-2 focus:!border-primary-500 dark:!bg-muted-900 dark:focus:!border-primary-500',
+              '!ps-14 !py-2 !h-14 !text-4xl !leading-5 !border-t-0 !border-l-0  !border-r-0 !border-b-2 focus:!border-primary-500 dark:!bg-muted-900 dark:focus:!border-primary-500',
             icon: '!h-14 !w-14',
           }"
           @change="setBalanceLimit()"
@@ -141,7 +141,7 @@ function setBalanceLimit() {
               </div>
               <Icon
                 name="lucide:chevron-down"
-                class="w-4 h-4 ml-auto text-muted-400 transition-transform duration-300"
+                class="w-4 h-4 ms-auto text-muted-400 transition-transform duration-300"
                 :class="open && 'rotate-180'"
               />
             </span>

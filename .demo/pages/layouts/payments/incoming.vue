@@ -121,7 +121,7 @@ function statusColor(itemStatus: string) {
                   </span>
                 </td>
                 <td class="p-4">
-                  <div class="flex items-center gap-2 mr-5 md:mr-0">
+                  <div class="flex items-center gap-2 me-5 md:me-0">
                     <BaseAvatar
                       shape="full"
                       size="xs"
@@ -231,7 +231,7 @@ function statusColor(itemStatus: string) {
                   </span>
                 </td>
                 <td class="p-4">
-                  <div class="flex items-center gap-2 mr-5 md:mr-0">
+                  <div class="flex items-center gap-2 me-5 md:me-0">
                     <BaseAvatar
                       shape="full"
                       size="xs"

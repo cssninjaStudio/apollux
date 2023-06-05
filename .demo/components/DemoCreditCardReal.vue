@@ -3,9 +3,9 @@ import VectorLogoVisa from './VectorLogoVisa.vue'
 
 const props = withDefaults(
   defineProps<{
-    brand?: 'visa' | 'mastercard'
-    name?: string
-    number?: number | string
+    brand?: 'visa' | 'mastercard' | null | undefined
+    name?: string | null | undefined
+    number?: number | string | null | undefined
     expiryYear?: number | string
     expiryMonth?: number | string
     cvc?: number | string

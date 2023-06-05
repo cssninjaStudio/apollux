@@ -40,7 +40,7 @@ onClickOutside(target, (event) => (open.value = false))
       </span>
       <Icon
         name="lucide:chevron-down"
-        class="w-5 h-5 ml-auto text-muted-400 transition-transform duration-300"
+        class="w-5 h-5 ms-auto text-muted-400 transition-transform duration-300"
         :class="open ? 'rotate-180' : ''"
       />
     </button>

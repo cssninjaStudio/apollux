@@ -32,7 +32,7 @@ const props = defineProps<{
           >
             My Account
           </span>
-          <div class="ml-auto pe-4" :class="!collapsed ? 'hidden' : 'block'">
+          <div class="ms-auto pe-4" :class="!collapsed ? 'hidden' : 'block'">
             <Icon
               name="lucide:chevron-up"
               class="h-4 w-4 text-muted-500"
