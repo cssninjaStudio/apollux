@@ -43,7 +43,7 @@ const daySpentProgress = computed(() => {
     </div>
 
     <div
-      class="relative h-[calc(100%_-_80px)] overflow-y-auto slimscroll w-full p-6"
+      class="relative h-[calc(100%_-_80px)] overflow-y-auto nui-slimscroll w-full p-6"
     >
       <div class="mb-3">
         <!--Info-->
@@ -147,7 +147,7 @@ const daySpentProgress = computed(() => {
                   >
                     Posted
                   </BaseParagraph>
-                  <span data-tooltip="Settled transactions">
+                  <span data-nui-tooltip="Settled transactions">
                     <Icon
                       name="lucide:help-circle"
                       class="w-3 h-3 text-muted-400"
@@ -173,7 +173,7 @@ const daySpentProgress = computed(() => {
                     Pending
                   </BaseParagraph>
                   <span
-                    data-tooltip="Unsettled transactions or temporary holds"
+                    data-nui-tooltip="Unsettled transactions or temporary holds"
                   >
                     <Icon
                       name="lucide:help-circle"
@@ -200,7 +200,7 @@ const daySpentProgress = computed(() => {
                     Unavailable
                   </BaseParagraph>
                   <span
-                    data-tooltip="Unavailable funds due to spend on other cards. Reach out for assistance."
+                    data-nui-tooltip="Unavailable funds due to spend on other cards. Reach out for assistance."
                   >
                     <Icon
                       name="lucide:help-circle"
@@ -338,7 +338,7 @@ const daySpentProgress = computed(() => {
                 <NuxtLink
                   to="#"
                   class="font-sans font-medium text-sm text-muted-600 dark:text-muted-300 hover:underline underline-offset-4"
-                  data-tooltip="View Account"
+                  data-nui-tooltip="View Account"
                 >
                   Checking {{ card.account }}
                 </NuxtLink>

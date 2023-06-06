@@ -117,7 +117,7 @@ function useDemoAreaBalance() {
       </button>
     </div>
     <div
-      class="relative h-[calc(100%_-_5rem)] w-full overflow-y-auto overflow-x-hidden slimscroll p-6"
+      class="relative h-[calc(100%_-_5rem)] w-full overflow-y-auto overflow-x-hidden nui-slimscroll p-6"
     >
       <!--Info-->
       <div class="flex items-center justify-between">
@@ -157,7 +157,7 @@ function useDemoAreaBalance() {
             <BaseParagraph size="sm" class="text-muted-700 dark:text-muted-40">
               Routing number
             </BaseParagraph>
-            <BaseText data-tooltip="The wire routing number">
+            <BaseText data-nui-tooltip="The wire routing number">
               <Icon name="lucide:help-circle" class="h-3 w-3 text-muted-400" />
             </BaseText>
           </div>
@@ -176,7 +176,7 @@ function useDemoAreaBalance() {
             <BaseParagraph size="sm" class="text-muted-700 dark:text-muted-40">
               Account number
             </BaseParagraph>
-            <BaseText data-tooltip="Your full account number">
+            <BaseText data-nui-tooltip="Your full account number">
               <Icon name="lucide:help-circle" class="h-3 w-3 text-muted-400" />
             </BaseText>
           </div>
@@ -195,7 +195,7 @@ function useDemoAreaBalance() {
             <BaseParagraph size="sm" class="text-muted-700 dark:text-muted-40">
               IBAN
             </BaseParagraph>
-            <BaseText data-tooltip="The international identifier">
+            <BaseText data-nui-tooltip="The international identifier">
               <Icon name="lucide:help-circle" class="h-3 w-3 text-muted-400" />
             </BaseText>
           </div>

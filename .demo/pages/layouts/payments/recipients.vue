@@ -48,7 +48,7 @@ const companies = computed(() => {
             shape="full"
             color="primary"
             condensed
-            data-tooltip="Add recipient"
+            data-nui-tooltip="Add recipient"
           >
             <Icon name="lucide:plus" size="w-2 h-2" />
           </BaseButtonIcon>

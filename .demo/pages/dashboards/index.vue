@@ -14,6 +14,11 @@ definePageMeta({
 
 <template>
   <div>
+    <!--CLoseable widget-->
+    <div class="w-full">
+      <!--Features widget-->
+      <DemoWidgetFeatures class="mt-8" />
+    </div>
     <div class="grid grid-cols-12 gap-6 pt-6 pb-20">
       <!--Grid item-->
       <div class="col-span-12 md:col-span-5">

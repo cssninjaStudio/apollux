@@ -226,6 +226,11 @@ export default defineAppConfig({
             ],
           },
           {
+            name: 'Investment',
+            icon: { name: 'ph:rocket-duotone', class: 'w-6 h-6' },
+            to: '/layouts/invest',
+          },
+          {
             name: 'Divider',
             divider: true,
           },

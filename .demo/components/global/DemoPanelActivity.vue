@@ -70,7 +70,7 @@ const activeTab = ref('tab-1')
     </div>
 
     <div
-      class="slimscroll relative h-[calc(100%_-_134px)] w-full overflow-y-auto px-6"
+      class="nui-slimscroll relative h-[calc(100%_-_134px)] w-full overflow-y-auto px-6"
     >
       <div class="pt-4 pb-6">
         <!-- Contacts tab content -->
