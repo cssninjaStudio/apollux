@@ -130,7 +130,7 @@ function openCardPanel(id: number, cards: any) {
             v-for="card in data?.data"
             :key="card.id"
             tabindex="0"
-            class="hover:bg-muted-100 dark:hover:bg-muted-950 cursor-pointer transition-colors duration-200 ease-in-out"
+            class="hover:bg-muted-50 dark:hover:bg-muted-950 cursor-pointer transition-colors duration-200 ease-in-out"
             @click="openCardPanel(card.id, data?.data)"
           >
             <td class="p-4">

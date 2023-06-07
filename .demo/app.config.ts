@@ -235,6 +235,43 @@ export default defineAppConfig({
             divider: true,
           },
           {
+            name: 'Subpages',
+            icon: { name: 'ph:app-window-duotone', class: 'w-6 h-6' },
+            activePath: '/layouts/subpages',
+            children: [
+              {
+                name: 'Members',
+                to: '/layouts/members/kendra-wilson',
+                icon: { name: 'ph:users-duotone', class: 'w-4 h-4' },
+              },
+              {
+                name: 'Profile',
+                to: '/layouts/profile',
+                icon: { name: 'ph:user-duotone', class: 'w-4 h-4' },
+              },
+              {
+                name: 'Company',
+                to: '/layouts/company',
+                icon: { name: 'ph:buildings-duotone', class: 'w-4 h-4' },
+              },
+              {
+                name: 'Integrations',
+                to: '/layouts/integrations',
+                icon: { name: 'ph:lightning-duotone', class: 'w-4 h-4' },
+              },
+              {
+                name: 'Vault',
+                to: '/layouts/vault',
+                icon: { name: 'ph:shield-check-duotone', class: 'w-4 h-4' },
+              },
+              {
+                name: 'Download',
+                to: '/layouts/download',
+                icon: { name: 'ph:download-duotone', class: 'w-4 h-4' },
+              },
+            ],
+          },
+          {
             name: 'Customize',
             icon: { name: 'ph:drop-half-bottom-duotone', class: 'w-6 h-6' },
             click: () => {
@@ -260,6 +297,12 @@ export default defineAppConfig({
         name: 'account',
         position: 'right',
         component: 'DemoPanelAccount',
+        size: 'lg',
+      },
+      {
+        name: 'invest',
+        position: 'right',
+        component: 'DemoPanelInvest',
         size: 'lg',
       },
       {

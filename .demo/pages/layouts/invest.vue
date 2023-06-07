@@ -43,7 +43,7 @@ const currentOption = ref()
 
 function openOptionPanel(id: number, options: any) {
   currentOption.value = options.find((option: any) => option.id === id)
-  open('option', { option: currentOption })
+  open('invest', { option: currentOption })
 }
 </script>
 
@@ -92,7 +92,7 @@ function openOptionPanel(id: number, options: any) {
               v-for="option in data?.data"
               :key="option.id"
               tabindex="0"
-              class="hover:bg-muted-100 dark:hover:bg-muted-950 border-b border-muted-200 dark:border-muted-800 cursor-pointer transition-colors duration-200 ease-in-out"
+              class="hover:bg-muted-50 dark:hover:bg-muted-950 border-b border-muted-200 dark:border-muted-800 cursor-pointer transition-colors duration-200 ease-in-out"
               @click="openOptionPanel(option.id, data?.data)"
             >
               <td class="p-4">
