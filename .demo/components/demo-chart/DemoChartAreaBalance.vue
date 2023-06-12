@@ -63,13 +63,16 @@ function useDemoAreaBalance() {
       x: {
         format: 'dd/MM/yy HH:mm',
       },
+      y: {
+        formatter: (val: number) => `$${val}`,
+      },
     },
   }
 
   const series = ref([
     {
-      name: 'Returning',
-      data: [31, 40, 28, 51, 42, 109, 100],
+      name: 'Balance',
+      data: [3143.16, 4298.49, 2876.54, 5183.76, 4232.87, 10876.56, 9543.12],
     },
   ])
 
