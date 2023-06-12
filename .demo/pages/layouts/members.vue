@@ -49,7 +49,7 @@ const currentMember = ref(data.value?.data[0])
     <div class="flex items-center justify-end py-6">
       <!--Buttons-->
       <div class="hidden md:flex items-center gap-2">
-        <BaseButton shape="full" color="muted" condensed>
+        <BaseButton to="/layouts/invite" shape="full" color="muted" condensed>
           <Icon name="lucide:user" class="w-4 h-4" />
           <span>Invite a Member</span>
         </BaseButton>

@@ -51,7 +51,7 @@ const password = ref(true)
           <div class="group">
             <a
               href="#"
-              class="flex items-center gap-4 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-100 dark:hover:bg-muted-800 transition-colors duration-300"
+              class="flex items-center gap-4 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-50 dark:hover:bg-muted-800 transition-colors duration-300"
             >
               <div>
                 <h3 class="font-heading text-xs text-muted-400">Password</h3>
@@ -71,7 +71,7 @@ const password = ref(true)
           <div class="group">
             <a
               href="#"
-              class="flex items-center gap-4 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-100 dark:hover:bg-muted-800 transition-colors duration-300"
+              class="flex items-center gap-4 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-50 dark:hover:bg-muted-800 transition-colors duration-300"
             >
               <div>
                 <h3 class="font-heading text-xs text-muted-400">
@@ -127,7 +127,7 @@ const password = ref(true)
           <div class="group">
             <NuxtLink
               to="#"
-              class="flex items-center gap-4 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-100 dark:hover:bg-muted-800 transition-colors duration-300"
+              class="flex items-center gap-4 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-50 dark:hover:bg-muted-800 transition-colors duration-300"
             >
               <div>
                 <BaseHeading
@@ -154,7 +154,7 @@ const password = ref(true)
           <div class="group">
             <NuxtLink
               to="#"
-              class="flex items-center gap-4 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-100 dark:hover:bg-muted-800 transition-colors duration-300"
+              class="flex items-center gap-4 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-50 dark:hover:bg-muted-800 transition-colors duration-300"
             >
               <div>
                 <BaseHeading
@@ -181,7 +181,7 @@ const password = ref(true)
           <div class="group">
             <NuxtLink
               to="#"
-              class="flex items-center gap-4 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-100 dark:hover:bg-muted-800 transition-colors duration-300"
+              class="flex items-center gap-4 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-50 dark:hover:bg-muted-800 transition-colors duration-300"
             >
               <div>
                 <BaseHeading
@@ -241,7 +241,7 @@ const password = ref(true)
           <!--Item-->
           <div class="group">
             <div
-              class="flex items-center gap-2 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-100 dark:hover:bg-muted-800 transition-colors duration-300"
+              class="flex items-center gap-2 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-50 dark:hover:bg-muted-800 transition-colors duration-300"
             >
               <BaseSwitchThin v-model="session" />
               <div>
@@ -260,7 +260,7 @@ const password = ref(true)
           <!--Item-->
           <div class="group">
             <div
-              class="flex items-center gap-2 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-100 dark:hover:bg-muted-800 transition-colors duration-300"
+              class="flex items-center gap-2 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-50 dark:hover:bg-muted-800 transition-colors duration-300"
             >
               <BaseSwitchThin v-model="password" />
               <div>

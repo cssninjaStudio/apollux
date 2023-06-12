@@ -65,7 +65,7 @@ definePageMeta({
             <div class="group">
               <NuxtLink
                 to="#"
-                class="flex items-center gap-2 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-100 dark:hover:bg-muted-800 transition-colors duration-300"
+                class="flex items-center gap-2 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-50 dark:hover:bg-muted-800 transition-colors duration-300"
               >
                 <BaseText size="sm">Q1 Statement</BaseText>
                 <Icon name="lucide:download" class="w-4 h-4" />
@@ -82,7 +82,7 @@ definePageMeta({
             <div class="group">
               <NuxtLink
                 to="#"
-                class="flex items-center gap-2 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-100 dark:hover:bg-muted-800 transition-colors duration-300"
+                class="flex items-center gap-2 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-50 dark:hover:bg-muted-800 transition-colors duration-300"
               >
                 <BaseText size="sm">Q2 Statement</BaseText>
                 <Icon name="lucide:download" class="w-4 h-4" />
@@ -99,7 +99,7 @@ definePageMeta({
             <div class="group">
               <NuxtLink
                 to="#"
-                class="flex items-center gap-2 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-100 dark:hover:bg-muted-800 transition-colors duration-300"
+                class="flex items-center gap-2 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-50 dark:hover:bg-muted-800 transition-colors duration-300"
               >
                 <BaseText size="sm">Q3 Statement</BaseText>
                 <Icon name="lucide:download" class="w-4 h-4" />
@@ -150,7 +150,7 @@ definePageMeta({
             <div class="group">
               <NuxtLink
                 to="#"
-                class="flex items-center gap-2 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-100 dark:hover:bg-muted-800 transition-colors duration-300"
+                class="flex items-center gap-2 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-50 dark:hover:bg-muted-800 transition-colors duration-300"
               >
                 <BaseText size="sm">Wire details</BaseText>
                 <Icon name="lucide:download" class="w-4 h-4" />
@@ -167,7 +167,7 @@ definePageMeta({
             <div class="group">
               <NuxtLink
                 to="#"
-                class="flex items-center gap-2 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-100 dark:hover:bg-muted-800 transition-colors duration-300"
+                class="flex items-center gap-2 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-50 dark:hover:bg-muted-800 transition-colors duration-300"
               >
                 <BaseText size="sm">Bank contract</BaseText>
                 <Icon name="lucide:download" class="w-4 h-4" />

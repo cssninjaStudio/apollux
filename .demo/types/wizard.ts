@@ -90,3 +90,10 @@ export interface PaymentReceive {
   }
   email?: string
 }
+
+export interface Invite {
+  firstName: string
+  lastName: string
+  email: string
+  role: string
+}
