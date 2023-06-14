@@ -159,9 +159,21 @@ export default defineAppConfig({
         },
         items: [
           {
-            name: 'Dashboard',
+            name: 'Dashboards',
             icon: { name: 'ph:gauge-duotone', class: 'w-6 h-6' },
-            to: '/dashboards',
+            activePath: '/dashboards',
+            children: [
+              {
+                name: 'Personal',
+                to: '/dashboards',
+                icon: { name: 'ph:house-duotone', class: 'w-4 h-4' },
+              },
+              {
+                name: 'Messaging',
+                to: '/dashboards/messaging',
+                icon: { name: 'ph:chat-duotone', class: 'w-4 h-4' },
+              },
+            ],
           },
           {
             name: 'Transactions',
