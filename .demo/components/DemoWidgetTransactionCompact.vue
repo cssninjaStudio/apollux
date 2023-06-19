@@ -96,7 +96,7 @@ function statusColor(itemStatus: string) {
             :key="item.id"
             tabindex="0"
           >
-            <td class="py-2 xs:pe-6">
+            <td class="py-2">
               <BaseText
                 size="sm"
                 weight="medium"
@@ -129,16 +129,6 @@ function statusColor(itemStatus: string) {
               </BaseText>
             </td>
             <td class="py-2 px-4">
-              <BaseText
-                size="sm"
-                weight="medium"
-                lead="none"
-                class="text-muted-400"
-              >
-                {{ item.account }}
-              </BaseText>
-            </td>
-            <td class="py-2 px-4">
               <BaseTag
                 flavor="pastel"
                 shape="full"
@@ -147,33 +137,6 @@ function statusColor(itemStatus: string) {
               >
                 {{ item.status }}
               </BaseTag>
-            </td>
-            <td class="py-2 px-4">
-              <div class="flex items-center gap-2 text-muted-400">
-                <Icon
-                  v-if="item.method === 'credit card'"
-                  name="ph:credit-card-duotone"
-                  class="w-5 h-5"
-                />
-                <Icon
-                  v-else-if="item.method === 'cheque'"
-                  name="ph:pen-nib-duotone"
-                  class="w-5 h-5"
-                />
-                <Icon
-                  v-else-if="item.method === 'transfer'"
-                  name="ph:arrows-left-right-duotone"
-                  class="w-5 h-5"
-                />
-                <BaseText
-                  size="sm"
-                  weight="medium"
-                  lead="none"
-                  class="text-muted-400"
-                >
-                  {{ item.method }}
-                </BaseText>
-              </div>
             </td>
           </tr>
         </tbody>

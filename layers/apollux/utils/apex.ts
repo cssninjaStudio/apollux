@@ -8,10 +8,10 @@ export function asMinutes(val: number): string {
   return `${val} (mins)`
 }
 export function asDollar(val: number): string {
-  return `$ ${val}`
+  return `$${val}`
 }
 export function asKDollar(val: number): string {
-  return `$ ${val}K`
+  return `$${val}K`
 }
 export function asPercent(val: number): string {
   return `${val} %`

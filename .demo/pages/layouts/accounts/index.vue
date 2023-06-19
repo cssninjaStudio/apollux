@@ -100,7 +100,7 @@ function openAccountPanel(id: number, accounts: any) {
         >
           <div class="w-3/5">
             <div class="w-full flex items-center gap-3">
-              <ApolluxLogo class="w-8 h-8 dark:invert" />
+              <ApolluxLogo class="w-8 h-8 text-muted-400" />
               <BaseText size="sm" class="text-muted-800 dark:text-muted-200">
                 {{ account.type }} {{ account.number }}
               </BaseText>

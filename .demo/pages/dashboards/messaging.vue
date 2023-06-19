@@ -613,7 +613,7 @@ async function submitMessage() {
           class="hidden ltablet:flex lg:flex items-center gap-2"
           aria-label="Go to Apollux homepage"
         >
-          <ApolluxLogo class="text-muted-800 dark:text-white h-9" />
+          <ApolluxLogo class="text-primary-500 h-9" />
           <ApolluxLogoText class="text-muted-800 dark:text-white h-3" />
         </NuxtLink>
       </div>

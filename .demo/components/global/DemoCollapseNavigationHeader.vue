@@ -9,7 +9,9 @@ const isSearchOpen = useState('search-open', () => false)
     <div class="flex h-20 items-center justify-center">
       <slot name="logo">
         <NuxtLink to="/" class="flex items-center justify-center gap-2">
-          <ApolluxLogo class="text-muted-800 dark:text-white h-8 w-8" />
+          <ApolluxLogo
+            class="text-primary-500 dark:text-white h-9 w-9 animate-spin"
+          />
           <ApolluxLogoText
             class="text-muted-800 dark:text-white h-3"
             :class="!isOpen ? 'hidden' : 'lg:block'"

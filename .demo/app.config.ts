@@ -164,9 +164,34 @@ export default defineAppConfig({
             activePath: '/dashboards',
             children: [
               {
-                name: 'Personal',
+                name: 'Main Dashboard',
                 to: '/dashboards',
                 icon: { name: 'ph:house-duotone', class: 'w-4 h-4' },
+              },
+              {
+                name: 'Personal',
+                to: '/dashboards/personal',
+                icon: { name: 'ph:chart-pie-slice-duotone', class: 'w-4 h-4' },
+              },
+              {
+                name: 'Tracking',
+                to: '/dashboards/tracking',
+                icon: { name: 'ph:bank-duotone', class: 'w-4 h-4' },
+              },
+              {
+                name: 'Trading',
+                to: '/dashboards/trading',
+                icon: { name: 'ph:chart-donut-duotone', class: 'w-4 h-4' },
+              },
+              {
+                name: 'Overview',
+                to: '/dashboards/overview',
+                icon: { name: 'ph:subtract-duotone', class: 'w-4 h-4' },
+              },
+              {
+                name: 'Quickview',
+                to: '/dashboards/quickview',
+                icon: { name: 'ph:circles-three-duotone', class: 'w-4 h-4' },
               },
               {
                 name: 'Messaging',

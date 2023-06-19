@@ -109,7 +109,7 @@ const { close } = usePanels()
         <!--Provider-->
         <div class="flex items-center justify-between mt-6">
           <div class="flex items-center gap-2">
-            <img :src="props.option?.provider.logo" class="w-11 h-11" alt="" />
+            <img :src="props.option?.provider.logo" class="w-10 h-10" alt="" />
             <BaseHeading
               size="md"
               weight="medium"

@@ -75,7 +75,7 @@ async function getDemoData() {
       targets: ['Acquisitions', 'R&D', 'Marketing', 'Payroll'],
       provider: {
         name: 'Apollux Inc.',
-        logo: 'https://apollo.cssninja.io/img/logo/logo-square-outline.svg',
+        logo: '/img/logos/logo.svg',
       },
     },
     {
@@ -112,7 +112,7 @@ async function getDemoData() {
       targets: ['Advertising', 'Inventory'],
       provider: {
         name: 'Apollux Inc.',
-        logo: 'https://apollo.cssninja.io/img/logo/logo-square-outline.svg',
+        logo: '/img/logos/logo.svg',
       },
     },
     {
@@ -150,7 +150,7 @@ async function getDemoData() {
       targets: ['Advertising', 'Inventory'],
       provider: {
         name: 'Apollux Inc.',
-        logo: 'https://apollo.cssninja.io/img/logo/logo-square-outline.svg',
+        logo: '/img/logos/logo.svg',
       },
     },
     {
@@ -190,7 +190,7 @@ async function getDemoData() {
       targets: ['Advertising', 'Expenses', 'Hiring'],
       provider: {
         name: 'Apollux Inc.',
-        logo: 'https://apollo.cssninja.io/img/logo/logo-square-outline.svg',
+        logo: '/img/logos/logo.svg',
       },
     },
     {
@@ -227,7 +227,7 @@ async function getDemoData() {
       targets: ['Runway', 'Payroll', 'Advertising'],
       provider: {
         name: 'Apollux Inc.',
-        logo: 'https://apollo.cssninja.io/img/logo/logo-square-outline.svg',
+        logo: '/img/logos/logo.svg',
       },
     },
     {
@@ -264,7 +264,7 @@ async function getDemoData() {
       targets: ['Business', 'Payroll', 'Aquisitions'],
       provider: {
         name: 'Apollux Inc.',
-        logo: 'https://apollo.cssninja.io/img/logo/logo-square-outline.svg',
+        logo: '/img/logos/logo.svg',
       },
     },
   ])
