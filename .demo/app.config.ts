@@ -306,6 +306,11 @@ export default defineAppConfig({
                 to: '/layouts/download',
                 icon: { name: 'ph:download-duotone', class: 'w-4 h-4' },
               },
+              {
+                name: 'Invoice',
+                to: '/layouts/invoice',
+                icon: { name: 'ph:note-duotone', class: 'w-4 h-4' },
+              },
             ],
           },
           {

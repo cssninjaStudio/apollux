@@ -33,7 +33,7 @@ const isTokens = computed(() => {
 
 <template>
   <div class="min-h-screen bg-white dark:bg-muted-900">
-    <DemoNavigationTop title="Settings" />
+    <DemoNavigationTop title="Settings" closeTo="/dashboards" />
 
     <div class="w-full pt-32 pb-20">
       <div class="w-full max-w-6xl mx-auto px-4">

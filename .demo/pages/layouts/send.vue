@@ -170,7 +170,7 @@ useHead({
 
 <template>
   <div class="min-h-screen bg-white dark:bg-muted-900">
-    <DemoNavigationTop title="Send Money" />
+    <DemoNavigationTop title="Send Money" closeTo="/layouts/payments" />
 
     <div class="w-full pt-32 pb-20">
       <div class="w-full max-w-6xl mx-auto px-4">

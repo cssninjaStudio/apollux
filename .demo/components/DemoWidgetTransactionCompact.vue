@@ -65,18 +65,6 @@ function statusColor(itemStatus: string) {
         title="No matching results"
         subtitle="Looks like we couldn't find any matching results for your search terms. Try other search terms."
       >
-        <template #image>
-          <img
-            class="block dark:hidden"
-            src="/img/illustrations/placeholders/flat/placeholder-search-4.svg"
-            alt="Placeholder image"
-          />
-          <img
-            class="hidden dark:block"
-            src="/img/illustrations/placeholders/flat/placeholder-search-4-dark.svg"
-            alt="Placeholder image"
-          />
-        </template>
       </BasePlaceholderPage>
     </div>
     <div v-else class="mt-7 overflow-x-auto">

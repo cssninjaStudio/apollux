@@ -33,11 +33,11 @@ const isRecipients = computed(() => {
     <div class="flex items-center justify-end py-6">
       <!--Buttons-->
       <div class="hidden md:flex items-center gap-2">
-        <BaseButton shape="full" color="muted" condensed>
+        <BaseButton to="/layouts/send" shape="full" color="muted" condensed>
           <Icon name="lucide:send" class="w-4 h-4" />
           <span>New Payment</span>
         </BaseButton>
-        <BaseButton shape="full" color="muted" condensed>
+        <BaseButton to="/layouts/receive" shape="full" color="muted" condensed>
           <Icon name="lucide:mail" class="w-4 h-4" />
           <span>Request Payment</span>
         </BaseButton>

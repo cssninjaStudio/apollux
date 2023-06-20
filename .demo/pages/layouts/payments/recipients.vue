@@ -88,7 +88,7 @@ const companies = computed(() => {
             <NuxtLink
               v-for="item in people"
               :key="item.id"
-              to="#"
+              :to="`/layouts/recipient/${item.slug}`"
               class="group/contact"
             >
               <BaseCard
@@ -149,7 +149,7 @@ const companies = computed(() => {
             <NuxtLink
               v-for="item in companies"
               :key="item.id"
-              to="#"
+              :to="`/layouts/recipient/${item.slug}`"
               class="group/contact"
             >
               <BaseCard

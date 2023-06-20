@@ -112,7 +112,7 @@ useHead({
 
 <template>
   <div class="min-h-screen bg-white dark:bg-muted-900">
-    <DemoNavigationTop title="Invite" />
+    <DemoNavigationTop title="Invite" closeTo="/layouts/members" />
 
     <div class="w-full pt-32 pb-20">
       <div class="w-full max-w-6xl mx-auto px-4">

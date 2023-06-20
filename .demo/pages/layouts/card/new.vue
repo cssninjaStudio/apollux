@@ -239,7 +239,7 @@ const onSubmit = handleSubmit(
 
 <template>
   <div class="min-h-screen bg-white dark:bg-muted-900">
-    <DemoNavigationTop title="New Card" />
+    <DemoNavigationTop title="New Card" closeTo="/layouts/cards" />
 
     <div class="w-full pt-32 pb-20">
       <div class="w-full max-w-6xl mx-auto px-4">

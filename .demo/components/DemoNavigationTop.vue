@@ -3,9 +3,11 @@ const props = withDefaults(
   defineProps<{
     title: string
     closeLabel?: string
+    closeTo?: string
   }>(),
   {
     closeLabel: 'Back',
+    closeTo: '/',
   },
 )
 </script>
@@ -16,7 +18,7 @@ const props = withDefaults(
       <div class="w-full flex items-center justify-between py-5">
         <div class="flex-1 flex items-center">
           <NuxtLink to="/dashboards" class="flex items-center gap-2">
-            <ApolluxLogo class="w-8 h-8 dark:invert" />
+            <ApolluxLogo class="w-8 h-8 text-primary-600" />
             <ApolluxLogoText
               class="text-muted-800 dark:text-white h-3 hidden lg:block"
             />
@@ -31,7 +33,7 @@ const props = withDefaults(
         </div>
         <div class="flex-1">
           <div class="flex items-center justify-end">
-            <NuxtLink to="/dashboards" class="group text-center">
+            <NuxtLink :to="props.closeTo" class="group text-center">
               <Icon
                 name="lucide:x"
                 class="w-8 h-8 text-muted-800 dark:text-muted-500 dark:group-hover:text-muted-200 transition-colors duration-300"
