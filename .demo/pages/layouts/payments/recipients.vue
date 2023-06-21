@@ -45,6 +45,7 @@ const companies = computed(() => {
       <div class="w-full">
         <div class="flex items-center gap-4 mb-5">
           <BaseButtonIcon
+            to="/layouts/contacts/create"
             shape="full"
             color="primary"
             condensed

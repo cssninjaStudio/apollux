@@ -87,7 +87,12 @@ function statusColor(itemStatus: string) {
           <Icon name="lucide:arrow-left" class="w-4 h-4" />
           <span>Go Back</span>
         </BaseButton>
-        <BaseButton shape="full" color="muted" condensed>
+        <BaseButton
+          to="/layouts/contacts/create"
+          shape="full"
+          color="muted"
+          condensed
+        >
           <Icon name="lucide:plus" class="w-4 h-4" />
           <span>New Contact</span>
         </BaseButton>
