@@ -228,16 +228,6 @@ export default defineAppConfig({
             ],
           },
           {
-            name: 'Cards',
-            icon: { name: 'ph:credit-card-duotone', class: 'w-6 h-6' },
-            to: '/layouts/cards',
-          },
-          {
-            name: 'Credit',
-            icon: { name: 'ph:infinity-duotone', class: 'w-6 h-6' },
-            to: '/layouts/credit',
-          },
-          {
             name: 'Accounts',
             icon: { name: 'ph:bank-duotone', class: 'w-6 h-6' },
             activePath: '/layouts/accounts',
@@ -263,6 +253,11 @@ export default defineAppConfig({
             ],
           },
           {
+            name: 'Cards',
+            icon: { name: 'ph:credit-card-duotone', class: 'w-6 h-6' },
+            to: '/layouts/cards',
+          },
+          {
             name: 'Investment',
             icon: { name: 'ph:rocket-duotone', class: 'w-6 h-6' },
             to: '/layouts/invest',
@@ -272,13 +267,45 @@ export default defineAppConfig({
             divider: true,
           },
           {
+            name: 'Wizards',
+            icon: { name: 'ph:notification-duotone', class: 'w-6 h-6' },
+            activePath: '/layouts/send',
+            children: [
+              {
+                name: 'Send Money',
+                to: '/layouts/send',
+                icon: { name: 'ph:arrow-right-duotone', class: 'w-4 h-4' },
+              },
+              {
+                name: 'Receive Money',
+                to: '/layouts/receive',
+                icon: { name: 'ph:arrow-left-duotone', class: 'w-4 h-4' },
+              },
+              {
+                name: 'Invite members',
+                to: '/layouts/invite',
+                icon: { name: 'ph:envelope-duotone', class: 'w-4 h-4' },
+              },
+              {
+                name: 'New Card',
+                to: '/layouts/card/new',
+                icon: { name: 'ph:credit-card-duotone', class: 'w-4 h-4' },
+              },
+            ],
+          },
+          {
             name: 'Subpages',
             icon: { name: 'ph:app-window-duotone', class: 'w-6 h-6' },
             activePath: '/layouts/subpages',
             children: [
               {
+                name: 'Credit',
+                to: '/layouts/credit',
+                icon: { name: 'ph:rocket-duotone', class: 'w-4 h-4' },
+              },
+              {
                 name: 'Members',
-                to: '/layouts/members/kendra-wilson',
+                to: '/layouts/members',
                 icon: { name: 'ph:users-duotone', class: 'w-4 h-4' },
               },
               {
@@ -302,6 +329,11 @@ export default defineAppConfig({
                 icon: { name: 'ph:shield-check-duotone', class: 'w-4 h-4' },
               },
               {
+                name: 'Documents',
+                to: '/layouts/documents',
+                icon: { name: 'ph:folder-duotone', class: 'w-4 h-4' },
+              },
+              {
                 name: 'Download',
                 to: '/layouts/download',
                 icon: { name: 'ph:download-duotone', class: 'w-4 h-4' },
@@ -310,6 +342,41 @@ export default defineAppConfig({
                 name: 'Invoice',
                 to: '/layouts/invoice',
                 icon: { name: 'ph:note-duotone', class: 'w-4 h-4' },
+              },
+              {
+                name: 'Offers',
+                to: '/layouts/offers',
+                icon: { name: 'ph:gift-duotone', class: 'w-4 h-4' },
+              },
+              {
+                name: 'Settings',
+                to: '/layouts/settings',
+                icon: { name: 'ph:gear-six-duotone', class: 'w-4 h-4' },
+              },
+            ],
+          },
+          {
+            name: 'Authentication',
+            icon: { name: 'ph:lock-duotone', class: 'w-6 h-6' },
+            activePath: '/auth',
+            children: [
+              {
+                name: 'Login',
+                to: '/auth',
+                icon: { name: 'ph:fingerprint-duotone', class: 'w-4 h-4' },
+              },
+              {
+                name: 'Signup',
+                to: '/auth/signup',
+                icon: { name: 'ph:lightning-duotone', class: 'w-4 h-4' },
+              },
+              {
+                name: 'Recover',
+                to: '/auth/recover',
+                icon: {
+                  name: 'ph:sparkle-duotone',
+                  class: 'w-4 h-4',
+                },
               },
             ],
           },
