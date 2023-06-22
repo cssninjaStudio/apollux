@@ -75,8 +75,8 @@ definePageMeta({
           >
             <!--Item-->
             <div class="group">
-              <a
-                href="#"
+              <NuxtLink
+                to="/layouts/profile-edit"
                 class="flex items-center gap-4 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-50 dark:hover:bg-muted-800 transition-colors duration-300"
               >
                 <div>
@@ -98,12 +98,12 @@ definePageMeta({
                 >
                   Edit
                 </BaseText>
-              </a>
+              </NuxtLink>
             </div>
             <!--Item-->
             <div class="group">
-              <a
-                href="#"
+              <NuxtLink
+                to="/layouts/profile-edit"
                 class="flex items-center gap-4 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-50 dark:hover:bg-muted-800 transition-colors duration-300"
               >
                 <div>
@@ -125,12 +125,12 @@ definePageMeta({
                 >
                   Edit
                 </BaseText>
-              </a>
+              </NuxtLink>
             </div>
             <!--Item-->
             <div class="group">
-              <a
-                href="#"
+              <NuxtLink
+                to="/layouts/profile-edit"
                 class="flex items-center gap-4 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-50 dark:hover:bg-muted-800 transition-colors duration-300"
               >
                 <div>
@@ -152,7 +152,7 @@ definePageMeta({
                 >
                   Edit
                 </BaseText>
-              </a>
+              </NuxtLink>
             </div>
           </div>
         </div>
@@ -191,8 +191,8 @@ definePageMeta({
           >
             <!--Item-->
             <div class="group">
-              <a
-                href="#"
+              <NuxtLink
+                to="/layouts/profile-edit"
                 class="flex items-center gap-4 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-50 dark:hover:bg-muted-800 transition-colors duration-300"
               >
                 <div>
@@ -214,12 +214,12 @@ definePageMeta({
                 >
                   Edit
                 </BaseText>
-              </a>
+              </NuxtLink>
             </div>
             <!--Item-->
             <div class="group">
-              <a
-                href="#"
+              <NuxtLink
+                to="/layouts/profile-edit"
                 class="flex items-center gap-4 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-50 dark:hover:bg-muted-800 transition-colors duration-300"
               >
                 <div>
@@ -241,12 +241,12 @@ definePageMeta({
                 >
                   Edit
                 </BaseText>
-              </a>
+              </NuxtLink>
             </div>
             <!--Item-->
             <div class="group">
-              <a
-                href="#"
+              <NuxtLink
+                href="/layouts/profile-edit"
                 class="flex items-center gap-4 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-50 dark:hover:bg-muted-800 transition-colors duration-300"
               >
                 <div>
@@ -268,12 +268,12 @@ definePageMeta({
                 >
                   Edit
                 </BaseText>
-              </a>
+              </NuxtLink>
             </div>
             <!--Item-->
             <div class="group">
-              <a
-                href="#"
+              <NuxtLink
+                to="/layouts/profile-edit"
                 class="flex items-center gap-4 font-heading text-sm p-4 text-muted-600 dark:text-muted-400 hover:bg-muted-50 dark:hover:bg-muted-800 transition-colors duration-300"
               >
                 <div>
@@ -295,7 +295,7 @@ definePageMeta({
                 >
                   Edit
                 </BaseText>
-              </a>
+              </NuxtLink>
             </div>
           </div>
         </div>
@@ -359,7 +359,7 @@ definePageMeta({
               </BaseParagraph>
             </div>
             <div class="mt-2">
-              <DemoLinkArrow to="#" label="Edit address" />
+              <DemoLinkArrow to="/layouts/profile-edit" label="Edit address" />
             </div>
           </div>
         </div>
@@ -423,7 +423,7 @@ definePageMeta({
               </BaseParagraph>
             </div>
             <div class="mt-2">
-              <DemoLinkArrow to="#" label="Edit address" />
+              <DemoLinkArrow to="/layouts/profile-edit" label="Edit address" />
             </div>
           </div>
         </div>

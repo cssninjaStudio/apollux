@@ -4,9 +4,9 @@ import { Field, useFieldError, useForm } from 'vee-validate'
 import { z } from 'zod'
 
 definePageMeta({
-  title: 'New Contact',
+  title: 'Edit Profile',
   preview: {
-    title: 'New Contact',
+    title: 'Edit Profile',
     description: 'For forms and input fields',
     categories: ['layouts', 'forms'],
     src: '/img/screens/layouts-form-1.png',
@@ -15,13 +15,20 @@ definePageMeta({
   },
 })
 
+const masks = ref({
+  input: 'YYYY-MM-DD',
+})
+
 // This is the object that will contain the validation messages
 const ONE_MB = 1000000
 const VALIDATION_TEXT = {
   FIRST_NAME_REQUIRED: "First name can't be empty",
   LAST_NAME_REQUIRED: "Last name can't be empty",
-  COMPANY_NAME_REQUIRED: "Company name can't be empty",
-  TITLE_REQUIRED: "Title can't be empty",
+  PREFERRED_NAME_REQUIRED:
+    'Preferred name should be at least 3 characters long',
+  BIRTHDAY_REQUIRED: "Birthday can't be empty",
+  BIRTHMONTH_REQUIRED: "Birth month can't be empty",
+  BIRTHYEAR_REQUIRED: "Birth year can't be empty",
   EMAIL_REQUIRED: "Email address can't be empty",
   PHONE_REQUIRED: "Phone number can't be empty",
   STATUS_REQUIRED: 'Pick a status',
@@ -29,10 +36,6 @@ const VALIDATION_TEXT = {
   CITY_REQUIRED: 'Please enter a city',
   STATE_REQUIRED: 'Please enter a state',
   ZIPCODE_REQUIRED: 'Please enter a zipcode',
-  ACCOUNT_NUMBER_REQUIRED: "Account number can't be empty",
-  IBAN_REQUIRED: "IBAN can't be empty",
-  ROUTING_NUMBER_REQUIRED: "Routing number can't be empty",
-  TAXID_REQUIRED: "Tax ID can't be empty",
   AVATAR_TOO_BIG: `Avatar size must be less than 1MB`,
 }
 
@@ -41,45 +44,44 @@ const VALIDATION_TEXT = {
 const zodSchema = z
   .object({
     avatar: z.custom<File>((v) => v instanceof File).nullable(),
-    contact: z.object({
-      firstName: z
-        .string()
-        .min(1, VALIDATION_TEXT.FIRST_NAME_REQUIRED)
-        .optional(),
-      lastName: z
-        .string()
-        .min(1, VALIDATION_TEXT.LAST_NAME_REQUIRED)
-        .optional(),
-      companyName: z
-        .string()
-        .min(1, VALIDATION_TEXT.COMPANY_NAME_REQUIRED)
-        .optional(),
-      title: z.string().min(1, VALIDATION_TEXT.TITLE_REQUIRED),
+    profile: z.object({
+      firstName: z.string().min(1, VALIDATION_TEXT.FIRST_NAME_REQUIRED),
+      lastName: z.string().min(1, VALIDATION_TEXT.LAST_NAME_REQUIRED),
+      preferredName: z.string().optional(),
       email: z.string().min(1, VALIDATION_TEXT.EMAIL_REQUIRED),
       phone: z.string().min(1, VALIDATION_TEXT.PHONE_REQUIRED),
-      status: z.union([z.literal('active'), z.literal('inactive')]).nullable(),
-      type: z.union([z.literal('person'), z.literal('company')]).nullable(),
+      birthday: z.object({
+        year: z.number().nullable(),
+        month: z.string().nullable(),
+        day: z.string().nullable(),
+      }),
+      status: z
+        .union([
+          z.literal('single'),
+          z.literal('married'),
+          z.literal('divorced'),
+          z.literal('widower'),
+        ])
+        .nullable(),
       gender: z
         .union([z.literal('male'), z.literal('female'), z.literal('other')])
         .optional(),
-      address: z.string().min(1, VALIDATION_TEXT.ADDRESS_REQUIRED),
-      city: z.string().min(1, VALIDATION_TEXT.CITY_REQUIRED),
-      state: z.string().min(1, VALIDATION_TEXT.STATE_REQUIRED),
-      zipcode: z.string().min(5, VALIDATION_TEXT.ZIPCODE_REQUIRED),
-      country: z.string(),
-      accountNumber: z
-        .number()
-        .min(16, VALIDATION_TEXT.ACCOUNT_NUMBER_REQUIRED)
-        .nullable(),
-      routingNumber: z
-        .number()
-        .min(5, VALIDATION_TEXT.ROUTING_NUMBER_REQUIRED)
-        .nullable(),
-      iban: z.string().min(5, VALIDATION_TEXT.IBAN_REQUIRED).nullable(),
-      taxId: z.string().min(5, VALIDATION_TEXT.TAXID_REQUIRED).nullable(),
-      paymentMethod: z
-        .union([z.literal('paypal'), z.literal('stripe'), z.literal('custom')])
-        .nullable(),
+      mailingAddress: z.object({
+        address: z.string().min(1, VALIDATION_TEXT.ADDRESS_REQUIRED),
+        suite: z.string().min(1, VALIDATION_TEXT.ADDRESS_REQUIRED).optional(),
+        city: z.string().min(1, VALIDATION_TEXT.CITY_REQUIRED),
+        state: z.string().min(1, VALIDATION_TEXT.STATE_REQUIRED),
+        zipcode: z.string().min(5, VALIDATION_TEXT.ZIPCODE_REQUIRED),
+        country: z.string(),
+      }),
+      legalAddress: z.object({
+        address: z.string().min(1, VALIDATION_TEXT.ADDRESS_REQUIRED),
+        suite: z.string().min(1, VALIDATION_TEXT.ADDRESS_REQUIRED).optional(),
+        city: z.string().min(1, VALIDATION_TEXT.CITY_REQUIRED),
+        state: z.string().min(1, VALIDATION_TEXT.STATE_REQUIRED),
+        zipcode: z.string().min(5, VALIDATION_TEXT.ZIPCODE_REQUIRED),
+        country: z.string(),
+      }),
     }),
   })
   .superRefine((data, ctx) => {
@@ -92,32 +94,57 @@ const zodSchema = z
         path: ['avatar'],
       })
     }
-    if (data.contact.firstName === '' && data.contact.type === 'person') {
+    if (data.profile.firstName === '') {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
         message: VALIDATION_TEXT.FIRST_NAME_REQUIRED,
-        path: ['contact.firstName'],
+        path: ['profile.firstName'],
       })
     }
-    if (data.contact.lastName === '' && data.contact.type === 'person') {
+    if (data.profile.lastName === '') {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
         message: VALIDATION_TEXT.LAST_NAME_REQUIRED,
-        path: ['contact.lastName'],
+        path: ['profile.lastName'],
       })
     }
-    if (data.contact.companyName === '' && data.contact.type === 'company') {
+    if (
+      data.profile.preferredName &&
+      data.profile.preferredName !== '' &&
+      data.profile.preferredName.length < 3
+    ) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
-        message: VALIDATION_TEXT.COMPANY_NAME_REQUIRED,
-        path: ['contact.companyName'],
+        message: VALIDATION_TEXT.PREFERRED_NAME_REQUIRED,
+        path: ['profile.preferredName'],
       })
     }
-    if (!data.contact.status) {
+    if (data.profile.birthday.day === null) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: VALIDATION_TEXT.BIRTHDAY_REQUIRED,
+        path: ['profile.birthday.day'],
+      })
+    }
+    if (data.profile.birthday.month === null) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: VALIDATION_TEXT.BIRTHMONTH_REQUIRED,
+        path: ['profile.birthday.month'],
+      })
+    }
+    if (data.profile.birthday.year === null) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: VALIDATION_TEXT.BIRTHYEAR_REQUIRED,
+        path: ['profile.birthday.year'],
+      })
+    }
+    if (!data.profile.status) {
       ctx.addIssue({
         code: z.ZodIssueCode.custom,
         message: VALIDATION_TEXT.STATUS_REQUIRED,
-        path: ['contact.status'],
+        path: ['profile.status'],
       })
     }
   })
@@ -129,26 +156,35 @@ type FormInput = z.infer<typeof zodSchema>
 const validationSchema = toTypedSchema(zodSchema)
 const initialValues = computed<FormInput>(() => ({
   avatar: null,
-  contact: {
+  profile: {
     firstName: '',
     lastName: '',
-    companyName: '',
-    title: '',
+    preferredName: '',
     email: '',
     phone: '',
-    type: 'person',
+    birthday: {
+      year: null,
+      month: null,
+      day: null,
+    },
     gender: 'male',
-    status: 'active',
-    address: '',
-    city: '',
-    state: '',
-    zipcode: '',
-    country: 'United States',
-    accountNumber: null,
-    routingNumber: null,
-    iban: null,
-    taxId: null,
-    paymentMethod: null,
+    status: 'single',
+    mailingAddress: {
+      address: '',
+      suite: '',
+      city: '',
+      state: '',
+      zipcode: '',
+      country: 'United States',
+    },
+    legalAddress: {
+      address: '',
+      suite: '',
+      city: '',
+      state: '',
+      zipcode: '',
+      country: 'United States',
+    },
   },
 }))
 
@@ -169,7 +205,7 @@ const {
 
 // This is the computed value that will be used to display the current avatar
 const currentAvatar = computed(
-  () => `/img/avatars/default-${values.contact?.gender}.jpg`,
+  () => `/img/avatars/default-${values.profile?.gender}.jpg`,
 )
 
 const success = ref(false)
@@ -199,12 +235,12 @@ const onSubmit = handleSubmit(
     success.value = false
 
     // here you have access to the validated form values
-    console.log('contact-create-success', values)
+    console.log('profile-edit-success', values)
 
     try {
       // fake delay, this will make isSubmitting value to be true
       await new Promise((resolve, reject) => {
-        if (values.contact.title === 'Clown') {
+        if (values.profile.firstName === 'Edgar') {
           // simulate a backend error
           setTimeout(
             () => reject(new Error('Fake backend validation error')),
@@ -217,7 +253,7 @@ const onSubmit = handleSubmit(
       toaster.clearAll()
       toaster.show({
         title: 'Success',
-        message: `Contact has been created!`,
+        message: `Changes have been saved!`,
         color: 'success',
         icon: 'ph:check',
         closable: true,
@@ -225,7 +261,7 @@ const onSubmit = handleSubmit(
     } catch (error: any) {
       // this will set the error on the form
       if (error.message === 'Fake backend validation error') {
-        setFieldError('contact.title', 'This title is not allowed')
+        setFieldError('profile.firstName', 'This name is not allowed')
 
         document.documentElement.scrollTo({
           top: 0,
@@ -261,7 +297,7 @@ const onSubmit = handleSubmit(
     success.value = false
 
     // here you have access to the error
-    console.log('contact-create-error', error)
+    console.log('profile-edit-error', error)
 
     // you can use it to scroll to the first error
     document.documentElement.scrollTo({
@@ -347,13 +383,10 @@ const onSubmit = handleSubmit(
                   <!--Personal info-->
                   <ApolluxFormGroup
                     label="Personal info"
-                    sublabel="Basic info about your contact"
+                    sublabel="Basic info about you"
                   >
                     <div class="grid grid-cols-12 gap-4">
-                      <div
-                        v-if="values.contact?.type === 'person'"
-                        class="ltablet:col-span-6 col-span-12 lg:col-span-6"
-                      >
+                      <div class="ltablet:col-span-6 col-span-12 lg:col-span-6">
                         <Field
                           v-slot="{
                             field,
@@ -361,7 +394,7 @@ const onSubmit = handleSubmit(
                             handleChange,
                             handleBlur,
                           }"
-                          name="contact.firstName"
+                          name="profile.firstName"
                         >
                           <BaseInput
                             label="First Name"
@@ -376,10 +409,7 @@ const onSubmit = handleSubmit(
                           />
                         </Field>
                       </div>
-                      <div
-                        v-if="values.contact?.type === 'person'"
-                        class="ltablet:col-span-6 col-span-12 lg:col-span-6"
-                      >
+                      <div class="ltablet:col-span-6 col-span-12 lg:col-span-6">
                         <Field
                           v-slot="{
                             field,
@@ -387,7 +417,7 @@ const onSubmit = handleSubmit(
                             handleChange,
                             handleBlur,
                           }"
-                          name="contact.lastName"
+                          name="profile.lastName"
                         >
                           <BaseInput
                             label="Last Name"
@@ -402,10 +432,7 @@ const onSubmit = handleSubmit(
                           />
                         </Field>
                       </div>
-                      <div
-                        v-if="values.contact?.type === 'company'"
-                        class="col-span-12"
-                      >
+                      <div class="ltablet:col-span-6 col-span-12 lg:col-span-6">
                         <Field
                           v-slot="{
                             field,
@@ -413,12 +440,12 @@ const onSubmit = handleSubmit(
                             handleChange,
                             handleBlur,
                           }"
-                          name="contact.companyName"
+                          name="profile.preferredName"
                         >
                           <BaseInput
-                            label="Company Name"
-                            icon="ph:buildings-duotone"
-                            placeholder="Ex: Acme Inc."
+                            label="Preferred Name"
+                            icon="ph:mask-happy-duotone"
+                            placeholder="Ex: John Doe"
                             :model-value="field.value"
                             :error="errorMessage"
                             :disabled="isSubmitting"
@@ -436,35 +463,12 @@ const onSubmit = handleSubmit(
                             handleChange,
                             handleBlur,
                           }"
-                          name="contact.title"
+                          name="profile.email"
                         >
                           <BaseInput
-                            label="Title / Category"
-                            icon="ph:suitcase-duotone"
-                            placeholder="Ex: Freelance / Software company"
-                            :model-value="field.value"
-                            :error="errorMessage"
-                            :disabled="isSubmitting"
-                            type="text"
-                            @update:model-value="handleChange"
-                            @blur="handleBlur"
-                          />
-                        </Field>
-                      </div>
-                      <div class="ltablet:col-span-6 col-span-12 lg:col-span-6">
-                        <Field
-                          v-slot="{
-                            field,
-                            errorMessage,
-                            handleChange,
-                            handleBlur,
-                          }"
-                          name="contact.email"
-                        >
-                          <BaseInput
-                            label="Contact Email"
+                            label="Email Address"
                             icon="ph:envelope-duotone"
-                            placeholder="Ex: hello@acme.co"
+                            placeholder="Ex: johndoe@gmail.com"
                             :model-value="field.value"
                             :error="errorMessage"
                             :disabled="isSubmitting"
@@ -482,7 +486,7 @@ const onSubmit = handleSubmit(
                             handleChange,
                             handleBlur,
                           }"
-                          name="contact.phone"
+                          name="profile.phone"
                         >
                           <BaseInput
                             icon="lucide:phone"
@@ -505,11 +509,11 @@ const onSubmit = handleSubmit(
                             handleChange,
                             handleBlur,
                           }"
-                          name="contact.status"
+                          name="profile.status"
                         >
                           <BaseSelect
                             shape="rounded"
-                            label="Status"
+                            label="Family Status"
                             :model-value="field.value"
                             :error="errorMessage"
                             :disabled="isSubmitting"
@@ -517,135 +521,97 @@ const onSubmit = handleSubmit(
                             @blur="handleBlur"
                           >
                             <option value="" hidden></option>
-                            <option value="active">Active</option>
-                            <option value="inactive">Inactive</option>
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                            <option value="divorced">Divorced</option>
+                            <option value="widower">Widow/Widower</option>
                           </BaseSelect>
                         </Field>
                       </div>
-                      <div class="col-span-12">
-                        <div class="">
-                          <label class="nui-label pb-2 text-[0.825rem]"
-                            >Contact type</label
+                      <div class="ltablet:col-span-4 col-span-12 lg:col-span-4">
+                        <Field
+                          v-slot="{
+                            field,
+                            errorMessage,
+                            handleChange,
+                            handleBlur,
+                          }"
+                          name="profile.birthday.day"
+                        >
+                          <BaseSelect
+                            shape="rounded"
+                            label="Birthday"
+                            :model-value="field.value"
+                            :error="errorMessage"
+                            :disabled="isSubmitting"
+                            @update:model-value="handleChange"
+                            @blur="handleBlur"
                           >
-                          <div class="sm:grid-cols-2 grid gap-4">
-                            <Field
-                              v-slot="{
-                                field,
-                                errorMessage,
-                                handleChange,
-                                handleBlur,
-                              }"
-                              name="contact.type"
-                            >
-                              <BaseRadioHeadless
-                                value="person"
-                                :model-value="field.value"
-                                :error="errorMessage"
-                                :disabled="isSubmitting"
-                                @update:model-value="handleChange"
-                                @blur="handleBlur"
-                              >
-                                <BaseCard
-                                  shape="rounded"
-                                  class="text-muted-400 peer-checked:!border-primary-500 peer-checked:[&_.child]:!text-primary-500 relative border px-2 py-6 grayscale peer-checked:grayscale-0"
-                                >
-                                  <div
-                                    class="flex w-full flex-col items-center gap-2 text-center"
-                                  >
-                                    <Icon
-                                      name="ph:user-duotone"
-                                      class="child mx-auto h-6 w-6"
-                                    />
-
-                                    <div>
-                                      <BaseHeading
-                                        as="h4"
-                                        size="sm"
-                                        weight="medium"
-                                        lead="none"
-                                      >
-                                        Person
-                                      </BaseHeading>
-
-                                      <BaseText size="xs" class="text-muted-400"
-                                        >Personal contact</BaseText
-                                      >
-                                    </div>
-
-                                    <div
-                                      class="child text-muted-300 absolute right-2 top-2 ms-auto"
-                                    >
-                                      <div
-                                        class="h-2 w-2 rounded-full bg-current"
-                                      ></div>
-                                    </div>
-                                  </div>
-                                </BaseCard>
-                              </BaseRadioHeadless>
-                            </Field>
-
-                            <Field
-                              v-slot="{
-                                field,
-                                errorMessage,
-                                handleChange,
-                                handleBlur,
-                              }"
-                              name="contact.type"
-                            >
-                              <BaseRadioHeadless
-                                value="company"
-                                :model-value="field.value"
-                                :error="errorMessage"
-                                :disabled="isSubmitting"
-                                @update:model-value="handleChange"
-                                @blur="handleBlur"
-                              >
-                                <BaseCard
-                                  shape="rounded"
-                                  class="text-muted-400 peer-checked:!border-primary-500 peer-checked:[&_.child]:!text-primary-500 relative border px-2 py-6 grayscale peer-checked:grayscale-0"
-                                >
-                                  <div
-                                    class="flex w-full flex-col items-center gap-2 text-center"
-                                  >
-                                    <Icon
-                                      name="ph:buildings-duotone"
-                                      class="child mx-auto h-6 w-6"
-                                    />
-
-                                    <div>
-                                      <BaseHeading
-                                        as="h4"
-                                        size="sm"
-                                        weight="medium"
-                                        lead="none"
-                                      >
-                                        Company
-                                      </BaseHeading>
-
-                                      <BaseText size="xs" class="text-muted-400"
-                                        >Enterprise contact</BaseText
-                                      >
-                                    </div>
-
-                                    <div
-                                      class="child text-muted-300 absolute right-2 top-2 ms-auto"
-                                    >
-                                      <div
-                                        class="h-2 w-2 rounded-full bg-current"
-                                      ></div>
-                                    </div>
-                                  </div>
-                                </BaseCard>
-                              </BaseRadioHeadless>
-                            </Field>
-                          </div>
-                        </div>
+                            <option value="" hidden></option>
+                            <option v-for="index in 31" :value="index">
+                              {{ index }}
+                            </option>
+                          </BaseSelect>
+                        </Field>
                       </div>
-                      <div
-                        v-if="values.contact?.type === 'person'"
-                        class="col-span-12"
-                      >
+                      <div class="ltablet:col-span-4 col-span-12 lg:col-span-4">
+                        <Field
+                          v-slot="{
+                            field,
+                            errorMessage,
+                            handleChange,
+                            handleBlur,
+                          }"
+                          name="profile.birthday.month"
+                        >
+                          <BaseSelect
+                            shape="rounded"
+                            label="Birth Month"
+                            :model-value="field.value"
+                            :error="errorMessage"
+                            :disabled="isSubmitting"
+                            @update:model-value="handleChange"
+                            @blur="handleBlur"
+                          >
+                            <option value="" hidden></option>
+                            <option value="january">January</option>
+                            <option value="february">February</option>
+                            <option value="march">March</option>
+                            <option value="april">April</option>
+                            <option value="may">May</option>
+                            <option value="june">June</option>
+                            <option value="july">July</option>
+                            <option value="august">August</option>
+                            <option value="september">September</option>
+                            <option value="october">October</option>
+                            <option value="november">November</option>
+                            <option value="december">December</option>
+                          </BaseSelect>
+                        </Field>
+                      </div>
+                      <div class="ltablet:col-span-4 col-span-12 lg:col-span-4">
+                        <Field
+                          v-slot="{
+                            field,
+                            errorMessage,
+                            handleChange,
+                            handleBlur,
+                          }"
+                          name="profile.birthday.year"
+                        >
+                          <BaseInput
+                            label="Birth Year"
+                            placeholder="Ex: 1992"
+                            :model-value="field.value"
+                            :error="errorMessage"
+                            :disabled="isSubmitting"
+                            type="number"
+                            @update:model-value="handleChange"
+                            @blur="handleBlur"
+                          />
+                        </Field>
+                      </div>
+                      <div class="col-span-12">
                         <div class="">
                           <label class="nui-label pb-2 text-[0.825rem]"
                             >Gender</label
@@ -658,7 +624,7 @@ const onSubmit = handleSubmit(
                                 handleChange,
                                 handleBlur,
                               }"
-                              name="contact.gender"
+                              name="profile.gender"
                             >
                               <BaseRadioHeadless
                                 value="male"
@@ -710,7 +676,7 @@ const onSubmit = handleSubmit(
                                 handleChange,
                                 handleBlur,
                               }"
-                              name="contact.gender"
+                              name="profile.gender"
                             >
                               <BaseRadioHeadless
                                 value="female"
@@ -762,7 +728,7 @@ const onSubmit = handleSubmit(
                                 handleChange,
                                 handleBlur,
                               }"
-                              name="contact.gender"
+                              name="profile.gender"
                             >
                               <BaseRadioHeadless
                                 value="other"
@@ -814,8 +780,8 @@ const onSubmit = handleSubmit(
 
                   <!--Address info-->
                   <ApolluxFormGroup
-                    label="Address info"
-                    sublabel="Add the address of your contact"
+                    label="Mailing address"
+                    sublabel="The address we will use to mail you"
                   >
                     <div class="grid grid-cols-12 gap-4">
                       <div class="col-span-12">
@@ -826,12 +792,34 @@ const onSubmit = handleSubmit(
                             handleChange,
                             handleBlur,
                           }"
-                          name="contact.address"
+                          name="profile.mailingAddress.address"
                         >
                           <BaseInput
-                            label="Address / Street"
+                            label="Address"
                             icon="ph:map-pin-duotone"
-                            placeholder="Ex: App 12 suite G4 Santa Barbara"
+                            placeholder="Ex: 48, Santa Barbara Railroad"
+                            :model-value="field.value"
+                            :error="errorMessage"
+                            :disabled="isSubmitting"
+                            @update:model-value="handleChange"
+                            @blur="handleBlur"
+                          />
+                        </Field>
+                      </div>
+                      <div class="col-span-12">
+                        <Field
+                          v-slot="{
+                            field,
+                            errorMessage,
+                            handleChange,
+                            handleBlur,
+                          }"
+                          name="profile.mailingAddress.suite"
+                        >
+                          <BaseInput
+                            label="Street / Suite"
+                            icon="ph:map-pin-duotone"
+                            placeholder="Ex: App 12 suite G4"
                             :model-value="field.value"
                             :error="errorMessage"
                             :disabled="isSubmitting"
@@ -848,7 +836,7 @@ const onSubmit = handleSubmit(
                             handleChange,
                             handleBlur,
                           }"
-                          name="contact.city"
+                          name="profile.mailingAddress.city"
                         >
                           <BaseInput
                             label="City"
@@ -871,7 +859,7 @@ const onSubmit = handleSubmit(
                             handleChange,
                             handleBlur,
                           }"
-                          name="contact.state"
+                          name="profile.mailingAddress.state"
                         >
                           <BaseInput
                             label="State/Province"
@@ -894,7 +882,7 @@ const onSubmit = handleSubmit(
                             handleChange,
                             handleBlur,
                           }"
-                          name="contact.zipcode"
+                          name="profile.mailingAddress.zipcode"
                         >
                           <BaseInput
                             type="text"
@@ -917,7 +905,7 @@ const onSubmit = handleSubmit(
                             handleChange,
                             handleBlur,
                           }"
-                          name="contact.country"
+                          name="profile.mailingAddress.country"
                         >
                           <BaseSelect
                             shape="rounded"
@@ -944,11 +932,11 @@ const onSubmit = handleSubmit(
 
                   <!--Address info-->
                   <ApolluxFormGroup
-                    label="Financial info"
-                    sublabel="Add your contact's financial details"
+                    label="Legal address"
+                    sublabel="Your legal address for billing purposes"
                   >
                     <div class="grid grid-cols-12 gap-4">
-                      <div class="ltablet:col-span-6 col-span-12 lg:col-span-6">
+                      <div class="col-span-12">
                         <Field
                           v-slot="{
                             field,
@@ -956,85 +944,15 @@ const onSubmit = handleSubmit(
                             handleChange,
                             handleBlur,
                           }"
-                          name="contact.accountNumber"
+                          name="profile.legalAddress.address"
                         >
                           <BaseInput
-                            label="Account Number"
-                            icon="ph:bank-duotone"
-                            placeholder="Ex: 4134 1213 3298 4273"
+                            label="Address"
+                            icon="ph:map-pin-duotone"
+                            placeholder="Ex: 48, Santa Barbara Railroad"
                             :model-value="field.value"
                             :error="errorMessage"
                             :disabled="isSubmitting"
-                            type="number"
-                            @update:model-value="handleChange"
-                            @blur="handleBlur"
-                          />
-                        </Field>
-                      </div>
-                      <div class="ltablet:col-span-6 col-span-12 lg:col-span-6">
-                        <Field
-                          v-slot="{
-                            field,
-                            errorMessage,
-                            handleChange,
-                            handleBlur,
-                          }"
-                          name="contact.iban"
-                        >
-                          <BaseInput
-                            label="IBAN"
-                            icon="ph:arrows-left-right-duotone"
-                            placeholder="Ex: USX35B"
-                            :model-value="field.value"
-                            :error="errorMessage"
-                            :disabled="isSubmitting"
-                            type="text"
-                            @update:model-value="handleChange"
-                            @blur="handleBlur"
-                          />
-                        </Field>
-                      </div>
-                      <div class="ltablet:col-span-6 col-span-12 lg:col-span-6">
-                        <Field
-                          v-slot="{
-                            field,
-                            errorMessage,
-                            handleChange,
-                            handleBlur,
-                          }"
-                          name="contact.routingNumber"
-                        >
-                          <BaseInput
-                            label="Routing Number"
-                            icon="ph:compass-duotone"
-                            placeholder="Ex: 2873213"
-                            :model-value="field.value"
-                            :error="errorMessage"
-                            :disabled="isSubmitting"
-                            type="number"
-                            @update:model-value="handleChange"
-                            @blur="handleBlur"
-                          />
-                        </Field>
-                      </div>
-                      <div class="ltablet:col-span-6 col-span-12 lg:col-span-6">
-                        <Field
-                          v-slot="{
-                            field,
-                            errorMessage,
-                            handleChange,
-                            handleBlur,
-                          }"
-                          name="contact.taxId"
-                        >
-                          <BaseInput
-                            label="Tax ID"
-                            icon="ph:note-duotone"
-                            placeholder="Ex: TX-DHDZ526"
-                            :model-value="field.value"
-                            :error="errorMessage"
-                            :disabled="isSubmitting"
-                            type="text"
                             @update:model-value="handleChange"
                             @blur="handleBlur"
                           />
@@ -1048,11 +966,102 @@ const onSubmit = handleSubmit(
                             handleChange,
                             handleBlur,
                           }"
-                          name="contact.paymentMethod"
+                          name="profile.legalAddress.suite"
+                        >
+                          <BaseInput
+                            label="Street / Suite"
+                            icon="ph:map-pin-duotone"
+                            placeholder="Ex: App 12 suite G4"
+                            :model-value="field.value"
+                            :error="errorMessage"
+                            :disabled="isSubmitting"
+                            @update:model-value="handleChange"
+                            @blur="handleBlur"
+                          />
+                        </Field>
+                      </div>
+                      <div class="col-span-12 sm:col-span-4">
+                        <Field
+                          v-slot="{
+                            field,
+                            errorMessage,
+                            handleChange,
+                            handleBlur,
+                          }"
+                          name="profile.legalAddress.city"
+                        >
+                          <BaseInput
+                            label="City"
+                            icon="ph:buildings-duotone"
+                            placeholder="Ex: Los Angeles"
+                            :model-value="field.value"
+                            :error="errorMessage"
+                            :disabled="isSubmitting"
+                            type="text"
+                            @update:model-value="handleChange"
+                            @blur="handleBlur"
+                          />
+                        </Field>
+                      </div>
+                      <div class="col-span-12 sm:col-span-4">
+                        <Field
+                          v-slot="{
+                            field,
+                            errorMessage,
+                            handleChange,
+                            handleBlur,
+                          }"
+                          name="profile.legalAddress.state"
+                        >
+                          <BaseInput
+                            label="State/Province"
+                            icon="ph:globe-duotone"
+                            placeholder="Ex: CA"
+                            :model-value="field.value"
+                            :error="errorMessage"
+                            :disabled="isSubmitting"
+                            type="text"
+                            @update:model-value="handleChange"
+                            @blur="handleBlur"
+                          />
+                        </Field>
+                      </div>
+                      <div class="col-span-12 sm:col-span-4">
+                        <Field
+                          v-slot="{
+                            field,
+                            errorMessage,
+                            handleChange,
+                            handleBlur,
+                          }"
+                          name="profile.legalAddress.zipcode"
+                        >
+                          <BaseInput
+                            type="text"
+                            label="Zip Code"
+                            icon="ph:paper-plane-tilt-duotone"
+                            placeholder="Ex: 912656"
+                            :model-value="field.value"
+                            :error="errorMessage"
+                            :disabled="isSubmitting"
+                            @update:model-value="handleChange"
+                            @blur="handleBlur"
+                          />
+                        </Field>
+                      </div>
+                      <div class="col-span-12">
+                        <Field
+                          v-slot="{
+                            field,
+                            errorMessage,
+                            handleChange,
+                            handleBlur,
+                          }"
+                          name="profile.legalAddress.country"
                         >
                           <BaseSelect
                             shape="rounded"
-                            label="Payment Method"
+                            label="Country"
                             :model-value="field.value"
                             :error="errorMessage"
                             :disabled="isSubmitting"
@@ -1060,9 +1069,13 @@ const onSubmit = handleSubmit(
                             @blur="handleBlur"
                           >
                             <option value="" hidden></option>
-                            <option value="stripe">Stripe</option>
-                            <option value="paypal">Paypal</option>
-                            <option value="custom">Custom</option>
+                            <option value="United States">United States</option>
+                            <option value="Canada">Canada</option>
+                            <option value="France">France</option>
+                            <option value="Germany">Germany</option>
+                            <option value="Spain">Spain</option>
+                            <option value="China">China</option>
+                            <option value="Japan">Japan</option>
                           </BaseSelect>
                         </Field>
                       </div>
@@ -1070,10 +1083,10 @@ const onSubmit = handleSubmit(
                   </ApolluxFormGroup>
 
                   <div
-                    class="mt-5 flex flex-col-reverse text-right md:block md:space-x-3"
+                    class="mt-5 flex flex-col-reverse text-right md:block md:space-x-3 gap-y-4"
                   >
                     <BaseButton
-                      to="/layouts/payments/recipients"
+                      to="/layouts/profile"
                       type="button"
                       color="muted"
                       class="!h-12 w-full sm:w-40"
@@ -1088,7 +1101,7 @@ const onSubmit = handleSubmit(
                       shape="full"
                       :loading="isSubmitting"
                     >
-                      Create Contact
+                      Save Changes
                     </BaseButton>
                   </div>
                 </div>

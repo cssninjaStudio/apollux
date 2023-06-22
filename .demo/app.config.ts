@@ -314,9 +314,24 @@ export default defineAppConfig({
                 icon: { name: 'ph:user-duotone', class: 'w-4 h-4' },
               },
               {
+                name: 'Edit profile',
+                to: '/layouts/profile-edit',
+                icon: { name: 'ph:user-duotone', class: 'w-4 h-4' },
+              },
+              {
                 name: 'Company',
                 to: '/layouts/company',
                 icon: { name: 'ph:buildings-duotone', class: 'w-4 h-4' },
+              },
+              {
+                name: 'Edit company',
+                to: '/layouts/company-edit',
+                icon: { name: 'ph:buildings-duotone', class: 'w-4 h-4' },
+              },
+              {
+                name: 'New contact',
+                to: '/layouts/contacts/create',
+                icon: { name: 'ph:user-plus-duotone', class: 'w-4 h-4' },
               },
               {
                 name: 'Integrations',
