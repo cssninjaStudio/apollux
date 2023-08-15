@@ -10,10 +10,10 @@ icon:
 
 ::doc-component-demo
 ---
-title: Default snacks
+title: Muted snacks
 demo: '#examples/snack/base.vue'
 ---
-Default snacks are used to display an interactive message to the user. They feature a close button that can trigger an action when clicked.
+Muted snacks are used to display an interactive message to the user. They feature a close button that can trigger an action when clicked.
 ::
 
 ::doc-component-demo

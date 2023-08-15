@@ -8,6 +8,10 @@
       <Icon name="ph:github-logo-duotone" class="h-5 w-5" />
     </BaseButtonIcon>
 
+    <BaseButtonIcon shape="smooth">
+      <Icon name="ph:lightning-duotone" class="h-5 w-5" />
+    </BaseButtonIcon>
+
     <BaseButtonIcon shape="curved">
       <Icon name="ph:game-controller-duotone" class="h-5 w-5" />
     </BaseButtonIcon>

@@ -33,7 +33,8 @@ const show = ref(true)
       <div class="relative">
         <BaseCard
           shape="curved"
-          class="p-4 flex flex-col sm:flex-row gap-4 dark:!bg-muted-950 dark:!border-muted-800"
+          color="white-contrast"
+          class="p-4 flex flex-col sm:flex-row gap-4"
         >
           <div
             class="flex items-center justify-center w-full sm:h-48 sm:w-48 bg-muted-100 dark:bg-muted-900 rounded-xl shrink-0"
@@ -65,7 +66,8 @@ const show = ref(true)
       <div class="relative">
         <BaseCard
           shape="curved"
-          class="p-4 flex flex-col sm:flex-row gap-4 dark:!bg-muted-950 dark:!border-muted-800"
+          color="white-contrast"
+          class="p-4 flex flex-col sm:flex-row gap-4"
         >
           <div
             class="flex items-center justify-center w-full sm:h-48 sm:w-48 bg-muted-100 dark:bg-muted-900 rounded-xl shrink-0"

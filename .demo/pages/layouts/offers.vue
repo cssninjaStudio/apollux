@@ -3,10 +3,10 @@ definePageMeta({
   title: 'Offers',
   preview: {
     title: 'Offers',
-    description: 'For generic things',
+    description: 'For partner offers',
     categories: ['layouts', 'lists'],
-    src: '/img/screens/layouts-list-view-1.png',
-    srcDark: '/img/screens/layouts-list-view-1-dark.png',
+    src: '/img/screens/layouts-offers.png',
+    srcDark: '/img/screens/layouts-offers-dark.png',
     order: 37,
   },
 })

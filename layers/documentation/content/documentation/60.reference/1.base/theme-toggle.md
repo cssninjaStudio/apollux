@@ -17,3 +17,5 @@ Apollux ships with a ready to use theme switcher that you can include anywhere t
 ::
 
 :doc-component-meta{name="BaseThemeToggle"}
+
+:doc-component-meta{name="BaseThemeSwitch"}

@@ -7,11 +7,11 @@ definePageMeta({
   layout: 'empty',
   title: 'Signup',
   preview: {
-    title: 'Signup 2',
+    title: 'Signup form',
     description: 'For authentication and sign up',
     categories: ['layouts', 'authentication'],
-    src: '/img/screens/auth-signup-2.png',
-    srcDark: '/img/screens/auth-signup-2-dark.png',
+    src: '/img/screens/auth-signup.png',
+    srcDark: '/img/screens/auth-signup-dark.png',
     order: 101,
   },
 })

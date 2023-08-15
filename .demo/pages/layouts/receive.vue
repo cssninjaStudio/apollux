@@ -5,7 +5,7 @@ definePageMeta({
   title: 'Receive',
   layout: 'empty',
   preview: {
-    title: 'Receive',
+    title: 'Receive test',
     description: 'For generic things',
     categories: ['layouts', 'lists'],
     src: '/img/screens/layouts-list-view-1.png',

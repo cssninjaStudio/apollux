@@ -3,11 +3,11 @@ definePageMeta({
   title: 'Profile',
   preview: {
     title: 'Profile',
-    description: 'For generic things',
+    description: 'For viewing your info',
     categories: ['layouts', 'lists'],
-    src: '/img/screens/layouts-list-view-1.png',
-    srcDark: '/img/screens/layouts-list-view-1-dark.png',
-    order: 37,
+    src: '/img/screens/layouts-profile.png',
+    srcDark: '/img/screens/layouts-profile-dark.png',
+    order: 30,
   },
 })
 </script>

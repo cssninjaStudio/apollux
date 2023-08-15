@@ -4,6 +4,8 @@
 
     <BaseButtonAction shape="rounded" loading>Action</BaseButtonAction>
 
+    <BaseButtonAction shape="smooth" loading>Action</BaseButtonAction>
+
     <BaseButtonAction shape="curved" loading>Action</BaseButtonAction>
 
     <BaseButtonAction shape="full" loading>Action</BaseButtonAction>

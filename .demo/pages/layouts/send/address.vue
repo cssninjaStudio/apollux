@@ -6,11 +6,11 @@ definePageMeta({
   layout: 'empty',
   preview: {
     title: 'Send - Step 4',
-    description: 'For generic things',
-    categories: ['layouts', 'lists'],
-    src: '/img/screens/layouts-list-view-1.png',
-    srcDark: '/img/screens/layouts-list-view-1-dark.png',
-    order: 37,
+    description: 'For sending payments to people',
+    categories: ['layouts', 'wizards', 'forms'],
+    src: '/img/screens/wizards-send-4.png',
+    srcDark: '/img/screens/wizards-send-4-dark.png',
+    order: 21,
   },
 })
 

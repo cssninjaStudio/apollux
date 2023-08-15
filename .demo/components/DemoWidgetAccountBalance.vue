@@ -1,11 +1,7 @@
 <script setup lang="ts"></script>
 
 <template>
-  <BaseCard
-    shape="curved"
-    elevated
-    class="dark:!bg-muted-950 dark:!border-muted-800"
-  >
+  <BaseCard shape="curved" color="white-contrast" elevated>
     <div class="flex flex-col gap-4 px-8 pt-8 text-center">
       <BaseHeading
         as="h4"

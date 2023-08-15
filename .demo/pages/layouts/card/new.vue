@@ -7,12 +7,12 @@ definePageMeta({
   title: 'New card',
   layout: 'empty',
   preview: {
-    title: 'New card',
-    description: 'For generic things',
+    title: 'Card wizard',
+    description: 'For new card creation',
     categories: ['layouts', 'lists'],
-    src: '/img/screens/layouts-list-view-1.png',
-    srcDark: '/img/screens/layouts-list-view-1-dark.png',
-    order: 37,
+    src: '/img/screens/wizards-card.png',
+    srcDark: '/img/screens/wizards-card-dark.png',
+    order: 14,
   },
 })
 
@@ -285,11 +285,11 @@ const onSubmit = handleSubmit(
                     <div ref="target" class="relative w-full z-10">
                       <button
                         type="button"
-                        class="w-full p-4 click-blur bg-white dark:bg-muted-1000 rounded-xl border border-muted-200 dark:border-muted-800"
+                        class="w-full p-4 click-blur bg-white dark:bg-muted-950 rounded-xl border border-muted-200 dark:border-muted-800"
                         @click="openDropdown()"
                       >
                         <span class="w-full flex items-center gap-3 text-left">
-                          <ApolluxLogo class="w-8 h-8 dark:invert" />
+                          <ApolluxLogo class="w-8 h-8 text-primary-500" />
                           <div>
                             <BaseText
                               size="sm"
@@ -322,17 +322,19 @@ const onSubmit = handleSubmit(
                       >
                         <div
                           v-if="open"
-                          class="absolute top-20 left-0 w-full p-2 rounded-xl border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-1000 shadow-xl shadow-muted-400/10 dark:shadow-muted-800/10"
+                          class="absolute top-20 left-0 w-full p-2 rounded-xl border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-950 shadow-xl shadow-muted-400/10 dark:shadow-muted-800/10"
                         >
                           <!--Accounts-->
                           <ul>
                             <li v-for="account in accounts" :key="account.id">
                               <button
                                 type="button"
-                                class="w-full flex items-center gap-3 text-left py-2 px-4 rounded-lg hover:bg-muted-100 dark:hover:bg-muted-900 transition-colors duration-300"
+                                class="group w-full flex items-center gap-3 text-left p-2 rounded-lg hover:bg-muted-100 dark:hover:bg-muted-900 transition-colors duration-300"
                                 @click="setAccount(account)"
                               >
-                                <ApolluxLogo class="w-8 h-8 dark:invert" />
+                                <ApolluxLogo
+                                  class="w-8 h-8 text-muted-300 dark:text-muted-800 group-hover:text-primary-500 transition-colors duration-300"
+                                />
                                 <span class="block">
                                   <span
                                     class="block font-heading text-sm text-muted-800 dark:text-muted-200 capitalize"
@@ -562,6 +564,7 @@ const onSubmit = handleSubmit(
                   :name="values.card?.owner"
                   :number="values.card?.account?.number"
                   :brand="values.card?.brand"
+                  contrast="high"
                 />
               </div>
             </div>

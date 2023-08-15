@@ -3,10 +3,10 @@ definePageMeta({
   title: 'Dashboard',
   preview: {
     title: 'Dashboard',
-    description: 'For generic things',
+    description: 'For data tracking',
     categories: ['dashboards'],
-    src: '/img/screens/dashboards-personal-1.png',
-    srcDark: '/img/screens/dashboards-personal-1-dark.png',
+    src: '/img/screens/dashboards-main.png',
+    srcDark: '/img/screens/dashboards-main-dark.png',
     order: 1,
   },
 })

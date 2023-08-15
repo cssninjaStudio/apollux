@@ -2,11 +2,11 @@
 definePageMeta({
   title: 'Download',
   preview: {
-    title: 'Download',
-    description: 'For generic things',
+    title: 'Downloads',
+    description: 'For data export and download',
     categories: ['layouts', 'lists'],
-    src: '/img/screens/layouts-list-view-1.png',
-    srcDark: '/img/screens/layouts-list-view-1-dark.png',
+    src: '/img/screens/layouts-downloads.png',
+    srcDark: '/img/screens/layouts-downloads-dark.png',
     order: 37,
   },
 })

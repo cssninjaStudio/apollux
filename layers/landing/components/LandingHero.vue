@@ -104,10 +104,10 @@ function useGaugePersonal() {
           lead="tight"
           class="text-muted-800 xs:!text-4xl mx-auto mb-4 max-w-2xl dark:text-white"
         >
-          The dashboard system that makes you say
+          The ultimate dashboard system for
           <span
             class="text-primary-500 font-hairline underline decoration-dotted underline-offset-4"
-            >wow</span
+            >Fintechs</span
           >
         </BaseHeading>
         <BaseParagraph
@@ -133,17 +133,17 @@ function useGaugePersonal() {
       <!-- Components -->
       <fieldset
         disabled
-        class="ltablet:min-h-[760px] min-h-[2075px] w-full sm:min-h-[760px] lg:min-h-[750px]"
+        class="ltablet:min-h-[760px] min-h-[1300px] w-full sm:min-h-[760px] lg:min-h-[750px]"
         aria-hidden="true"
       >
         <div
-          class="group-[&.scrolled]/landing:bg-muted-100 group-[&.scrolled]/landing:dark:bg-muted-900 group-[&.scrolled]/landing:border-muted-200 group-[&.scrolled]/landing:dark:border-muted-800 group-[&.scrolled]/landing:ltablet:ps-24 relative z-30 mt-12 overflow-hidden border group-[&.scrolled]/landing:rounded-xl group-[&:not(.scrolled)]/landing:border-transparent group-[&.scrolled]/landing:pb-6 group-[&.scrolled]/landing:pe-6 group-[&.scrolled]/landing:ps-6 group-[&.scrolled]/landing:pt-20 motion-safe:transition-all motion-safe:duration-300 group-[&.scrolled]/landing:lg:ps-28"
+          class="group-[&.scrolled]/landing:dark:bg-muted-900 group-[&.scrolled]/landing:border-muted-200 group-[&.scrolled]/landing:dark:border-muted-800 group-[&.scrolled]/landing:ltablet:ps-24 relative z-30 mt-12 overflow-hidden border group-[&.scrolled]/landing:rounded-xl group-[&:not(.scrolled)]/landing:border-transparent group-[&.scrolled]/landing:bg-white group-[&.scrolled]/landing:pb-6 group-[&.scrolled]/landing:pe-6 group-[&.scrolled]/landing:ps-6 group-[&.scrolled]/landing:pt-20 motion-safe:transition-all motion-safe:duration-300 group-[&.scrolled]/landing:lg:ps-28"
         >
           <!-- Fake sidebar -->
           <div
-            class="ltablet:w-16 ltablet:flex dark:bg-muted-800 absolute left-0 top-0 hidden h-full w-20 flex-col bg-white group-[&.scrolled]/landing:translate-x-0 group-[&:not(.scrolled)]/landing:-translate-x-full group-[&.scrolled]/landing:opacity-100 group-[&:not(.scrolled)]/landing:opacity-0 motion-safe:transition-all motion-safe:duration-200 lg:flex"
+            class="ltablet:w-16 ltablet:flex dark:bg-muted-950 bg-muted-100 absolute left-0 top-0 hidden h-full w-20 flex-col group-[&.scrolled]/landing:translate-x-0 group-[&:not(.scrolled)]/landing:-translate-x-full group-[&.scrolled]/landing:opacity-100 group-[&:not(.scrolled)]/landing:opacity-0 motion-safe:transition-all motion-safe:duration-200 lg:flex"
           >
-            <div class="flex h-20 w-full items-center justify-center">
+            <div class="mb-6 flex h-20 w-full items-center justify-center">
               <ApolluxLogo class="text-primary-500 h-8 w-8" />
             </div>
             <div class="flex h-16 w-full items-center justify-center">
@@ -151,7 +151,7 @@ function useGaugePersonal() {
                 class="nui-mask nui-mask-blob bg-primary-500/10 flex h-12 w-12 items-center justify-center motion-safe:transition-colors motion-safe:duration-200"
               >
                 <Icon
-                  name="ph:house-duotone"
+                  name="ph:gauge-duotone"
                   class="text-primary-500 h-5 w-5"
                 />
               </div>
@@ -161,16 +161,9 @@ function useGaugePersonal() {
                 class="nui-mask nui-mask-blob hover:bg-muted-100 dark:hover:bg-muted-700/50 flex h-12 w-12 items-center justify-center motion-safe:transition-colors motion-safe:duration-200"
               >
                 <Icon
-                  name="ph:grid-four-duotone"
+                  name="ph:arrows-left-right-duotone"
                   class="text-muted-400 h-5 w-5"
                 />
-              </div>
-            </div>
-            <div class="flex h-16 w-full items-center justify-center">
-              <div
-                class="nui-mask nui-mask-blob hover:bg-muted-100 dark:hover:bg-muted-700/50 flex h-12 w-12 items-center justify-center motion-safe:transition-colors motion-safe:duration-200"
-              >
-                <Icon name="ph:users-duotone" class="text-muted-400 h-5 w-5" />
               </div>
             </div>
             <div class="flex h-16 w-full items-center justify-center">
@@ -178,169 +171,99 @@ function useGaugePersonal() {
                 class="nui-mask nui-mask-blob hover:bg-muted-100 dark:hover:bg-muted-700/50 flex h-12 w-12 items-center justify-center motion-safe:transition-colors motion-safe:duration-200"
               >
                 <Icon
-                  name="ph:chat-circle-duotone"
+                  name="ph:check-circle-duotone"
                   class="text-muted-400 h-5 w-5"
                 />
+              </div>
+            </div>
+            <div class="flex h-16 w-full items-center justify-center">
+              <div
+                class="nui-mask nui-mask-blob hover:bg-muted-100 dark:hover:bg-muted-700/50 flex h-12 w-12 items-center justify-center motion-safe:transition-colors motion-safe:duration-200"
+              >
+                <Icon name="ph:bank-duotone" class="text-muted-400 h-5 w-5" />
+              </div>
+            </div>
+            <div class="flex h-16 w-full items-center justify-center">
+              <div
+                class="nui-mask nui-mask-blob hover:bg-muted-100 dark:hover:bg-muted-700/50 flex h-12 w-12 items-center justify-center motion-safe:transition-colors motion-safe:duration-200"
+              >
+                <Icon
+                  name="ph:credit-card-duotone"
+                  class="text-muted-400 h-5 w-5"
+                />
+              </div>
+            </div>
+            <div class="flex h-16 w-full items-center justify-center">
+              <div
+                class="nui-mask nui-mask-blob hover:bg-muted-100 dark:hover:bg-muted-700/50 flex h-12 w-12 items-center justify-center motion-safe:transition-colors motion-safe:duration-200"
+              >
+                <Icon name="ph:rocket-duotone" class="text-muted-400 h-5 w-5" />
               </div>
             </div>
             <div class="mt-auto flex h-16 w-full items-center justify-center">
               <div
                 class="nui-mask nui-mask-blob hover:bg-muted-100 dark:hover:bg-muted-700/50 flex h-12 w-12 items-center justify-center motion-safe:transition-colors motion-safe:duration-200"
               >
-                <Icon
-                  name="ph:gear-six-duotone"
-                  class="text-muted-400 h-5 w-5"
-                />
-              </div>
-            </div>
-            <div class="flex h-16 w-full items-center justify-center">
-              <div
-                class="nui-mask nui-mask-blob hover:bg-muted-100 dark:hover:bg-muted-700/50 flex h-12 w-12 items-center justify-center motion-safe:transition-colors motion-safe:duration-200"
-              >
-                <BaseAvatar
-                  shape="straight"
-                  size="sm"
-                  src="/img/avatars/24.svg"
-                  class="nui-mask nui-mask-blob"
-                />
+                <BaseAvatar shape="full" size="sm" src="/img/avatars/10.svg" />
               </div>
             </div>
           </div>
           <!-- Fake navbar -->
           <div
-            class="ltablet:ps-24 absolute left-0 top-0 flex h-20 w-full items-center justify-between pe-6 ps-6 group-[&.scrolled]/landing:translate-y-0 group-[&:not(.scrolled)]/landing:-translate-y-full group-[&.scrolled]/landing:opacity-100 group-[&:not(.scrolled)]/landing:opacity-0 motion-safe:transition-all motion-safe:duration-200 lg:ps-28"
+            class="ltablet:ps-24 absolute left-0 top-0 flex h-20 w-full pe-6 ps-6 group-[&.scrolled]/landing:translate-y-0 group-[&:not(.scrolled)]/landing:-translate-y-full group-[&.scrolled]/landing:opacity-100 group-[&:not(.scrolled)]/landing:opacity-0 motion-safe:transition-all motion-safe:duration-200 lg:ps-28"
           >
-            <div class="flex h-full items-center gap-4">
-              <div
-                class="nui-mask nui-mask-blob dark:hover:bg-muted-800 flex h-10 w-10 items-center justify-center hover:bg-white motion-safe:transition-colors motion-safe:duration-200"
-              >
-                <Icon name="lucide:menu" class="text-muted-400 h-5 w-5" />
+            <div
+              class="mx-auto flex h-full w-full max-w-4xl items-center justify-between"
+            >
+              <div class="flex h-full items-center gap-4">
+                <div
+                  class="nui-mask nui-mask-blob dark:hover:bg-muted-800 flex h-10 w-10 items-center justify-center hover:bg-white motion-safe:transition-colors motion-safe:duration-200"
+                >
+                  <Icon name="lucide:menu" class="text-muted-400 h-5 w-5" />
+                </div>
+                <BaseText class="hidden sm:inline-block">My Dashboard</BaseText>
               </div>
-              <BaseText class="hidden sm:inline-block">My Dashboard</BaseText>
-            </div>
-            <div class="flex h-full items-center justify-end gap-1">
-              <div
-                class="nui-mask nui-mask-blob dark:hover:bg-muted-800 flex h-10 w-10 items-center justify-center hover:bg-white motion-safe:transition-colors motion-safe:duration-200"
-              >
-                <Icon name="ph:bell-duotone" class="text-muted-400 h-5 w-5" />
-              </div>
-              <div
-                class="nui-mask nui-mask-blob dark:hover:bg-muted-800 flex h-10 w-10 items-center justify-center hover:bg-white motion-safe:transition-colors motion-safe:duration-200"
-              >
-                <Icon
-                  name="ph:circles-four-duotone"
-                  class="text-muted-400 h-5 w-5"
-                />
-              </div>
-              <div
-                class="nui-mask nui-mask-blob dark:hover:bg-muted-800 flex h-10 w-10 items-center justify-center hover:bg-white motion-safe:transition-colors motion-safe:duration-200"
-              >
-                <Icon
-                  name="ph:translate-duotone"
-                  class="text-muted-400 h-5 w-5"
-                />
-              </div>
-              <div
-                class="nui-mask nui-mask-blob dark:hover:bg-muted-800 flex h-10 w-10 items-center justify-center hover:bg-white motion-safe:transition-colors motion-safe:duration-200"
-              >
-                <BaseAvatar
-                  shape="straight"
-                  size="xs"
-                  src="/img/avatars/24.svg"
-                  class="nui-mask nui-mask-blob"
-                />
+              <div class="flex h-full items-center justify-end gap-1">
+                <div class="scale-90">
+                  <BaseThemeSwitch />
+                </div>
+                <div class="scale-90 pe-2">
+                  <BaseButton shape="full" color="primary" shadow="hover">
+                    <span>Move Money</span>
+                    <Icon name="lucide:chevron-down" class="h-4 w-4" />
+                  </BaseButton>
+                </div>
+                <button
+                  type="button"
+                  class="text-muted-300 dark:text-muted-600 dark:bg-muted-800 shadow-muted-400/20 dark:shadow-muted-800/30 nui-focus inline-flex h-9 w-9 items-center justify-center rounded-full bg-white font-sans text-sm shadow-lg transition-all duration-300 hover:text-yellow-400 hover:shadow-xl dark:hover:text-yellow-400"
+                >
+                  <Icon name="fluent:flash-28-filled" class="h-5 w-5" />
+                </button>
               </div>
             </div>
           </div>
-          <div
-            class="ltablet:grid-cols-3 ltablet:gap-6 grid grid-cols-1 gap-6 sm:grid-cols-3 sm:gap-3 lg:grid-cols-4 lg:gap-4"
-          >
-            <!-- Col -->
+          <div class="mx-auto w-full max-w-4xl">
             <div
-              class="ltablet:gap-6 group-[&:not(.scrolled)]/landing:ltablet:mt-24 group-[&:not(.scrolled)]/landing:ptablet:mt-24 flex flex-col gap-6 sm:gap-3 lg:gap-4 group-[&:not(.scrolled)]/landing:lg:mt-24"
+              class="ltablet:grid-cols-2 ltablet:gap-6 grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-3 lg:grid-cols-2 lg:gap-4"
             >
-              <!-- Widget -->
-              <BaseCard shape="curved" elevated class="flex flex-col p-6">
-                <div class="mb-6 flex items-center justify-between">
-                  <BaseHeading
-                    as="h3"
-                    size="sm"
-                    weight="semibold"
-                    lead="tight"
-                    class="text-muted-800 dark:text-white"
-                  >
-                    <span>Personal Score</span>
-                  </BaseHeading>
-                </div>
-                <div class="flex justify-center py-16">
-                  <AddonApexcharts
-                    v-bind="gaugePersonal"
-                    class="-mt-14 motion-safe:transition-all motion-safe:duration-200"
-                  />
-                </div>
-                <div class="mt-auto text-center">
-                  <BaseParagraph size="sm">
-                    <span class="text-muted-400">
-                      Your score has been calculated based on the latest metrics
-                    </span>
-                  </BaseParagraph>
-                </div>
-              </BaseCard>
-            </div>
-            <!-- Col -->
-            <div class="ltablet:gap-6 flex flex-col gap-6 sm:gap-3 lg:gap-4">
-              <!-- Widget -->
-              <BaseCard shape="curved" elevated class="p-6">
-                <DemoInboxMessage
-                  picture="/img/avatars/10.svg"
-                  name="Kendra W."
-                  title="Design Project"
-                  text="Where are we in terms of design? We need to review the new screens."
-                  time="28 minutes"
-                  shape="curved"
-                />
-              </BaseCard>
-              <!-- Widget -->
-              <BaseCard shape="curved" elevated class="p-6">
-                <DemoInfoBadges
-                  image="/img/illustrations/widgets/1.svg"
-                  badge-small="/img/illustrations/widgets/3.svg"
-                  badge-medium="/img/illustrations/widgets/2.svg"
-                  title="You've unlocked 2 new Achievements"
-                  text="Congrats, your efforts have been rewarded. Keep up like this!"
-                />
-              </BaseCard>
-            </div>
-            <!-- Col -->
-            <div
-              class="ltablet:gap-6 group-[&:not(.scrolled)]/landing:ltablet:mt-16 group-[&:not(.scrolled)]/landing:ptablet:mt-16 flex flex-col gap-6 sm:hidden sm:gap-3 lg:flex lg:gap-4 group-[&:not(.scrolled)]/landing:lg:mt-16"
-            >
-              <!-- Widget -->
-              <BaseCard shape="curved" elevated class="p-4">
-                <DemoTeamSearchCompact shape="curved" />
-              </BaseCard>
-              <!-- Widget -->
-              <BaseCard shape="curved" elevated class="p-3">
-                <DemoVideoCompact shape="curved" />
-              </BaseCard>
-            </div>
-            <!-- Col -->
-            <div
-              class="ltablet:gap-6 group-[&:not(.scrolled)]/landing:ltablet:mt-10 group-[&:not(.scrolled)]/landing:ptablet:mt-10 flex flex-col gap-6 sm:gap-3 lg:gap-4 group-[&:not(.scrolled)]/landing:lg:mt-10"
-            >
-              <!-- Widget -->
-              <BaseCard shape="curved" elevated class="p-6">
-                <DemoProgressCircle
-                  image="/img/avatars/6.svg"
-                  :title="`${y < 500 ? Math.trunc(y / 5) : 100}% completed!`"
-                  text="Congrats, your efforts have been rewarded. Keep up like this!"
-                  :value="y < 500 ? Math.trunc(y / 5) : 100"
-                />
-              </BaseCard>
-              <!-- Widget -->
-              <BaseCard shape="curved" elevated class="p-6">
-                <DemoFollowersCompact />
-              </BaseCard>
+              <!-- Col -->
+              <div
+                class="ltablet:gap-6 group-[&:not(.scrolled)]/landing:ltablet:mt-24 group-[&:not(.scrolled)]/landing:ptablet:mt-24 col-span-2 flex flex-col gap-6 sm:col-span-1 sm:gap-3 lg:gap-4 group-[&:not(.scrolled)]/landing:lg:mt-24"
+              >
+                <!-- Widget -->
+                <DemoWidgetWelcome />
+              </div>
+              <!-- Col -->
+              <div
+                class="ltablet:gap-6 col-span-2 flex flex-col gap-6 sm:col-span-1 sm:gap-3 lg:gap-4"
+              >
+                <!-- Widget -->
+                <DemoWidgetAccountBalance />
+              </div>
+              <div class="col-span-2">
+                <!--Transactions widget-->
+                <DemoWidgetTransactionSummary />
+              </div>
             </div>
           </div>
         </div>

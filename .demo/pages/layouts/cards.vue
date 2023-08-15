@@ -3,11 +3,11 @@ definePageMeta({
   title: 'Credit Cards',
   preview: {
     title: 'Credit Cards',
-    description: 'For generic things',
+    description: 'For card management',
     categories: ['layouts', 'lists'],
-    src: '/img/screens/layouts-list-view-1.png',
-    srcDark: '/img/screens/layouts-list-view-1-dark.png',
-    order: 37,
+    src: '/img/screens/layouts-cards.png',
+    srcDark: '/img/screens/layouts-cards-dark.png',
+    order: 13,
   },
 })
 

@@ -103,11 +103,7 @@ function statusColor(itemStatus: string) {
       <div class="col-span-12 ltablet:col-span-4 lg:col-span-4">
         <div class="flex flex-col gap-6">
           <!--Recipient-->
-          <BaseCard
-            shape="curved"
-            elevated
-            class="p-6 dark:!bg-muted-950 dark:!border-muted-800"
-          >
+          <BaseCard shape="curved" color="white-contrast" elevated class="p-6">
             <div
               class="flex items-center gap-4 mb-6 pb-8 border-b border-muted-200 dark:border-muted-800"
             >
@@ -163,11 +159,7 @@ function statusColor(itemStatus: string) {
             </div>
           </BaseCard>
           <!--Details-->
-          <BaseCard
-            shape="curved"
-            elevated
-            class="p-6 dark:!bg-muted-950 dark:!border-muted-800"
-          >
+          <BaseCard shape="curved" color="white-contrast" elevated class="p-6">
             <div class="mb-6">
               <div>
                 <BaseHeading
@@ -279,8 +271,9 @@ function statusColor(itemStatus: string) {
           <div class="col-span-12 sm:col-span-4">
             <BaseCard
               shape="curved"
+              color="white-contrast"
               elevated
-              class="h-full flex flex-col justify-center items-center p-6 dark:!bg-muted-950 dark:!border-muted-800"
+              class="h-full flex flex-col justify-center items-center p-6"
             >
               <div class="text-center">
                 <Icon
@@ -313,8 +306,9 @@ function statusColor(itemStatus: string) {
           <div class="col-span-12 sm:col-span-4">
             <BaseCard
               shape="curved"
+              color="white-contrast"
               elevated
-              class="h-full flex flex-col justify-center items-center p-6 dark:!bg-muted-950 dark:!border-muted-800"
+              class="h-full flex flex-col justify-center items-center p-6"
             >
               <div class="text-center">
                 <div>
@@ -337,8 +331,9 @@ function statusColor(itemStatus: string) {
           <div class="col-span-12 sm:col-span-4">
             <BaseCard
               shape="curved"
+              color="white-contrast"
               elevated
-              class="h-full flex flex-col justify-center items-center p-6 dark:!bg-muted-950 dark:!border-muted-800"
+              class="h-full flex flex-col justify-center items-center p-6"
             >
               <div class="text-center">
                 <div>
@@ -361,8 +356,9 @@ function statusColor(itemStatus: string) {
           <div class="col-span-12">
             <BaseCard
               shape="curved"
+              color="white-contrast"
               elevated
-              class="p-8 dark:!bg-muted-950 dark:!border-muted-800"
+              class="p-8"
             >
               <div class="flex items-center justify-between mb-8">
                 <BaseHeading

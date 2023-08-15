@@ -40,10 +40,10 @@ Selects can have a material design style floating label using the `labelFloat` p
 
 ::doc-component-demo
 ---
-title: Condensed
+title: Sizes
 demo: '#examples/select/condensed.vue'
 ---
-Selects can be displayed in a smaller and more compact way using the `condensed` prop.
+Selects can have different sizes like a smaller and a larger one using the `size` prop. accepted values are `sm`,  `md` and `lg`.
 ::
 
 ::doc-component-demo

@@ -2,11 +2,11 @@
 definePageMeta({
   title: 'Credit',
   preview: {
-    title: 'Credit',
-    description: 'For generic things',
+    title: 'Credit form',
+    description: 'For credit application',
     categories: ['layouts', 'lists'],
-    src: '/img/screens/layouts-list-view-1.png',
-    srcDark: '/img/screens/layouts-list-view-1-dark.png',
+    src: '/img/screens/layouts-credits.png',
+    srcDark: '/img/screens/layouts-credits-dark.png',
     order: 37,
   },
 })

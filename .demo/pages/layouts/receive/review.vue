@@ -6,11 +6,11 @@ definePageMeta({
   layout: 'empty',
   preview: {
     title: 'Receive - Step 3',
-    description: 'For generic things',
+    description: 'For receiving payments',
     categories: ['layouts', 'lists'],
-    src: '/img/screens/layouts-list-view-1.png',
-    srcDark: '/img/screens/layouts-list-view-1-dark.png',
-    order: 37,
+    src: '/img/screens/wizards-receive-3.png',
+    srcDark: '/img/screens/wizards-receive-3-dark.png',
+    order: 17,
   },
 })
 
@@ -137,10 +137,10 @@ useHead({
             Transfer from
           </BaseParagraph>
           <div
-            class="w-full p-4 bg-white dark:bg-muted-1000 rounded-xl border border-muted-200 dark:border-muted-800"
+            class="w-full p-4 bg-white dark:bg-muted-950 rounded-xl border border-muted-200 dark:border-muted-800"
           >
             <div class="w-full flex items-center gap-3 text-left">
-              <ApolluxLogo class="w-8 h-8 dark:invert" />
+              <ApolluxLogo class="w-8 h-8 text-primary-500" />
               <div>
                 <BaseText
                   size="sm"

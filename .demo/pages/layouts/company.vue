@@ -3,11 +3,11 @@ definePageMeta({
   title: 'Company',
   preview: {
     title: 'Company',
-    description: 'For generic things',
+    description: 'For company details',
     categories: ['layouts', 'lists'],
-    src: '/img/screens/layouts-list-view-1.png',
-    srcDark: '/img/screens/layouts-list-view-1-dark.png',
-    order: 37,
+    src: '/img/screens/layouts-company.png',
+    srcDark: '/img/screens/layouts-company-dark.png',
+    order: 32,
   },
 })
 </script>

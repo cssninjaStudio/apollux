@@ -3,10 +3,10 @@ definePageMeta({
   title: 'API Tokens',
   preview: {
     title: 'API Tokens',
-    description: 'For generic things',
-    categories: ['layouts', 'lists'],
-    src: '/img/screens/layouts-list-view-1.png',
-    srcDark: '/img/screens/layouts-list-view-1-dark.png',
+    description: 'For settings management',
+    categories: ['layouts', 'settings'],
+    src: '/img/screens/layouts-settings-4.png',
+    srcDark: '/img/screens/layouts-settings-4-dark.png',
     order: 37,
   },
 })

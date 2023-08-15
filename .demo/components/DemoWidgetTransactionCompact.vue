@@ -45,8 +45,9 @@ function statusColor(itemStatus: string) {
 <template>
   <BaseCard
     shape="curved"
+    color="white-contrast"
     elevated
-    class="py-4 md:py-7 px-4 md:px-8 xl:px-10 dark:!bg-muted-950 dark:!border-muted-800"
+    class="py-4 md:py-7 px-4 md:px-8 xl:px-10"
   >
     <div class="sm:flex items-center justify-between">
       <BaseHeading

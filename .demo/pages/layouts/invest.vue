@@ -3,10 +3,10 @@ definePageMeta({
   title: 'Investments',
   preview: {
     title: 'Investments',
-    description: 'For generic things',
+    description: 'For funding and investment options',
     categories: ['layouts', 'lists'],
-    src: '/img/screens/layouts-list-view-1.png',
-    srcDark: '/img/screens/layouts-list-view-1-dark.png',
+    src: '/img/screens/layouts-invest.png',
+    srcDark: '/img/screens/layouts-invest-dark.png',
     order: 37,
   },
 })

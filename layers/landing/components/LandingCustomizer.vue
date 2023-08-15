@@ -90,40 +90,38 @@ watch(selectedStyle, (value) => {
             <BaseCard
               v-if="selectedStyle === 'smart'"
               shape="curved"
+              color="white-contrast"
               class="!border-primary-600 relative z-20 mx-auto max-w-[340px] p-6"
             >
               <div class="mb-6 flex items-center justify-between">
                 <BaseTag shape="curved" color="primary" shadow="flat"
-                  >Member</BaseTag
+                  >$3,857.97</BaseTag
                 >
                 <BaseButtonClose shape="full" color="muted" />
               </div>
               <BaseAvatar
                 size="xl"
-                src="/img/avatars/24.svg"
-                badge-src="/img/stacks/html5.svg"
-                class="mx-auto !flex !transition-all !duration-200"
+                src="/img/logos/companies/xero.svg"
+                class="mx-auto !flex bg-sky-500/10 !transition-all !duration-200"
                 shape="full"
               />
               <div class="mt-3 text-center">
                 <BaseHeading as="h3" size="xl" weight="medium">
-                  Belen Lopez</BaseHeading
+                  Acme Inc.</BaseHeading
                 >
                 <BaseText size="sm" class="text-muted-500 dark:text-muted-400"
-                  >Fullstack Developer</BaseText
+                  >Checking **** 4482</BaseText
                 >
               </div>
-              <div class="my-6 flex items-center justify-center gap-4">
-                <BaseAvatar size="xs" src="/img/stacks/js.svg" shape="full" />
-                <BaseAvatar
-                  size="xs"
-                  src="/img/stacks/python.svg"
-                  shape="full"
-                />
-                <BaseAvatar
-                  size="xs"
-                  src="/img/stacks/reactjs.svg"
-                  shape="full"
+              <div class="mb-3 mt-6 flex w-full items-center justify-center">
+                <BaseInput
+                  shape="curved"
+                  icon="lucide:dollar-sign"
+                  type="number"
+                  placeholder="Ex: 3225.49"
+                  :classes="{
+                    wrapper: 'w-full',
+                  }"
                 />
               </div>
               <div>
@@ -133,19 +131,20 @@ watch(selectedStyle, (value) => {
                   color="primary"
                   flavor="pastel"
                 >
-                  <Icon name="lucide:bell" class="h-4 w-4" />
-                  <span>Follow Belen</span>
+                  <Icon name="lucide:dollar-sign" class="h-4 w-4" />
+                  <span>Send Money</span>
                 </BaseButton>
                 <NuxtLink
                   to="#"
                   class="text-primary-500 block pt-4 text-center font-sans text-sm underline-offset-4 hover:underline"
                 >
-                  View profile
+                  Learn More
                 </NuxtLink>
               </div>
             </BaseCard>
             <BaseCard
               v-if="selectedStyle === 'creative'"
+              color="white-contrast"
               shape="curved"
               class="!border-primary-600 relative z-20 mx-auto max-w-[340px] overflow-hidden p-6"
             >
@@ -159,7 +158,7 @@ watch(selectedStyle, (value) => {
                   color="primary"
                   shadow="flat"
                   class="relative z-10"
-                  >Member</BaseTag
+                  >$3,857.97</BaseTag
                 >
                 <div
                   class="dark:bg-muted-800 flex h-7 w-7 items-center justify-center rounded-full bg-white"
@@ -173,94 +172,87 @@ watch(selectedStyle, (value) => {
               </div>
               <BaseAvatar
                 size="xl"
-                src="/img/avatars/10.svg"
-                class="nui-mask nui-mask-hexed mx-auto !flex !transition-all !duration-200"
+                src="/img/logos/companies/gitlab.svg"
+                class="nui-mask nui-mask-hexed bg-primary-800 mx-auto !flex !transition-all !duration-200"
                 shape="straight"
               />
               <div class="mt-3 text-center">
                 <BaseHeading as="h3" size="xl" weight="medium">
-                  Kendra Wilson</BaseHeading
+                  Acme Inc.</BaseHeading
                 >
                 <BaseText size="sm" class="text-muted-500 dark:text-muted-400"
-                  >Sales Manager</BaseText
+                  >Checking **** 4482</BaseText
                 >
               </div>
-              <div class="my-6 flex items-center justify-center gap-4">
-                <BaseAvatar
-                  size="xs"
-                  src="/img/icons/logos/nitro.svg"
+              <div class="mb-3 mt-6 flex w-full items-center justify-center">
+                <BaseInput
                   shape="full"
-                />
-                <BaseAvatar
-                  size="xs"
-                  src="/img/icons/logos/okano.svg"
-                  shape="full"
-                />
-                <BaseAvatar
-                  size="xs"
-                  src="/img/icons/logos/slicer.svg"
-                  shape="full"
+                  icon="lucide:dollar-sign"
+                  type="number"
+                  placeholder="Ex: 3225.49"
+                  :classes="{
+                    wrapper: 'w-full',
+                  }"
                 />
               </div>
               <div class="flex gap-2">
                 <BaseButton class="!h-11 w-full" shape="full">
-                  <Icon name="lucide:bookmark" class="h-4 w-4" />
-                  <span>Save</span>
+                  <Icon name="lucide:box" class="h-4 w-4" />
+                  <span>Stash</span>
                 </BaseButton>
 
                 <BaseButton class="!h-11 w-full" shape="full" color="primary">
-                  <Icon name="lucide:bell" class="h-4 w-4" />
-                  <span>Follow</span>
+                  <Icon name="lucide:send" class="h-4 w-4" />
+                  <span>Send</span>
                 </BaseButton>
               </div>
               <NuxtLink
                 to="#"
                 class="text-primary-500 block pt-4 text-center font-sans text-sm underline-offset-4 hover:underline"
               >
-                View projects
+                Learn More
               </NuxtLink>
             </BaseCard>
             <BaseCard
               v-if="selectedStyle === 'corporate'"
+              color="white-contrast"
               shape="rounded"
               class="!border-primary-600 relative z-20 mx-auto max-w-[340px] p-6"
             >
               <div class="mb-6 flex items-center justify-between">
                 <BaseTag shape="rounded" color="primary" shadow="flat"
-                  >Member</BaseTag
+                  >$3,857.97</BaseTag
                 >
                 <BaseButtonClose shape="curved" color="primary" />
               </div>
               <BaseAvatar
                 size="xl"
-                src="/img/avatars/25.svg"
-                badge-src="/img/stacks/illustrator.svg"
-                class="mx-auto !flex !transition-all !duration-200"
+                src="/img/logos/companies/quickbooks.svg"
+                badge-src="/img/icons/flags/united-states-of-america.svg"
+                class="mx-auto !flex bg-green-500/10 !transition-all !duration-200"
                 shape="curved"
               />
               <div class="mt-3 text-center">
                 <BaseHeading as="h3" size="xl" weight="medium">
-                  Jenna Davis</BaseHeading
+                  Acme Inc.</BaseHeading
                 >
                 <BaseText size="sm" class="text-muted-500 dark:text-muted-400"
-                  >UI/UX Designer</BaseText
+                  >Checking **** 4482</BaseText
                 >
               </div>
               <BaseParagraph size="sm" class="text-muted-400 my-2 text-center">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit sed
                 vitae nisl vitae nisl.</BaseParagraph
               >
-              <div class="my-6 flex items-center justify-center gap-4">
-                <BaseAvatar size="xs" src="/img/stacks/xd.svg" shape="full" />
-                <BaseAvatar
-                  size="xs"
-                  src="/img/stacks/photoshop.svg"
-                  shape="full"
-                />
-                <BaseAvatar
-                  size="xs"
-                  src="/img/stacks/html5.svg"
-                  shape="full"
+              <div class="mb-3 mt-6 flex w-full items-center justify-center">
+                <BaseInput
+                  shape="rounded"
+                  icon="lucide:dollar-sign"
+                  type="number"
+                  placeholder="Ex: 3225.49"
+                  :classes="{
+                    wrapper: 'w-full',
+                  }"
                 />
               </div>
               <div>
@@ -270,58 +262,49 @@ watch(selectedStyle, (value) => {
                   color="primary"
                 >
                   <Icon name="lucide:check" class="h-4 w-4" />
-                  <span>Hire Now</span>
+                  <span>Send Money</span>
                 </BaseButton>
               </div>
             </BaseCard>
             <BaseCard
               v-if="selectedStyle === 'classic'"
+              color="white-contrast"
               shape="straight"
               class="!border-primary-600 relative z-20 mx-auto max-w-[340px] p-6"
             >
               <div class="mb-6 flex items-center justify-between">
                 <BaseTag shape="straight" color="primary" shadow="flat"
-                  >Member</BaseTag
+                  >$3,857.97</BaseTag
                 >
                 <BaseButtonClose shape="straight" />
               </div>
-              <BaseAvatar
-                size="xl"
-                src="/img/avatars/8.svg"
-                class="mx-auto !flex !transition-all !duration-200"
-                shape="straight"
-              />
+              <div
+                class="bg-primary-500/10 mx-auto flex h-20 w-20 items-center justify-center"
+              >
+                <ApolluxLogo class="text-primary-500 h-10 w-10" />
+              </div>
               <div class="mt-3 text-center">
                 <BaseHeading as="h3" size="xl" weight="medium">
-                  John Baxter</BaseHeading
+                  Acme Inc.</BaseHeading
                 >
                 <BaseText size="sm" class="text-muted-500 dark:text-muted-400"
-                  >Technical Lead</BaseText
+                  >Checking **** 4482</BaseText
                 >
               </div>
               <BaseParagraph size="sm" class="text-muted-400 my-2 text-center">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit sed
                 vitae nisl vitae nisl.</BaseParagraph
               >
-              <div class="my-6 flex items-center justify-center gap-4">
-                <NuxtLink
-                  to="#"
-                  class="text-muted-400 hover:text-primary-500 flex h-6 w-6 items-center justify-center transition-colors duration-200"
-                >
-                  <Icon name="fa6-brands:facebook-f" class="h-4 w-4" />
-                </NuxtLink>
-                <NuxtLink
-                  to="#"
-                  class="text-muted-400 hover:text-primary-500 flex h-6 w-6 items-center justify-center transition-colors duration-200"
-                >
-                  <Icon name="fa6-brands:twitter" class="h-4 w-4" />
-                </NuxtLink>
-                <NuxtLink
-                  to="#"
-                  class="text-muted-400 hover:text-primary-500 flex h-6 w-6 items-center justify-center transition-colors duration-200"
-                >
-                  <Icon name="fa6-brands:linkedin-in" class="h-4 w-4" />
-                </NuxtLink>
+              <div class="mb-3 mt-6 flex w-full items-center justify-center">
+                <BaseInput
+                  shape="straight"
+                  icon="lucide:dollar-sign"
+                  type="number"
+                  placeholder="Ex: 3225.49"
+                  :classes="{
+                    wrapper: 'w-full',
+                  }"
+                />
               </div>
               <div>
                 <BaseButton
@@ -330,7 +313,7 @@ watch(selectedStyle, (value) => {
                   color="primary"
                   flavor="outline"
                 >
-                  <span>Send Invitation</span>
+                  <span>Send Money</span>
                 </BaseButton>
               </div>
             </BaseCard>

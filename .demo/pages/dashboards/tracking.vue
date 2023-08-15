@@ -3,11 +3,11 @@ definePageMeta({
   title: 'Tracking',
   preview: {
     title: 'Tracking',
-    description: 'For generic things',
+    description: 'For tracking and quick access',
     categories: ['dashboards'],
-    src: '/img/screens/dashboards-personal-1.png',
-    srcDark: '/img/screens/dashboards-personal-1-dark.png',
-    order: 1,
+    src: '/img/screens/dashboards-tracking.png',
+    srcDark: '/img/screens/dashboards-tracking-dark.png',
+    order: 6,
   },
 })
 </script>
@@ -19,8 +19,9 @@ definePageMeta({
       <div class="col-span-12 ltablet:col-span-6 lg:col-span-6">
         <BaseCard
           shape="curved"
+          color="white-contrast"
           elevated
-          class="h-full p-8 dark:!bg-muted-950 dark:!border-muted-800"
+          class="h-full p-8"
         >
           <div
             class="flex flex-col gap-y-6 sm:gap-y-0 sm:flex-row justify-between h-full"
@@ -104,11 +105,7 @@ definePageMeta({
       </div>
       <!-- Tile -->
       <div class="col-span-12 sm:col-span-4">
-        <BaseCard
-          shape="curved"
-          elevated
-          class="p-6 dark:!bg-muted-950 dark:!border-muted-800"
-        >
+        <BaseCard shape="curved" color="white-contrast" elevated class="p-6">
           <div class="flex justify-between mb-6">
             <div class="flex flex-col">
               <BaseHeading
@@ -144,11 +141,7 @@ definePageMeta({
       </div>
       <!-- Tile -->
       <div class="col-span-12 sm:col-span-4">
-        <BaseCard
-          shape="curved"
-          elevated
-          class="p-6 dark:!bg-muted-950 dark:!border-muted-800"
-        >
+        <BaseCard shape="curved" color="white-contrast" elevated class="p-6">
           <div class="flex justify-between mb-6">
             <div class="flex flex-col">
               <BaseHeading
@@ -184,11 +177,7 @@ definePageMeta({
       </div>
       <!-- Tile -->
       <div class="col-span-12 sm:col-span-4">
-        <BaseCard
-          shape="curved"
-          elevated
-          class="p-6 dark:!bg-muted-950 dark:!border-muted-800"
-        >
+        <BaseCard shape="curved" color="white-contrast" elevated class="p-6">
           <div class="flex justify-between mb-6">
             <div class="flex flex-col">
               <BaseHeading
@@ -230,8 +219,9 @@ definePageMeta({
       <div class="col-span-12 ltablet:col-span-6 lg:col-span-6">
         <BaseCard
           shape="curved"
+          color="white-contrast"
           elevated
-          class="p-8 flex flex-col h-full dark:!bg-muted-950 dark:!border-muted-800"
+          class="p-8 flex flex-col h-full"
         >
           <div class="sm:flex items-center justify-between mb-8">
             <BaseHeading
@@ -275,8 +265,9 @@ definePageMeta({
       <div class="col-span-12 ltablet:col-span-6 lg:col-span-6">
         <BaseCard
           shape="curved"
+          color="white-contrast"
           elevated
-          class="p-8 flex-col h-full dark:!bg-muted-950 dark:!border-muted-800"
+          class="p-8 flex-col h-full"
         >
           <div class="sm:flex items-center justify-between mb-8">
             <BaseHeading

@@ -29,6 +29,14 @@ The pagination component can have different shapes. Here is an example of a `rou
 
 ::doc-component-demo
 ---
+title: Smooth shape
+demo: '#examples/pagination/smooth.vue'
+---
+The pagination component can have different shapes. Here is an example of a `smooth` pagination.
+::
+
+::doc-component-demo
+---
 title: Curved shape
 demo: '#examples/pagination/curved.vue'
 ---

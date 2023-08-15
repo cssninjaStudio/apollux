@@ -3,11 +3,11 @@ definePageMeta({
   title: 'Personal',
   preview: {
     title: 'Personal',
-    description: 'For generic things',
+    description: 'For personal data tracking',
     categories: ['dashboards'],
-    src: '/img/screens/dashboards-personal-1.png',
-    srcDark: '/img/screens/dashboards-personal-1-dark.png',
-    order: 1,
+    src: '/img/screens/dashboards-personal.png',
+    srcDark: '/img/screens/dashboards-personal-dark.png',
+    order: 4,
   },
 })
 
@@ -59,11 +59,7 @@ function setAccount(account: any) {
     <div class="grid grid-cols-12 gap-6">
       <!--Tile-->
       <div class="col-span-12 sm:col-span-4">
-        <BaseCard
-          shape="curved"
-          elevated
-          class="p-4 dark:!bg-muted-950 dark:!border-muted-800"
-        >
+        <BaseCard shape="curved" color="white-contrast" elevated class="p-4">
           <div class="flex items-center">
             <div class="relative text-success-500">
               <BaseProgressCircle
@@ -88,11 +84,7 @@ function setAccount(account: any) {
       </div>
       <!--Tile-->
       <div class="col-span-12 sm:col-span-4">
-        <BaseCard
-          shape="curved"
-          elevated
-          class="p-4 dark:!bg-muted-950 dark:!border-muted-800"
-        >
+        <BaseCard shape="curved" color="white-contrast" elevated class="p-4">
           <div class="flex items-center">
             <div class="relative text-danger-500">
               <BaseProgressCircle
@@ -117,11 +109,7 @@ function setAccount(account: any) {
       </div>
       <!--Tile-->
       <div class="col-span-12 sm:col-span-4">
-        <BaseCard
-          shape="curved"
-          elevated
-          class="p-4 dark:!bg-muted-950 dark:!border-muted-800"
-        >
+        <BaseCard shape="curved" color="white-contrast" elevated class="p-4">
           <div class="flex items-center">
             <div class="relative text-warning-500">
               <BaseProgressCircle
@@ -153,11 +141,7 @@ function setAccount(account: any) {
         <DemoWidgetTransactionCompact />
       </div>
       <form action="" class="col-span-12 sm:col-span-4 space-y-6">
-        <BaseCard
-          shape="curved"
-          elevated
-          class="p-4 dark:!bg-muted-950 dark:!border-muted-800"
-        >
+        <BaseCard shape="curved" color="white-contrast" elevated class="p-4">
           <div class="mb-6">
             <DemoCreditCardReal
               status="active"
@@ -236,7 +220,7 @@ function setAccount(account: any) {
             <div ref="target" class="relative w-full z-10">
               <button
                 type="button"
-                class="w-full p-4 click-blur bg-white dark:bg-muted-1000 rounded-xl border border-muted-200 dark:border-muted-800"
+                class="w-full p-4 click-blur bg-white dark:bg-muted-950 rounded-xl border border-muted-200 dark:border-muted-800"
                 @click="openDropdown()"
               >
                 <span class="w-full flex items-center gap-3 text-left">
@@ -272,7 +256,7 @@ function setAccount(account: any) {
               >
                 <div
                   v-if="open"
-                  class="absolute top-20 left-0 w-full p-2 rounded-xl border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-1000 shadow-xl shadow-muted-400/10 dark:shadow-muted-800/10"
+                  class="absolute top-20 left-0 w-full p-2 rounded-xl border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-950 shadow-xl shadow-muted-400/10 dark:shadow-muted-800/10"
                 >
                   <!--Accounts-->
                   <ul>
@@ -326,7 +310,8 @@ function setAccount(account: any) {
         <!--Learn more-->
         <BaseCard
           shape="curved"
-          class="relative flex flex-col sm:flex-row gap-4 !bg-muted-100 dark:!bg-muted-950 dark:!border-muted-800"
+          color="muted-contrast"
+          class="relative flex flex-col sm:flex-row gap-4"
         >
           <div class="flex flex-col p-6">
             <div

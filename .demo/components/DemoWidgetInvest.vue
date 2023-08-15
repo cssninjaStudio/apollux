@@ -3,7 +3,8 @@
     <div class="col-span-12 md:col-span-8">
       <BaseCard
         shape="curved"
-        class="relative flex flex-col sm:flex-row gap-4 dark:!bg-muted-950 dark:!border-muted-800 overflow-hidden"
+        color="white-contrast"
+        class="relative flex flex-col sm:flex-row gap-4 overflow-hidden"
       >
         <div class="flex flex-col p-6">
           <BaseHeading
@@ -39,7 +40,8 @@
     <div class="col-span-12 md:col-span-4">
       <BaseCard
         shape="curved"
-        class="relative h-full flex flex-col sm:flex-row gap-4 !bg-muted-100 dark:!bg-muted-950 dark:!border-muted-800"
+        color="muted-contrast"
+        class="relative h-full flex flex-col sm:flex-row gap-4"
       >
         <div class="flex flex-col p-6">
           <BaseHeading

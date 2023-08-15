@@ -46,8 +46,9 @@ const total = computed(() => {
 <template>
   <BaseCard
     shape="curved"
+    color="white-contrast"
     elevated
-    class="h-full py-16 px-10 dark:!bg-muted-950 dark:!border-muted-800"
+    class="h-full py-16 px-10"
   >
     <div class="h-full flex flex-col justify-between gap-7">
       <BaseHeading

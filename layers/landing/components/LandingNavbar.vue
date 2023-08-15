@@ -16,11 +16,14 @@ const metaKey = useMetaKey()
       <div class="flex w-1/5 items-center gap-2">
         <NuxtLink
           to="/"
-          class="ms-2 inline-flex"
+          class="ms-2 inline-flex items-center gap-2"
           aria-label="Go to Apollux homepage"
         >
+          <ApolluxLogo
+            class="text-primary-500 group-[&.scrolled]/landing:h-8 group-[&:not(.scrolled)]/landing:h-10 sm:group-[&.scrolled]/landing:h-7 sm:group-[&:not(.scrolled)]/landing:h-8"
+          />
           <ApolluxLogoText
-            class="text-primary-500 group-[&.scrolled]/landing:h-4 group-[&:not(.scrolled)]/landing:h-5 motion-safe:transition-all motion-safe:duration-200"
+            class="text-primary-500 hidden group-[&.scrolled]/landing:h-3 group-[&:not(.scrolled)]/landing:h-4 motion-safe:transition-all motion-safe:duration-200 sm:block sm:group-[&.scrolled]/landing:h-3 sm:group-[&:not(.scrolled)]/landing:h-4"
           />
         </NuxtLink>
       </div>

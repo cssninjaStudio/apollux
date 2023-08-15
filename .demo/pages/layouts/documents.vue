@@ -3,10 +3,10 @@ definePageMeta({
   title: 'Documents',
   preview: {
     title: 'Documents',
-    description: 'For generic things',
+    description: 'For document management',
     categories: ['layouts', 'lists'],
-    src: '/img/screens/layouts-list-view-1.png',
-    srcDark: '/img/screens/layouts-list-view-1-dark.png',
+    src: '/img/screens/layouts-documents.png',
+    srcDark: '/img/screens/layouts-documents-dark.png',
     order: 37,
   },
 })

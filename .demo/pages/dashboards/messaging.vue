@@ -4,11 +4,11 @@ definePageMeta({
   layout: 'empty',
   preview: {
     title: 'Messaging',
-    description: 'For generic things',
+    description: 'For conversations and chats',
     categories: ['dashboards'],
-    src: '/img/screens/dashboards-personal-1.png',
-    srcDark: '/img/screens/dashboards-personal-1-dark.png',
-    order: 1,
+    src: '/img/screens/dashboards-messaging.png',
+    srcDark: '/img/screens/dashboards-messaging-dark.png',
+    order: 2,
   },
 })
 

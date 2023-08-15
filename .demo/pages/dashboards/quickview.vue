@@ -3,11 +3,11 @@ definePageMeta({
   title: 'Quickview',
   preview: {
     title: 'Quickview',
-    description: 'For generic things',
+    description: 'For personal use and tracking',
     categories: ['dashboards'],
-    src: '/img/screens/dashboards-personal-1.png',
-    srcDark: '/img/screens/dashboards-personal-1-dark.png',
-    order: 1,
+    src: '/img/screens/dashboards-quickview.png',
+    srcDark: '/img/screens/dashboards-quickview-dark.png',
+    order: 5,
   },
 })
 </script>

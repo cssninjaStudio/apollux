@@ -7,11 +7,11 @@ definePageMeta({
   title: 'Edit Profile',
   preview: {
     title: 'Edit Profile',
-    description: 'For forms and input fields',
+    description: 'For editing your info',
     categories: ['layouts', 'forms'],
-    src: '/img/screens/layouts-form-1.png',
-    srcDark: '/img/screens/layouts-form-1-dark.png',
-    order: 47,
+    src: '/img/screens/layouts-profile-edit.png',
+    srcDark: '/img/screens/layouts-profile-dark-edit.png',
+    order: 31,
   },
 })
 

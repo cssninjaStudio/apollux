@@ -3,11 +3,11 @@ definePageMeta({
   title: 'Transfer rules',
   preview: {
     title: 'Transfer rules',
-    description: 'For generic things',
+    description: 'For account management',
     categories: ['layouts', 'lists'],
-    src: '/img/screens/layouts-list-view-1.png',
-    srcDark: '/img/screens/layouts-list-view-1-dark.png',
-    order: 37,
+    src: '/img/screens/layouts-transfer-rules.png',
+    srcDark: '/img/screens/layouts-transfer-rules-dark.png',
+    order: 12,
   },
 })
 

@@ -3,11 +3,11 @@ definePageMeta({
   title: 'Trading',
   preview: {
     title: 'Trading',
-    description: 'For generic things',
+    description: 'For finance and investment',
     categories: ['dashboards'],
-    src: '/img/screens/dashboards-personal-1.png',
-    srcDark: '/img/screens/dashboards-personal-1-dark.png',
-    order: 1,
+    src: '/img/screens/dashboards-trading.png',
+    srcDark: '/img/screens/dashboards-trading-dark.png',
+    order: 7,
   },
 })
 
@@ -226,8 +226,9 @@ function useStockPrice() {
             <div class="relative">
               <BaseCard
                 shape="curved"
+                color="white-contrast"
                 elevated
-                class="flex gap-3 p-5 dark:!bg-muted-950 dark:!border-muted-800"
+                class="flex gap-3 p-5"
               >
                 <div class="shrink-0">
                   <img
@@ -261,8 +262,9 @@ function useStockPrice() {
             <div class="relative">
               <BaseCard
                 shape="curved"
+                color="white-contrast"
                 elevated
-                class="flex gap-3 p-5 dark:!bg-muted-950 dark:!border-muted-800"
+                class="flex gap-3 p-5"
               >
                 <div class="shrink-0">
                   <img
@@ -296,8 +298,9 @@ function useStockPrice() {
             <div class="relative">
               <BaseCard
                 shape="curved"
+                color="white-contrast"
                 elevated
-                class="flex gap-3 p-5 dark:!bg-muted-950 dark:!border-muted-800"
+                class="flex gap-3 p-5"
               >
                 <div class="shrink-0">
                   <img
@@ -334,7 +337,7 @@ function useStockPrice() {
               <div ref="target" class="relative w-full z-10">
                 <button
                   type="button"
-                  class="w-full p-3 click-blur bg-white dark:bg-muted-1000 rounded-full border border-muted-200 dark:border-muted-800"
+                  class="w-full p-3 click-blur bg-white dark:bg-muted-950 rounded-full border border-muted-200 dark:border-muted-800"
                   @click="openDropdown()"
                 >
                   <span class="w-full flex items-center gap-3 text-left">
@@ -368,7 +371,7 @@ function useStockPrice() {
                 >
                   <div
                     v-if="open"
-                    class="absolute top-14 left-0 w-full p-2 rounded-xl border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-1000 shadow-xl shadow-muted-400/10 dark:shadow-muted-800/10"
+                    class="absolute top-14 left-0 w-full p-2 rounded-xl border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-950 shadow-xl shadow-muted-400/10 dark:shadow-muted-800/10"
                   >
                     <!--banks-->
                     <ul>
@@ -401,7 +404,12 @@ function useStockPrice() {
           </div>
           <!-- Table -->
           <div>
-            <BaseCard shape="curved" elevated class="p-8">
+            <BaseCard
+              shape="curved"
+              color="white-contrast"
+              elevated
+              class="p-8"
+            >
               <div class="mb-6 flex items-center justify-between">
                 <BaseHeading
                   as="h3"
@@ -622,7 +630,12 @@ function useStockPrice() {
         <div class="flex flex-col gap-4">
           <!-- Insights -->
           <div class="relative">
-            <BaseCard shape="curved" elevated class="p-8">
+            <BaseCard
+              shape="curved"
+              color="white-contrast"
+              elevated
+              class="p-8"
+            >
               <div class="mb-6 flex items-center gap-2">
                 <ApolluxLogo class="h-9 w-9 text-primary-500" />
                 <div>
@@ -705,7 +718,12 @@ function useStockPrice() {
           </div>
           <!-- Buy shares -->
           <div class="relative">
-            <BaseCard shape="curved" elevated class="p-8">
+            <BaseCard
+              shape="curved"
+              color="white-contrast"
+              elevated
+              class="p-8"
+            >
               <div class="mb-6 flex items-center gap-2">
                 <div>
                   <BaseHeading
@@ -762,7 +780,9 @@ function useStockPrice() {
                     >{{ formatPrice(0.0) }}</BaseParagraph
                   >
                 </div>
-                <hr class="bg-muted-200 dark:bg-muted-800" />
+                <hr
+                  class="bg-transprent border-t border-muted-200 dark:border-muted-800"
+                />
                 <div class="flex items-center justify-between">
                   <BaseParagraph size="sm" class="text-muted-400"
                     >Estimated cost</BaseParagraph
@@ -785,7 +805,8 @@ function useStockPrice() {
           <!--Learn more-->
           <BaseCard
             shape="curved"
-            class="relative flex flex-col sm:flex-row gap-4 !bg-muted-100 dark:!bg-muted-950 dark:!border-muted-800"
+            color="muted-contrast"
+            class="relative flex flex-col sm:flex-row gap-4"
           >
             <div class="flex flex-col p-6">
               <div

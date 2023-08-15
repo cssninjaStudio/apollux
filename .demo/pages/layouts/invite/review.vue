@@ -6,10 +6,10 @@ definePageMeta({
   layout: 'empty',
   preview: {
     title: 'Invite - Step 3',
-    description: 'For generic things',
-    categories: ['layouts', 'lists'],
-    src: '/img/screens/layouts-list-view-1.png',
-    srcDark: '/img/screens/layouts-list-view-1-dark.png',
+    description: 'For iviting people',
+    categories: ['layouts', 'wizards', 'forms'],
+    src: '/img/screens/wizards-invite-3.png',
+    srcDark: '/img/screens/wizards-invite-3-dark.png',
     order: 37,
   },
 })
@@ -50,11 +50,7 @@ useHead({
 
       <div class="w-full max-w-md">
         <div class="w-full mb-6">
-          <BaseCard
-            shape="curved"
-            elevated
-            class="dark:!bg-muted-950 dark:!border-muted-800 p-8"
-          >
+          <BaseCard shape="curved" color="white-contrast" elevated class="p-8">
             <div class="flex items-center gap-3 mb-6">
               <BaseAvatar
                 :alt="request?.firstName"

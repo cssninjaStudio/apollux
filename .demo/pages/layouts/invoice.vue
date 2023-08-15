@@ -3,11 +3,11 @@ definePageMeta({
   title: 'Invoice',
   preview: {
     title: 'Invoice',
-    description: 'For generic things',
-    categories: ['dashboards'],
-    src: '/img/screens/dashboards-personal-1.png',
-    srcDark: '/img/screens/dashboards-personal-1-dark.png',
-    order: 1,
+    description: 'For services and accounting',
+    categories: ['layouts'],
+    src: '/img/screens/layouts-invoice.png',
+    srcDark: '/img/screens/layouts-invoice-dark.png',
+    order: 8,
   },
 })
 
@@ -30,11 +30,7 @@ const itemSubtotal = computed(() =>
     <div class="grid grid-cols-12 gap-6">
       <div class="col-span-12 ltablet:col-span-8 lg:col-span-8">
         <div class="flex flex-col gap-6">
-          <BaseCard
-            shape="curved"
-            elevated
-            class="p-6 dark:!bg-muted-950 dark:!border-muted-800"
-          >
+          <BaseCard shape="curved" color="white-contrast" elevated class="p-6">
             <div class="flex items-center gap-4 mb-8">
               <BaseAvatar
                 src="/img/logos/companies/amazon.svg"
@@ -53,7 +49,7 @@ const itemSubtotal = computed(() =>
                 >
                   Amazon
                 </BaseHeading>
-                <BaseParagraph size="sm" class="text-muted-400 line-clamp-1">
+                <BaseParagraph size="xs" class="text-muted-400 line-clamp-1">
                   Ecommerce Company
                 </BaseParagraph>
               </div>
@@ -384,11 +380,7 @@ const itemSubtotal = computed(() =>
       <div class="col-span-12 ltablet:col-span-4 lg:col-span-4">
         <div class="flex flex-col gap-6">
           <!--Customer-->
-          <BaseCard
-            shape="curved"
-            elevated
-            class="p-6 dark:!bg-muted-950 dark:!border-muted-800"
-          >
+          <BaseCard shape="curved" color="white-contrast" elevated class="p-6">
             <div
               class="flex items-center gap-4 mb-6 pb-8 border-b border-muted-200 dark:border-muted-800"
             >
@@ -439,11 +431,7 @@ const itemSubtotal = computed(() =>
             </div>
           </BaseCard>
           <!--Amount-->
-          <BaseCard
-            shape="curved"
-            elevated
-            class="p-6 dark:!bg-muted-950 dark:!border-muted-800"
-          >
+          <BaseCard shape="curved" color="white-contrast" elevated class="p-6">
             <div class="mb-6">
               <BaseHeading
                 weight="medium"
@@ -469,7 +457,7 @@ const itemSubtotal = computed(() =>
                   (Tax incl.)
                 </BaseText>
               </BaseHeading>
-              <BaseTag shape="full" flavor="pastel" color="danger">
+              <BaseTag shape="full" flavor="pastel" color="muted">
                 Due on Jul 11, 2023
               </BaseTag>
             </div>
@@ -483,11 +471,7 @@ const itemSubtotal = computed(() =>
             </div>
           </BaseCard>
           <!--Actions-->
-          <BaseCard
-            shape="curved"
-            elevated
-            class="p-6 dark:!bg-muted-950 dark:!border-muted-800"
-          >
+          <BaseCard shape="curved" color="white-contrast" elevated class="p-6">
             <div class="flex gap-4">
               <BaseButton shape="curved" class="w-full">
                 <Icon name="lucide:eye" class="w-4 h-4" />

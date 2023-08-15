@@ -4,6 +4,8 @@
 
     <BaseButtonAction shape="rounded" color="primary">Action</BaseButtonAction>
 
+    <BaseButtonAction shape="smooth" color="primary">Action</BaseButtonAction>
+
     <BaseButtonAction shape="curved" color="primary">Action</BaseButtonAction>
 
     <BaseButtonAction shape="full" color="primary">Action</BaseButtonAction>

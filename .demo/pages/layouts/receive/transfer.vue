@@ -6,11 +6,11 @@ definePageMeta({
   layout: 'empty',
   preview: {
     title: 'Receive - Step 2',
-    description: 'For generic things',
+    description: 'For receiving payments',
     categories: ['layouts', 'lists'],
-    src: '/img/screens/layouts-list-view-1.png',
-    srcDark: '/img/screens/layouts-list-view-1-dark.png',
-    order: 37,
+    src: '/img/screens/wizards-receive-2.png',
+    srcDark: '/img/screens/wizards-receive-2-dark.png',
+    order: 16,
   },
 })
 
@@ -118,7 +118,7 @@ function setAccount(account: any) {
           </BaseHeading>
 
           <!--Placeholder-->
-          <div class="p-4 text-center bg-muted-100 dark:bg-muted-1000">
+          <div class="p-4 text-center bg-muted-100 dark:bg-muted-950">
             <div class="w-full max-w-lg mx-auto">
               <BaseHeading
                 as="h3"
@@ -158,11 +158,11 @@ function setAccount(account: any) {
           <div ref="target" class="relative w-full z-10">
             <button
               type="button"
-              class="w-full p-4 click-blur bg-white dark:bg-muted-1000 rounded-xl border border-muted-200 dark:border-muted-800"
+              class="w-full p-4 click-blur bg-white dark:bg-muted-950 rounded-xl border border-muted-200 dark:border-muted-800"
               @click="openDropdown()"
             >
               <span class="w-full flex items-center gap-3 text-left">
-                <ApolluxLogo class="w-8 h-8 dark:invert" />
+                <ApolluxLogo class="w-8 h-8 text-primary-500" />
                 <div>
                   <BaseText
                     size="sm"
@@ -194,17 +194,19 @@ function setAccount(account: any) {
             >
               <div
                 v-if="open"
-                class="absolute top-20 left-0 w-full p-2 rounded-xl border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-1000 shadow-xl shadow-muted-400/10 dark:shadow-muted-800/10"
+                class="absolute top-20 left-0 w-full p-2 rounded-xl border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-950 shadow-xl shadow-muted-400/10 dark:shadow-muted-800/10"
               >
                 <!--Accounts-->
                 <ul>
                   <li v-for="account in accounts" :key="account.id">
                     <button
                       type="button"
-                      class="w-full flex items-center gap-3 text-left py-2 px-4 rounded-lg hover:bg-muted-100 dark:hover:bg-muted-900 transition-colors duration-300"
+                      class="group w-full flex items-center gap-3 text-left py-2 px-4 rounded-lg hover:bg-muted-100 dark:hover:bg-muted-900 transition-colors duration-300"
                       @click="setAccount(account)"
                     >
-                      <ApolluxLogo class="w-8 h-8 dark:invert" />
+                      <ApolluxLogo
+                        class="w-8 h-8 text-muted-300 dark:text-muted-700 group-hover:text-primary-500 transition-colors duration-300"
+                      />
                       <span class="block">
                         <span
                           class="block font-heading text-sm text-muted-800 dark:text-muted-200 capitalize"
@@ -302,7 +304,7 @@ function setAccount(account: any) {
           <div ref="target" class="relative w-full z-10">
             <button
               type="button"
-              class="w-full p-4 click-blur bg-white dark:bg-muted-1000 rounded-xl border border-muted-200 dark:border-muted-800"
+              class="w-full p-4 click-blur bg-white dark:bg-muted-950 rounded-xl border border-muted-200 dark:border-muted-800"
               @click="openDropdown()"
             >
               <span class="w-full flex items-center gap-3 text-left">
@@ -338,7 +340,7 @@ function setAccount(account: any) {
             >
               <div
                 v-if="open"
-                class="absolute top-20 left-0 w-full p-2 rounded-xl border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-1000 shadow-xl shadow-muted-400/10 dark:shadow-muted-800/10"
+                class="absolute top-20 left-0 w-full p-2 rounded-xl border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-950 shadow-xl shadow-muted-400/10 dark:shadow-muted-800/10"
               >
                 <!--Accounts-->
                 <ul>
@@ -404,7 +406,7 @@ function setAccount(account: any) {
         <div ref="target" class="relative w-full z-10">
           <button
             type="button"
-            class="w-full p-4 click-blur bg-white dark:bg-muted-1000 rounded-xl border border-muted-200 dark:border-muted-800"
+            class="w-full p-4 click-blur bg-white dark:bg-muted-950 rounded-xl border border-muted-200 dark:border-muted-800"
             @click="openDropdown()"
           >
             <span class="w-full flex items-center gap-3 text-left">
@@ -440,7 +442,7 @@ function setAccount(account: any) {
           >
             <div
               v-if="open"
-              class="absolute top-20 left-0 w-full p-2 rounded-xl border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-1000 shadow-xl shadow-muted-400/10 dark:shadow-muted-800/10"
+              class="absolute top-20 left-0 w-full p-2 rounded-xl border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-950 shadow-xl shadow-muted-400/10 dark:shadow-muted-800/10"
             >
               <!--Accounts-->
               <ul>

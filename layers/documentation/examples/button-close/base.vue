@@ -4,6 +4,8 @@
 
     <BaseButtonClose shape="rounded" />
 
+    <BaseButtonClose shape="smooth" />
+
     <BaseButtonClose shape="curved" />
 
     <BaseButtonClose shape="full" />

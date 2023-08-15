@@ -7,11 +7,11 @@ definePageMeta({
   layout: 'empty',
   title: 'Login',
   preview: {
-    title: 'Login 2',
+    title: 'Login form',
     description: 'For authentication and sign in',
     categories: ['layouts', 'authentication'],
-    src: '/img/screens/auth-login-2.png',
-    srcDark: '/img/screens/auth-login-2-dark.png',
+    src: '/img/screens/auth-login.png',
+    srcDark: '/img/screens/auth-login-dark.png',
     order: 97,
   },
 })

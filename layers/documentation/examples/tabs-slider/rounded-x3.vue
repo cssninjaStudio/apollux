@@ -1,7 +1,7 @@
 <template>
   <div class="w-full max-w-sm">
     <BaseTabSlider
-      :size="3"
+      :length="3"
       selected="team"
       :tabs="[
         { label: 'Team', value: 'team' },

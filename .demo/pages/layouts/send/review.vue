@@ -6,11 +6,11 @@ definePageMeta({
   layout: 'empty',
   preview: {
     title: 'Send - Step 6',
-    description: 'For generic things',
-    categories: ['layouts', 'lists'],
-    src: '/img/screens/layouts-list-view-1.png',
-    srcDark: '/img/screens/layouts-list-view-1-dark.png',
-    order: 37,
+    description: 'For sending payments to people',
+    categories: ['layouts', 'wizards', 'forms'],
+    src: '/img/screens/wizards-send-6.png',
+    srcDark: '/img/screens/wizards-send-6-dark.png',
+    order: 23,
   },
 })
 
@@ -178,10 +178,10 @@ useHead({
         <div>
           <p class="font-heading text-xs text-muted-400 mb-1">Transfer from</p>
           <div
-            class="w-full p-4 bg-white dark:bg-muted-1000 rounded-xl border border-muted-200 dark:border-muted-800"
+            class="w-full p-4 bg-white dark:bg-muted-950 rounded-xl border border-muted-200 dark:border-muted-800"
           >
             <div class="w-full flex items-center gap-3 text-left">
-              <ApolluxLogo class="w-8 h-8 dark:invert" />
+              <ApolluxLogo class="w-8 h-8 text-primary-500" />
               <div>
                 <BaseText
                   size="sm"

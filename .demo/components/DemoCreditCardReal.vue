@@ -10,6 +10,7 @@ const props = withDefaults(
     expiryMonth?: number | string
     cvc?: number | string
     status?: 'active' | 'disabled' | 'expired' | 'locked'
+    contrast?: 'low' | 'high'
   }>(),
   {
     brand: 'mastercard',
@@ -19,13 +20,18 @@ const props = withDefaults(
     expiryMonth: '••',
     cvc: '•••',
     status: 'active',
+    contrast: 'low',
   },
 )
 </script>
 
 <template>
   <div
-    class="dark:bg-muted-900 border-muted-200 dark:border-muted-800 shadow-muted-400/10 dark:shadow-muted-800/10 relative mx-auto h-[200px] w-full max-w-[315px] rounded-xl border bg-white p-6 shadow-xl"
+    class="border-muted-200 dark:border-muted-800 shadow-muted-400/10 dark:shadow-muted-800/10 relative mx-auto h-[200px] w-full max-w-[315px] rounded-xl border bg-white p-6 shadow-xl"
+    :class="[
+      props.contrast === 'high' && 'dark:bg-muted-950',
+      props.contrast === 'low' && 'dark:bg-muted-900',
+    ]"
   >
     <div class="flex h-full flex-col gap-3">
       <div class="flex items-center gap-2">

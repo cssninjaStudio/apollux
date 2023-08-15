@@ -7,11 +7,11 @@ definePageMeta({
   title: 'Edit Company',
   preview: {
     title: 'Edit Company',
-    description: 'For forms and input fields',
+    description: 'For editing company info',
     categories: ['layouts', 'forms'],
-    src: '/img/screens/layouts-form-1.png',
-    srcDark: '/img/screens/layouts-form-1-dark.png',
-    order: 47,
+    src: '/img/screens/layouts-company-edit.png',
+    srcDark: '/img/screens/layouts-company-edit-dark.png',
+    order: 33,
   },
 })
 

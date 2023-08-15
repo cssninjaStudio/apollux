@@ -6,10 +6,10 @@ definePageMeta({
   layout: 'empty',
   preview: {
     title: 'Invite - Step 2',
-    description: 'For generic things',
-    categories: ['layouts', 'lists'],
-    src: '/img/screens/layouts-list-view-1.png',
-    srcDark: '/img/screens/layouts-list-view-1-dark.png',
+    description: 'For iviting people',
+    categories: ['layouts', 'wizards', 'forms'],
+    src: '/img/screens/wizards-invite-2.png',
+    srcDark: '/img/screens/wizards-invite-2-dark.png',
     order: 37,
   },
 })
@@ -55,7 +55,7 @@ useHead({
           name="role_permissions"
         >
           <div
-            class="absolute top-1/2 -translate-y-1/2 left-6 w-6 h-6 rounded-full flex items-center justify-center peer-checked:child:scale-1 peer-not-checked:child:scale-0 bg-muted-100 text-muted-100 dark:bg-muted-800 dark:text-muted-800 peer-checked:text-primary-500"
+            class="absolute top-1/2 -translate-y-1/2 start-[1.35rem] w-6 h-6 rounded-full flex items-center justify-center peer-checked:child:scale-1 peer-not-checked:child:scale-0 bg-muted-100 text-muted-100 dark:bg-muted-800 dark:text-muted-800 peer-checked:text-primary-500"
           >
             <div
               class="w-3 h-3 rounded-full bg-current transition-colors duration-300"
@@ -90,7 +90,7 @@ useHead({
           name="role_permissions"
         >
           <div
-            class="absolute top-1/2 -translate-y-1/2 left-6 w-6 h-6 rounded-full flex items-center justify-center peer-checked:child:scale-1 peer-not-checked:child:scale-0 bg-muted-100 text-muted-100 dark:bg-muted-800 dark:text-muted-800 peer-checked:text-primary-500"
+            class="absolute top-1/2 -translate-y-1/2 start-[1.35rem] w-6 h-6 rounded-full flex items-center justify-center peer-checked:child:scale-1 peer-not-checked:child:scale-0 bg-muted-100 text-muted-100 dark:bg-muted-800 dark:text-muted-800 peer-checked:text-primary-500"
           >
             <div
               class="w-3 h-3 rounded-full bg-current transition-colors duration-300"
@@ -125,7 +125,7 @@ useHead({
           name="role_permissions"
         >
           <div
-            class="absolute top-1/2 -translate-y-1/2 left-6 w-6 h-6 rounded-full flex items-center justify-center peer-checked:child:scale-1 peer-not-checked:child:scale-0 bg-muted-100 text-muted-100 dark:bg-muted-800 dark:text-muted-800 peer-checked:text-primary-500"
+            class="absolute top-1/2 -translate-y-1/2 start-[1.35rem] w-6 h-6 rounded-full flex items-center justify-center peer-checked:child:scale-1 peer-not-checked:child:scale-0 bg-muted-100 text-muted-100 dark:bg-muted-800 dark:text-muted-800 peer-checked:text-primary-500"
           >
             <div
               class="w-3 h-3 rounded-full bg-current transition-colors duration-300"
@@ -160,7 +160,7 @@ useHead({
           name="role_permissions"
         >
           <div
-            class="absolute top-1/2 -translate-y-1/2 left-6 w-6 h-6 rounded-full flex items-center justify-center peer-checked:child:scale-1 peer-not-checked:child:scale-0 bg-muted-100 text-muted-100 dark:bg-muted-800 dark:text-muted-800 peer-checked:text-primary-500"
+            class="absolute top-1/2 -translate-y-1/2 start-[1.35rem] w-6 h-6 rounded-full flex items-center justify-center peer-checked:child:scale-1 peer-not-checked:child:scale-0 bg-muted-100 text-muted-100 dark:bg-muted-800 dark:text-muted-800 peer-checked:text-primary-500"
           >
             <div
               class="w-3 h-3 rounded-full bg-current transition-colors duration-300"

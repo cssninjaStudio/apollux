@@ -1,5 +1,5 @@
 <template>
-  <div class="grid gap-6 md:max-w-lg md:grid-cols-2">
+  <div class="grid gap-x-6 gap-y-10 md:max-w-lg md:grid-cols-2">
     <BaseInputFile v-model="first" shape="straight" label="Straight input" />
 
     <BaseInputFile v-model="second" shape="rounded" label="Rounded input" />

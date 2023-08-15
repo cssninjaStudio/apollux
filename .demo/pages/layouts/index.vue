@@ -3,11 +3,11 @@ definePageMeta({
   title: 'Transactions',
   preview: {
     title: 'Transactions',
-    description: 'For generic things',
+    description: 'For transactions history',
     categories: ['layouts', 'lists'],
-    src: '/img/screens/layouts-list-view-1.png',
-    srcDark: '/img/screens/layouts-list-view-1-dark.png',
-    order: 37,
+    src: '/img/screens/layouts-transactions.png',
+    srcDark: '/img/screens/layouts-transactions-dark.png',
+    order: 9,
   },
 })
 

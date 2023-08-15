@@ -3,10 +3,10 @@ definePageMeta({
   title: 'Integrations',
   preview: {
     title: 'Integrations',
-    description: 'For generic things',
+    description: 'For software integrations',
     categories: ['layouts', 'lists'],
-    src: '/img/screens/layouts-list-view-1.png',
-    srcDark: '/img/screens/layouts-list-view-1-dark.png',
+    src: '/img/screens/layouts-integrations.png',
+    srcDark: '/img/screens/layouts-integrations-dark.png',
     order: 37,
   },
 })
