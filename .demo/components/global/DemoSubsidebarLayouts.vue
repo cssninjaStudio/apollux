@@ -1,12 +1,56 @@
 <script setup lang="ts">
 const navigation = [
   {
+    name: 'Main Dashboard',
+    to: '/dashboards',
+  },
+  {
+    name: 'Personal Board',
+    to: '/dashboards/personal',
+  },
+  {
+    name: 'Tracking Board',
+    to: '/dashboards/tracking',
+  },
+  {
+    name: 'Trading Board',
+    to: '/dashboards/trading',
+  },
+  {
+    name: 'Overview Board',
+    to: '/dashboards/overview',
+  },
+  {
+    name: 'Quickview Board',
+    to: '/dashboards/quickview',
+  },
+  {
+    divider: true,
+  },
+  {
     name: 'Transactions',
     children: [
       {
         name: 'Transactions list',
         icon: 'ph:wallet-duotone',
         to: '/layouts',
+        exact: true,
+      },
+    ],
+  },
+  {
+    name: 'Cards',
+    children: [
+      {
+        name: 'Cards list',
+        icon: 'ph:credit-card-duotone',
+        to: '/layouts/cards',
+        exact: true,
+      },
+      {
+        name: 'New card',
+        icon: 'ph:credit-card-duotone',
+        to: '/layouts/cards/new',
         exact: true,
       },
     ],
@@ -60,9 +104,98 @@ const navigation = [
         to: '/layouts/documents',
       },
       {
+        name: 'Downloads',
+        icon: 'ph:download-duotone',
+        to: '/layouts/download',
+      },
+      {
+        name: 'Invoice',
+        icon: 'ph:note-duotone',
+        to: '/layouts/invoice',
+      },
+      {
         name: 'Offers',
         icon: 'ph:gift-duotone',
         to: '/layouts/offers',
+      },
+    ],
+  },
+  {
+    name: 'Subpages',
+    children: [
+      {
+        name: 'Investments',
+        icon: 'ph:rocket-duotone',
+        to: '/layouts/invest',
+      },
+      {
+        name: 'Vault',
+        icon: 'ph:shield-check-duotone',
+        to: '/layouts/vault',
+      },
+      {
+        name: 'Integrations',
+        icon: 'ph:lightning-duotone',
+        to: '/layouts/integrations',
+      },
+      {
+        name: 'Members',
+        icon: 'ph:users-duotone',
+        to: '/layouts/members',
+      },
+      {
+        name: 'Profile',
+        icon: 'ph:user-duotone',
+        to: '/layouts/profile',
+      },
+      {
+        name: 'Edit profile',
+        icon: 'ph:user-duotone',
+        to: '/layouts/profile-edit',
+      },
+      {
+        name: 'Company',
+        icon: 'ph:buildings-duotone',
+        to: '/layouts/company',
+      },
+      {
+        name: 'Edit company',
+        icon: 'ph:buildings-duotone',
+        to: '/layouts/company-edit',
+      },
+      {
+        name: 'New contact',
+        icon: 'ph:user-plus-duotone',
+        to: '/layouts/contacts/create',
+      },
+    ],
+  },
+  {
+    name: 'Wizards',
+    children: [
+      {
+        name: 'Send money',
+        icon: 'ph:arrow-right-duotone',
+        to: '/layouts/send',
+        exact: true,
+      },
+      {
+        name: 'Receive money',
+        icon: 'ph:arrow-left-duotone',
+        to: '/layouts/receive',
+        exact: true,
+      },
+      {
+        name: 'Invite members',
+        icon: 'ph:envelope-duotone',
+        to: '/layouts/invite',
+        exact: true,
+      },
+      {
+        name: 'New card',
+        icon: 'ph:credit-card-duotone',
+        to: '/layouts/cards/new',
+        exact: true,
       },
     ],
   },

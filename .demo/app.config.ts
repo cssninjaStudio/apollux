@@ -68,13 +68,7 @@ export default defineAppConfig({
         },
         items: [
           {
-            title: 'Dashboards',
-            icon: { name: 'ph:sidebar-duotone', class: 'w-5 h-5' },
-            subsidebar: { component: 'DemoSubsidebarDashboards' },
-            activePath: '/dashboards',
-          },
-          {
-            title: 'Layouts',
+            title: 'Prebuilt pages',
             icon: { name: 'ph:app-window-duotone', class: 'w-5 h-5' },
             subsidebar: { component: 'DemoSubsidebarLayouts' },
             activePath: '/layouts',
