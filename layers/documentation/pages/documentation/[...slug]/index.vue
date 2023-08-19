@@ -115,7 +115,7 @@ const metaKey = useMetaKey()
 
 <template>
   <div>
-    <ApolluxSidebarLayout>
+    <ApolluxSidebarLayout expanded>
       <div class="flex items-center justify-between">
         <BaseBreadcrumb :items="breadcrumb" />
         <button

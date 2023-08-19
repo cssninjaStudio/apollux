@@ -3,11 +3,11 @@ definePageMeta({
   title: 'Members',
   preview: {
     title: 'Members',
-    description: 'For generic things',
+    description: 'For member management',
     categories: ['layouts', 'lists'],
     src: '/img/screens/layouts-list-view-1.png',
     srcDark: '/img/screens/layouts-list-view-1-dark.png',
-    order: 37,
+    order: 36,
   },
 })
 
@@ -39,7 +39,7 @@ const { data, pending, error, refresh } = await useFetch('/api/members', {
   query,
 })
 
-const currentMember = ref(data.value?.data[0])
+const currentMember = ref()
 </script>
 
 <template>
@@ -98,7 +98,20 @@ const currentMember = ref(data.value?.data[0])
       </div>
       <!--Slug content-->
       <div class="col-span-12 ltablet:col-span-7 lg:col-span-7">
-        <RouterView />
+        <RouterView v-if="currentMember !== undefined" />
+        <BaseCard v-else color="muted-contrast" shape="curved">
+          <div class="p-6">
+            <div class="text-center py-10">
+              <BaseHeading weight="medium" size="xl" lead="none" class="mb-1">
+                Nothing to show
+              </BaseHeading>
+              <BaseParagraph size="sm" class="text-muted-400 max-w-xs mx-auto">
+                No member selected. Select one your organization members to see
+                more details.
+              </BaseParagraph>
+            </div>
+          </div>
+        </BaseCard>
       </div>
     </div>
   </div>

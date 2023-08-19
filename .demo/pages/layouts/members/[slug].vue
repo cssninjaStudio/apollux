@@ -32,7 +32,7 @@ if (!data.value?.member) {
 
 <template>
   <div>
-    <BaseCard shape="curved" class="dark:!bg-muted-950">
+    <BaseCard color="white-contrast" shape="curved">
       <div
         class="flex gap-4 p-6 sm:p-10 border-b border-muted-200 dark:border-muted-800"
       >

@@ -59,7 +59,7 @@ const codeTailwind = [
       <BaseHeading size="md" weight="medium" class="uppercase">
         <span>Welcome to</span>
       </BaseHeading>
-      <ApolluxLogoText class="text-primary-500 mx-auto h-8" />
+      <ApolluxLogoText class="text-primary-500 mx-auto h-4" />
     </div>
     <BaseCard shape="curved" class="dark:!bg-muted-900 mb-4 p-8 sm:mb-6">
       <div

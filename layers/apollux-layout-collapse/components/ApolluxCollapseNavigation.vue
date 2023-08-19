@@ -7,7 +7,7 @@ const app = useAppConfig()
 
 <template>
   <div
-    class="dark:bg-muted-950 border-muted-200 dark:border-muted-800 bg-muted-100 fixed left-0 top-0 z-[60] flex h-full flex-col border-r transition-all duration-300"
+    class="dark:bg-muted-950 border-muted-200 dark:border-muted-800 bg-muted-100 fixed start-0 top-0 z-[60] flex h-full flex-col border-r transition-all duration-300"
     :class="[
       !isOpen ? 'w-[80px]' : 'w-[280px]',
       isMobileOpen

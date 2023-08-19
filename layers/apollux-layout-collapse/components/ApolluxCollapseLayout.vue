@@ -18,7 +18,7 @@ const props = withDefaults(
 )
 
 const app = useAppConfig()
-const { isOpen } = useCollapse()
+const { isOpen, isMobileOpen, toggle } = useCollapse()
 
 const collapseEnabled = computed(() => {
   return (
@@ -69,6 +69,16 @@ const mainClass = computed(() => {
   <div class="dark:bg-muted-900 bg-white pb-20">
     <slot name="navigation">
       <ApolluxCollapseNavigation v-if="collapseEnabled" />
+      <div
+        role="button"
+        class="bg-muted-800 dark:bg-muted-900 fixed start-0 top-0 z-[59] block h-full w-full transition-opacity duration-300 lg:hidden"
+        :class="
+          isMobileOpen
+            ? 'opacity-50 dark:opacity-75'
+            : 'opacity-0 pointer-events-none'
+        "
+        @click="toggle"
+      ></div>
     </slot>
 
     <div :class="mainClass">

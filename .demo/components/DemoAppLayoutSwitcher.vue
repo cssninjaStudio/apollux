@@ -113,16 +113,16 @@ const primaryPresets = [
     class: 'bg-yellow-500',
   },
   {
-    name: 'orange',
-    label: 'Orange',
-    shades: colors.orange,
-    class: 'bg-orange-500',
+    name: 'stone',
+    label: 'Stone',
+    shades: colors.stone,
+    class: 'bg-stone-500',
   },
   {
-    name: 'mauve',
+    name: 'slate',
     label: 'Custom',
-    shades: mauve,
-    class: 'bg-mauve-500',
+    shades: colors.slate,
+    class: 'bg-slate-500',
   },
 ]
 </script>
