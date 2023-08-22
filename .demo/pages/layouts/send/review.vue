@@ -67,7 +67,7 @@ useHead({
             </BaseHeading>
           </div>
           <!--Amount-->
-          <div class="flex-1 text-right">
+          <div class="flex-1 text-end">
             <BaseParagraph size="xs" class="text-muted-400 mb-1">
               Routing number
             </BaseParagraph>
@@ -180,7 +180,7 @@ useHead({
           <div
             class="w-full p-4 bg-white dark:bg-muted-950 rounded-xl border border-muted-200 dark:border-muted-800"
           >
-            <div class="w-full flex items-center gap-3 text-left">
+            <div class="w-full flex items-center gap-3 text-start">
               <ApolluxLogo class="w-8 h-8 text-primary-500" />
               <div>
                 <BaseText

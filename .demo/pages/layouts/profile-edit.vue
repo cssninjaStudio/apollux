@@ -658,7 +658,7 @@ const onSubmit = handleSubmit(
                                     </div>
 
                                     <div
-                                      class="child text-muted-300 absolute right-2 top-2 ms-auto"
+                                      class="child text-muted-300 absolute end-2 top-2 ms-auto"
                                     >
                                       <div
                                         class="h-2 w-2 rounded-full bg-current"
@@ -710,7 +710,7 @@ const onSubmit = handleSubmit(
                                     </div>
 
                                     <div
-                                      class="child text-muted-300 absolute right-2 top-2 ms-auto"
+                                      class="child text-muted-300 absolute end-2 top-2 ms-auto"
                                     >
                                       <div
                                         class="h-2 w-2 rounded-full bg-current"
@@ -762,7 +762,7 @@ const onSubmit = handleSubmit(
                                     </div>
 
                                     <div
-                                      class="child text-muted-300 absolute right-2 top-2 ms-auto"
+                                      class="child text-muted-300 absolute end-2 top-2 ms-auto"
                                     >
                                       <div
                                         class="h-2 w-2 rounded-full bg-current"
@@ -1083,7 +1083,7 @@ const onSubmit = handleSubmit(
                   </ApolluxFormGroup>
 
                   <div
-                    class="mt-5 flex flex-col-reverse text-right md:block md:space-x-3 gap-y-4"
+                    class="mt-5 flex flex-col-reverse text-end md:block md:space-x-3 gap-y-4"
                   >
                     <BaseButton
                       to="/layouts/profile"

@@ -128,7 +128,7 @@ const dialogClasses = computed(() => {
               leave-to="opacity-0 scale-95"
             >
               <DialogPanel
-                class="dark:bg-muted-800 w-full bg-white text-left align-middle shadow-xl transition-all"
+                class="dark:bg-muted-800 w-full bg-white text-start align-middle shadow-xl transition-all"
                 :class="dialogClasses"
               >
                 <slot name="header"></slot>

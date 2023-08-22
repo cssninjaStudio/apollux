@@ -95,7 +95,7 @@ definePageMeta({
             </div>
             <div class="relative shrink-0 min-h-[180px] min-w-[160px]">
               <div
-                class="absolute bottom-0 right-0 sm:-right-16 min-w-[250px] max-w-[250px] sm:min-w-[220px]"
+                class="absolute bottom-0 end-0 sm:-end-16 min-w-[250px] max-w-[250px] sm:min-w-[220px]"
               >
                 <VectorIllustrationCalendar class="text-primary-500" />
               </div>

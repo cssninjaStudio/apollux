@@ -55,7 +55,7 @@ useHead({
           name="payment_method"
         >
           <div
-            class="absolute top-1/2 -translate-y-1/2 left-6 w-6 h-6 rounded-full flex items-center justify-center peer-checked:child:scale-1 peer-not-checked:child:scale-0 bg-muted-100 text-muted-100 dark:bg-muted-800 dark:text-muted-800 peer-checked:text-primary-500"
+            class="absolute top-1/2 -translate-y-1/2 start-6 w-6 h-6 rounded-full flex items-center justify-center peer-checked:child:scale-1 peer-not-checked:child:scale-0 bg-muted-100 text-muted-100 dark:bg-muted-800 dark:text-muted-800 peer-checked:text-primary-500"
           >
             <div
               class="w-3 h-3 rounded-full bg-current transition-colors duration-300"
@@ -94,7 +94,7 @@ useHead({
           name="payment_method"
         >
           <div
-            class="absolute top-1/2 -translate-y-1/2 left-6 w-6 h-6 rounded-full flex items-center justify-center peer-checked:child:scale-1 peer-not-checked:child:scale-0 bg-muted-100 text-muted-100 dark:bg-muted-800 dark:text-muted-800 peer-checked:text-primary-500"
+            class="absolute top-1/2 -translate-y-1/2 start-6 w-6 h-6 rounded-full flex items-center justify-center peer-checked:child:scale-1 peer-not-checked:child:scale-0 bg-muted-100 text-muted-100 dark:bg-muted-800 dark:text-muted-800 peer-checked:text-primary-500"
           >
             <div
               class="w-3 h-3 rounded-full bg-current transition-colors duration-300"
@@ -133,7 +133,7 @@ useHead({
           name="payment_method"
         >
           <div
-            class="absolute top-1/2 -translate-y-1/2 left-6 w-6 h-6 rounded-full flex items-center justify-center peer-checked:child:scale-1 peer-not-checked:child:scale-0 bg-muted-100 text-muted-100 dark:bg-muted-800 dark:text-muted-800 peer-checked:text-primary-500"
+            class="absolute top-1/2 -translate-y-1/2 start-6 w-6 h-6 rounded-full flex items-center justify-center peer-checked:child:scale-1 peer-not-checked:child:scale-0 bg-muted-100 text-muted-100 dark:bg-muted-800 dark:text-muted-800 peer-checked:text-primary-500"
           >
             <div
               class="w-3 h-3 rounded-full bg-current transition-colors duration-300"

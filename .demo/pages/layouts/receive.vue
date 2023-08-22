@@ -127,16 +127,16 @@ useHead({
               >
                 <!--Progress-->
                 <div
-                  class="absolute xs:top-1.5 top-2 xs:inset-x-0 left-2 md:-translate-x-1/2 mx-auto w-[calc(100%_-_1rem)] h-1 md:h-[calc(100%_-_1rem)] md:w-1 bg-muted-200 dark:bg-muted-700 z-0"
+                  class="absolute xs:top-1.5 top-2 xs:inset-x-0 start-2 md:-translate-x-1/2 mx-auto w-[calc(100%_-_1rem)] h-1 md:h-[calc(100%_-_1rem)] md:w-1 bg-muted-200 dark:bg-muted-700 z-0"
                 ></div>
                 <!--Vertical progress-->
                 <div
-                  class="hidden md:block absolute top-2 left-2 -translate-x-1/2 mx-auto w-0.5 rounded-full bg-primary-500 z-10 transition-all duration-300"
+                  class="hidden md:block absolute top-2 start-2 -translate-x-1/2 mx-auto w-0.5 rounded-full bg-primary-500 z-10 transition-all duration-300"
                   :style="`height: calc(${progress}% - 0.5rem);`"
                 ></div>
                 <!--Horizontal progress (mobile)-->
                 <div
-                  class="md:hidden absolute top-[7px] left-1.5 h-0.5 rounded-full bg-primary-500 z-10 transition-all duration-300"
+                  class="md:hidden absolute top-[7px] start-1.5 h-0.5 rounded-full bg-primary-500 z-10 transition-all duration-300"
                   :style="`width: calc(${progress}% - 0.5rem);`"
                 ></div>
                 <!--Nodes-->

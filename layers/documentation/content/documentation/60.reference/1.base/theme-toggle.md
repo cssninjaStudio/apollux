@@ -2,6 +2,7 @@
 title: BaseThemeToggle
 components:
   - BaseThemeToggle
+  - BaseThemeSwitch
 description: Apollux ships with a ready to use theme switcher that you can include anywhere to toggle between light and dark mode.
 icon:
   src: /img/illustrations/components/focus-loop-icon.svg

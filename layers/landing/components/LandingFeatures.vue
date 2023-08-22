@@ -42,12 +42,12 @@
           JS.
         </LandingFeaturesTile>
         <LandingFeaturesTile title="Vite" icon="simple-icons:vite">
-          Vite is a next generation frontend tooling that significantly improves
-          frontend development.
+          Vite is a next generation tool that significantly improves frontend
+          development.
         </LandingFeaturesTile>
         <LandingFeaturesTile title="Node LTS" icon="teenyicons:nodejs-solid">
-          Node 18 is one of the latest versions of Node.js, a powerful
-          javascript server engine.
+          Node 18 is one of the latest versions of Node.js, a powerful js server
+          engine.
         </LandingFeaturesTile>
         <LandingFeaturesTile title="Pnpm" icon="file-icons:pnpm">
           Pnpm is a fast, disk space efficient package manager for the npm and

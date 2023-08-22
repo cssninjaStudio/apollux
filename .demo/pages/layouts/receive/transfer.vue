@@ -161,7 +161,7 @@ function setAccount(account: any) {
               class="w-full p-4 click-blur bg-white dark:bg-muted-950 rounded-xl border border-muted-200 dark:border-muted-800"
               @click="openDropdown()"
             >
-              <span class="w-full flex items-center gap-3 text-left">
+              <span class="w-full flex items-center gap-3 text-start">
                 <ApolluxLogo class="w-8 h-8 text-primary-500" />
                 <div>
                   <BaseText
@@ -194,14 +194,14 @@ function setAccount(account: any) {
             >
               <div
                 v-if="open"
-                class="absolute top-20 left-0 w-full p-2 rounded-xl border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-950 shadow-xl shadow-muted-400/10 dark:shadow-muted-800/10"
+                class="absolute top-20 start-0 w-full p-2 rounded-xl border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-950 shadow-xl shadow-muted-400/10 dark:shadow-muted-800/10"
               >
                 <!--Accounts-->
                 <ul>
                   <li v-for="account in accounts" :key="account.id">
                     <button
                       type="button"
-                      class="group w-full flex items-center gap-3 text-left py-2 px-4 rounded-lg hover:bg-muted-100 dark:hover:bg-muted-900 transition-colors duration-300"
+                      class="group w-full flex items-center gap-3 text-start py-2 px-4 rounded-lg hover:bg-muted-100 dark:hover:bg-muted-900 transition-colors duration-300"
                       @click="setAccount(account)"
                     >
                       <ApolluxLogo
@@ -307,7 +307,7 @@ function setAccount(account: any) {
               class="w-full p-4 click-blur bg-white dark:bg-muted-950 rounded-xl border border-muted-200 dark:border-muted-800"
               @click="openDropdown()"
             >
-              <span class="w-full flex items-center gap-3 text-left">
+              <span class="w-full flex items-center gap-3 text-start">
                 <ApolluxLogo class="w-8 h-8 dark:invert" />
                 <div>
                   <BaseText
@@ -340,14 +340,14 @@ function setAccount(account: any) {
             >
               <div
                 v-if="open"
-                class="absolute top-20 left-0 w-full p-2 rounded-xl border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-950 shadow-xl shadow-muted-400/10 dark:shadow-muted-800/10"
+                class="absolute top-20 start-0 w-full p-2 rounded-xl border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-950 shadow-xl shadow-muted-400/10 dark:shadow-muted-800/10"
               >
                 <!--Accounts-->
                 <ul>
                   <li v-for="account in accounts" :key="account.id">
                     <button
                       type="button"
-                      class="w-full flex items-center gap-3 text-left py-2 px-4 rounded-lg hover:bg-muted-100 dark:hover:bg-muted-900 transition-colors duration-300"
+                      class="w-full flex items-center gap-3 text-start py-2 px-4 rounded-lg hover:bg-muted-100 dark:hover:bg-muted-900 transition-colors duration-300"
                       @click="setAccount(account)"
                     >
                       <ApolluxLogo class="w-8 h-8 dark:invert" />
@@ -409,8 +409,8 @@ function setAccount(account: any) {
             class="w-full p-4 click-blur bg-white dark:bg-muted-950 rounded-xl border border-muted-200 dark:border-muted-800"
             @click="openDropdown()"
           >
-            <span class="w-full flex items-center gap-3 text-left">
-              <ApolluxLogo class="w-8 h-8 dark:invert" />
+            <span class="w-full flex items-center gap-3 text-start">
+              <ApolluxLogo class="w-8 h-8 text-primary-500" />
               <div>
                 <BaseText
                   size="sm"
@@ -442,17 +442,19 @@ function setAccount(account: any) {
           >
             <div
               v-if="open"
-              class="absolute top-20 left-0 w-full p-2 rounded-xl border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-950 shadow-xl shadow-muted-400/10 dark:shadow-muted-800/10"
+              class="absolute top-20 start-0 w-full p-2 rounded-xl border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-950 shadow-xl shadow-muted-400/10 dark:shadow-muted-800/10"
             >
               <!--Accounts-->
               <ul>
                 <li v-for="account in accounts" :key="account.id">
                   <button
                     type="button"
-                    class="w-full flex items-center gap-3 text-left py-2 px-4 rounded-lg hover:bg-muted-100 dark:hover:bg-muted-900 transition-colors duration-300"
+                    class="w-full flex items-center gap-3 text-start py-2 px-4 rounded-lg hover:bg-muted-100 dark:hover:bg-muted-900 transition-colors duration-300"
                     @click="setAccount(account)"
                   >
-                    <ApolluxLogo class="w-8 h-8 dark:invert" />
+                    <ApolluxLogo
+                      class="w-8 h-8 text-muted-400dark:text-muted-700"
+                    />
                     <span class="block">
                       <span
                         class="block font-heading text-sm text-muted-800 dark:text-muted-200 capitalize"
@@ -568,7 +570,7 @@ function setAccount(account: any) {
                             Address
                           </BaseText>
                           <div
-                            class="text-muted-800 dark:text-muted-200 text-right"
+                            class="text-muted-800 dark:text-muted-200 text-end"
                           >
                             <BaseParagraph size="sm"
                               >124, Downing street</BaseParagraph
@@ -634,7 +636,7 @@ function setAccount(account: any) {
                             Bank Address
                           </BaseText>
                           <div
-                            class="text-muted-800 dark:text-muted-200 text-right"
+                            class="text-muted-800 dark:text-muted-200 text-end"
                           >
                             <BaseParagraph size="sm"
                               >47 Victorian Av, Suite G3</BaseParagraph
@@ -745,7 +747,7 @@ function setAccount(account: any) {
                             Address
                           </BaseText>
                           <div
-                            class="text-muted-800 dark:text-muted-200 text-right"
+                            class="text-muted-800 dark:text-muted-200 text-end"
                           >
                             <BaseParagraph size="sm"
                               >47 Victorian Av, Suite G3</BaseParagraph
@@ -811,7 +813,7 @@ function setAccount(account: any) {
                             Bank Address
                           </BaseText>
                           <div
-                            class="text-muted-800 dark:text-muted-200 text-right"
+                            class="text-muted-800 dark:text-muted-200 text-end"
                           >
                             <BaseParagraph size="sm"
                               >124, Downing street</BaseParagraph

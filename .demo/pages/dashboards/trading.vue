@@ -340,7 +340,7 @@ function useStockPrice() {
                   class="w-full p-3 click-blur bg-white dark:bg-muted-950 rounded-full border border-muted-200 dark:border-muted-800"
                   @click="openDropdown()"
                 >
-                  <span class="w-full flex items-center gap-3 text-left">
+                  <span class="w-full flex items-center gap-3 text-start">
                     <img
                       :src="selectedBank.logo"
                       :alt="selectedBank.name"
@@ -371,14 +371,14 @@ function useStockPrice() {
                 >
                   <div
                     v-if="open"
-                    class="absolute top-14 left-0 w-full p-2 rounded-xl border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-950 shadow-xl shadow-muted-400/10 dark:shadow-muted-800/10"
+                    class="absolute top-14 start-0 w-full p-2 rounded-xl border border-muted-200 dark:border-muted-800 bg-white dark:bg-muted-950 shadow-xl shadow-muted-400/10 dark:shadow-muted-800/10"
                   >
                     <!--banks-->
                     <ul>
                       <li v-for="bank in banks" :key="bank.id">
                         <button
                           type="button"
-                          class="w-full flex items-center gap-3 text-left py-2 px-4 rounded-lg hover:bg-muted-100 dark:hover:bg-muted-900 transition-colors duration-300"
+                          class="w-full flex items-center gap-3 text-start py-2 px-4 rounded-lg hover:bg-muted-100 dark:hover:bg-muted-900 transition-colors duration-300"
                           @click="setAccount(bank)"
                         >
                           <img

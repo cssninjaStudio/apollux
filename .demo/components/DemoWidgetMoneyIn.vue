@@ -101,7 +101,7 @@ const total = computed(() => {
           </div>
         </div>
       </div>
-      <div class="mt-auto text-right">
+      <div class="mt-auto text-end">
         <DemoLinkArrow to="#" />
       </div>
     </div>

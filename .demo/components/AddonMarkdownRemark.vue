@@ -133,6 +133,6 @@ watchEffect(async () => {
 .markdown.with-line-number :deep(.shiki code .line::before) {
   content: counter(step);
   counter-increment: step;
-  @apply w-4 me-6 inline text-right text-muted-400 dark:text-muted-500;
+  @apply w-4 me-6 inline text-end text-muted-400 dark:text-muted-500;
 }
 </style>

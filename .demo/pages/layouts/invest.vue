@@ -72,17 +72,17 @@ function openOptionPanel(id: number, options: any) {
         <table class="w-full whitespace-nowrap">
           <thead>
             <th
-              class="md:w-1/5 font-sans text-xs font-semibold text-left pb-3 px-4 text-muted-400 dark:text-muted-300"
+              class="md:w-1/5 font-sans text-xs font-semibold text-start pb-3 px-4 text-muted-400 dark:text-muted-300"
             >
               <span>Category</span>
             </th>
             <th
-              class="md:w-3/5 font-sans text-xs font-semibold text-left pb-3 px-4 text-muted-400 dark:text-muted-300"
+              class="md:w-3/5 font-sans text-xs font-semibold text-start pb-3 px-4 text-muted-400 dark:text-muted-300"
             >
               <span>Typically spent on</span>
             </th>
             <th
-              class="font-sans text-xs font-semibold text-right pb-3 px-4 text-muted-400 dark:text-muted-300"
+              class="font-sans text-xs font-semibold text-end pb-3 px-4 text-muted-400 dark:text-muted-300"
             >
               <span>Funding based on</span>
             </th>
@@ -123,7 +123,7 @@ function openOptionPanel(id: number, options: any) {
                   </BaseTag>
                 </div>
               </td>
-              <td class="p-4 text-right">
+              <td class="p-4 text-end">
                 <div class="flex justify-end">
                   <BaseParagraph
                     size="sm"

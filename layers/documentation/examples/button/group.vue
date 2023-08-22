@@ -1,5 +1,5 @@
 <template>
-  <div class="nui-button-group">
+  <BaseButtonGroup>
     <BaseButton color="default">
       <Icon name="lucide:edit-3" class="-ms-1 h-3 w-3" />
 
@@ -23,5 +23,5 @@
 
       <span>Share</span>
     </BaseButton>
-  </div>
+  </BaseButtonGroup>
 </template>

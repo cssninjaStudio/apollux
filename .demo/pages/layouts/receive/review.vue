@@ -67,7 +67,7 @@ useHead({
             </BaseHeading>
           </div>
           <!--Payment method-->
-          <div class="flex-1 text-right">
+          <div class="flex-1 text-end">
             <BaseParagraph size="xs" class="text-muted-400 mb-1">
               Payment method
             </BaseParagraph>
@@ -88,7 +88,7 @@ useHead({
             Transfer to
           </BaseParagraph>
           <BaseCard shape="curved" class="p-4 bg-white dark:!bg-muted-950">
-            <div class="w-full flex items-center gap-3 text-left">
+            <div class="w-full flex items-center gap-3 text-start">
               <Icon
                 name="clarity:bank-outline-badged"
                 class="w-8 h-8 text-muted-500 dark:text-muted-400"
@@ -139,7 +139,7 @@ useHead({
           <div
             class="w-full p-4 bg-white dark:bg-muted-950 rounded-xl border border-muted-200 dark:border-muted-800"
           >
-            <div class="w-full flex items-center gap-3 text-left">
+            <div class="w-full flex items-center gap-3 text-start">
               <ApolluxLogo class="w-8 h-8 text-primary-500" />
               <div>
                 <BaseText

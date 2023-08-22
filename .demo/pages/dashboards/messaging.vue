@@ -592,7 +592,7 @@ async function submitMessage() {
           @click="mobileOpen = !mobileOpen"
         >
           <div
-            class="block top-1/2 left-6 w-4 -translate-x-1/2 -translate-y-1/2"
+            class="block top-1/2 start-6 w-4 -translate-x-1/2 -translate-y-1/2"
           >
             <span
               class="block absolute w-6 h-0.5 text-primary-500 bg-current transition duration-500 ease-in-out"
@@ -642,7 +642,7 @@ async function submitMessage() {
     >
       <!--Conversations sidebar-->
       <div
-        class="fixed top-0 left-0 z-30 ltablet:static lg:static flex flex-col h-full ltablet:py-4 lg:py-4 ps-4 w-72 bg-white dark:bg-muted-900 ltablet:dark:bg-muted-950 lg:dark:bg-muted-950 flex-shrink-0 transition-transform duration-300"
+        class="fixed top-0 start-0 z-30 ltablet:static lg:static flex flex-col h-full ltablet:py-4 lg:py-4 ps-4 w-72 bg-white dark:bg-muted-900 ltablet:dark:bg-muted-950 lg:dark:bg-muted-950 flex-shrink-0 transition-transform duration-300"
         :class="
           mobileOpen
             ? 'translate-x-0'
@@ -902,7 +902,7 @@ async function submitMessage() {
                       </div>
                       <div
                         class="text-muted-400 mt-1 font-sans text-xs"
-                        :class="item.type === 'received' ? 'text-right' : ''"
+                        :class="item.type === 'received' ? 'text-end' : ''"
                       >
                         {{ item.time }}
                       </div>

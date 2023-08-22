@@ -13,7 +13,7 @@ const props = withDefaults(
 </script>
 
 <template>
-  <div x-cloak class="absolute top-0 left-0 w-full">
+  <div x-cloak class="absolute top-0 start-0 w-full">
     <div class="w-full max-w-6xl mx-auto px-4">
       <div class="w-full flex items-center justify-between py-5">
         <div class="flex-1 flex items-center">

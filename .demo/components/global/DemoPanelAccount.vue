@@ -135,7 +135,7 @@ function useDemoAreaBalance() {
           </BaseParagraph>
         </div>
         <!--Balance-->
-        <div class="py-6 pe-4 text-right">
+        <div class="py-6 pe-4 text-end">
           <BaseParagraph size="xs" class="text-muted-400 mb-1">
             Account balance
           </BaseParagraph>

@@ -61,7 +61,7 @@ const daySpentProgress = computed(() => {
               {{ card.cardInfo.name }}
             </BaseParagraph>
           </div>
-          <div class="text-right">
+          <div class="text-end">
             <BaseHeading
               as="h4"
               size="sm"

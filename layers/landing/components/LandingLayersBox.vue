@@ -23,7 +23,7 @@ const props = withDefaults(
         props.color === 'primary'
           ? 'motion-safe:hover:!border-primary-500'
           : '',
-        props.color === 'purple' ? 'motion-safe:hover:!border-purple-500' : '',
+        props.color === 'purple' ? 'motion-safe:hover:!border-violet-500' : '',
         props.color === 'indigo' ? 'motion-safe:hover:!border-indigo-500' : '',
       ]"
     >
@@ -40,7 +40,7 @@ const props = withDefaults(
                 ? 'from-primary-100 to-primary-500 dark:from-primary-800'
                 : '',
               props.color === 'purple'
-                ? 'from-purple-100 to-purple-500 dark:from-purple-800'
+                ? 'from-purple-100 to-violet-500 dark:from-purple-800'
                 : '',
               props.color === 'indigo'
                 ? 'from-indigo-100 to-indigo-500 dark:from-indigo-800'
@@ -55,14 +55,14 @@ const props = withDefaults(
               class="h-7 w-7"
               :class="[
                 props.color === 'primary' ? 'text-primary-500' : '',
-                props.color === 'purple' ? 'text-purple-500' : '',
+                props.color === 'purple' ? 'text-violet-500' : '',
                 props.color === 'indigo' ? 'text-indigo-500' : '',
               ]"
             />
           </div>
         </div>
         <div
-          class="dark:bg-muted-900 absolute -right-4 bottom-0 h-full w-24 scale-105 bg-white blur-lg"
+          class="dark:bg-muted-900 absolute -end-4 bottom-0 h-full w-24 scale-105 bg-white blur-lg"
         ></div>
       </div>
       <div>

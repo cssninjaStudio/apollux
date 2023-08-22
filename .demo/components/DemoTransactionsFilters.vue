@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { Menu, MenuButton, MenuItems } from '@headlessui/vue'
+import { Menu, MenuButton, MenuItems } from '@headlessui/vue';
 
 const months = [
   {
@@ -93,7 +93,7 @@ const paymentMethods = ref([''])
         leave-to-class="transform scale-95 opacity-0"
       >
         <MenuItems
-          class="absolute top-11 left-0 w-[660px] grid grid-cols-12 bg-white dark:bg-muted-950 rounded-lg overflow-hidden border border-muted-200 dark:border-muted-800 shadow-xl shadow-muted-400/20 dark:shadow-muted-800/20"
+          class="absolute top-11 start-0 w-[660px] grid grid-cols-12 bg-white dark:bg-muted-950 rounded-lg overflow-hidden border border-muted-200 dark:border-muted-800 shadow-xl shadow-muted-400/20 dark:shadow-muted-800/20"
         >
           <div class="col-span-4 p-6 space-y-2 bg-muted-50 dark:bg-muted-900">
             <!--Menu item-->

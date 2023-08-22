@@ -3,8 +3,8 @@ import { Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/vue'
 </script>
 
 <template>
-  <div class="group inline-flex items-center justify-center text-right">
-    <Menu as="div" class="relative h-9 w-9 text-left" v-slot="{ close }">
+  <div class="group inline-flex items-center justify-center text-end">
+    <Menu as="div" class="relative h-9 w-9 text-start" v-slot="{ close }">
       <MenuButton as="div">
         <button
           type="button"

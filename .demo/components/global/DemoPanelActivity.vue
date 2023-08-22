@@ -251,7 +251,7 @@ const activeTab = ref('tab-1')
           >
             <div class="w-3/5">
               <div class="w-full flex items-center gap-3">
-                <ApolluxLogo class="w-8 h-8 dark:invert" />
+                <ApolluxLogo class="w-8 h-8 text-primary-500" />
                 <div>
                   <BaseText
                     size="sm"
@@ -277,7 +277,9 @@ const activeTab = ref('tab-1')
           >
             <div class="w-3/5">
               <div class="w-full flex items-center gap-3">
-                <ApolluxLogo class="w-8 h-8 dark:invert" />
+                <ApolluxLogo
+                  class="w-8 h-8 text-muted-300 dark:text-muted-700"
+                />
                 <div>
                   <BaseText
                     size="sm"

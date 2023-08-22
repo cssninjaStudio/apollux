@@ -2,6 +2,7 @@
 title: BaseButton
 components:
   - BaseButton
+  - BaseButtonGroup
 description: Use buttons to trigger actions or to navigate to a new page. Explore the different button types and their variations.
 icon:
   src: /img/illustrations/components/button-icon.svg

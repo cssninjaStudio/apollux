@@ -101,32 +101,32 @@ function statusColor(itemStatus: string) {
       <table class="w-full whitespace-nowrap">
         <thead>
           <th
-            class="w-1/5 font-sans text-xs font-semibold text-left pb-3 px-4 text-muted-400 dark:text-muted-300"
+            class="w-1/5 font-sans text-xs font-semibold text-start pb-3 px-4 text-muted-400 dark:text-muted-300"
           >
             <span>Date</span>
           </th>
           <th
-            class="w-2/5 font-sans text-xs font-semibold text-left pb-3 px-4 text-muted-400 dark:text-muted-300"
+            class="w-2/5 font-sans text-xs font-semibold text-start pb-3 px-4 text-muted-400 dark:text-muted-300"
           >
             <span>To / From</span>
           </th>
           <th
-            class="font-sans text-xs font-semibold text-left pb-3 px-4 text-muted-400 dark:text-muted-300"
+            class="font-sans text-xs font-semibold text-start pb-3 px-4 text-muted-400 dark:text-muted-300"
           >
             <span>Amount</span>
           </th>
           <th
-            class="font-sans text-xs font-semibold text-left pb-3 px-4 text-muted-400 dark:text-muted-300"
+            class="font-sans text-xs font-semibold text-start pb-3 px-4 text-muted-400 dark:text-muted-300"
           >
             <span>Account</span>
           </th>
           <th
-            class="font-sans text-xs font-semibold text-left pb-3 px-4 text-muted-400 dark:text-muted-300"
+            class="font-sans text-xs font-semibold text-start pb-3 px-4 text-muted-400 dark:text-muted-300"
           >
             <span>Status</span>
           </th>
           <th
-            class="font-sans text-xs font-semibold text-left pb-3 px-4 text-muted-400 dark:text-muted-300"
+            class="font-sans text-xs font-semibold text-start pb-3 px-4 text-muted-400 dark:text-muted-300"
           >
             <span>Payment method</span>
           </th>

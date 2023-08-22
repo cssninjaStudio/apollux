@@ -7,8 +7,8 @@ const props = defineProps<{
 </script>
 
 <template>
-  <div class="group inline-flex items-center justify-center text-right">
-    <Menu as="div" class="relative h-10 w-10 text-left" v-slot="{ close }">
+  <div class="group inline-flex items-center justify-center text-end">
+    <Menu as="div" class="relative h-10 w-10 text-start" v-slot="{ close }">
       <MenuButton as="template">
         <button
           type="button"
@@ -35,7 +35,7 @@ const props = defineProps<{
         leave-to-class="transform scale-95 opacity-0"
       >
         <MenuItems
-          class="border-muted-200 dark:border-muted-700 dark:bg-muted-800 absolute mt-2 w-60 origin-bottom-right rounded-md border bg-white text-left shadow-lg focus:outline-none"
+          class="border-muted-200 dark:border-muted-700 dark:bg-muted-800 absolute mt-2 w-60 origin-bottom-right rounded-md border bg-white text-start shadow-lg focus:outline-none"
           :class="props.horizontal ? 'top-10 end-0' : 'bottom-0 -end-64'"
         >
           <div class="bg-muted-50 dark:bg-muted-700/40 p-6">

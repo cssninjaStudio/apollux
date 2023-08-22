@@ -63,7 +63,7 @@ watch(selectedStyle, (value) => {
           >
             <div
               v-if="toggled"
-              class="absolute left-0 top-1/4 z-10 h-full w-full overflow-hidden motion-reduce:hidden"
+              class="absolute start-0 top-1/4 z-10 h-full w-full overflow-hidden motion-reduce:hidden"
             >
               <div class="shuriken-1 absolute block">
                 <img
@@ -149,7 +149,7 @@ watch(selectedStyle, (value) => {
               class="!border-primary-600 relative z-20 mx-auto max-w-[340px] overflow-hidden p-6"
             >
               <div
-                class="bg-primary-500 dark:bg-primary-500/20 absolute -right-16 -top-32 h-72 w-72 rounded-full transition-transform delay-150 duration-500"
+                class="bg-primary-500 dark:bg-primary-500/20 absolute -end-16 -top-32 h-72 w-72 rounded-full transition-transform delay-150 duration-500"
                 :class="selectedStyle === 'creative' ? 'scale-100' : 'scale-0'"
               ></div>
               <div class="mb-6 flex items-center justify-between">
@@ -327,7 +327,7 @@ watch(selectedStyle, (value) => {
               class="relative mx-auto mt-48 flex w-full max-w-xs flex-wrap sm:mt-0"
             >
               <img
-                class="absolute -top-48 right-8 w-64"
+                class="absolute -top-48 end-8 w-64"
                 src="/img/illustrations/text-hand.svg"
                 alt=""
                 loading="lazy"

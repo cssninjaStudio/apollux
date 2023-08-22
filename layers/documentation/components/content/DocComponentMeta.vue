@@ -109,10 +109,10 @@ function wrapExternalLinks(string: string) {
             >
               <div class="grid grid-cols-1 gap-6 px-2 py-4 lg:grid-cols-12">
                 <div class="col-span-1 lg:col-span-3">
-                  <div class="text-left font-semibold">Name</div>
+                  <div class="text-start font-semibold">Name</div>
                 </div>
                 <div class="col-span-1 lg:col-span-9">
-                  <div class="text-left font-semibold">Type</div>
+                  <div class="text-start font-semibold">Type</div>
                 </div>
               </div>
             </div>
@@ -140,7 +140,7 @@ function wrapExternalLinks(string: string) {
                   </div>
 
                   <div
-                    class="text-muted-400 whitespace-pre-wrap break-words text-left italic"
+                    class="text-muted-400 whitespace-pre-wrap break-words text-start italic"
                   >
                     {{ docs.model.description }}
                   </div>
@@ -237,13 +237,13 @@ function wrapExternalLinks(string: string) {
             >
               <div class="grid grid-cols-1 gap-6 px-2 py-4 lg:grid-cols-12">
                 <div class="col-span-1 lg:col-span-3">
-                  <div class="text-left font-semibold">Name</div>
+                  <div class="text-start font-semibold">Name</div>
                 </div>
                 <div class="col-span-1 lg:col-span-5">
-                  <div class="text-left font-semibold">Type</div>
+                  <div class="text-start font-semibold">Type</div>
                 </div>
                 <div class="col-span-1 lg:col-span-4">
-                  <div class="text-left font-semibold">Default</div>
+                  <div class="text-start font-semibold">Default</div>
                 </div>
               </div>
             </div>
@@ -269,7 +269,7 @@ function wrapExternalLinks(string: string) {
                 </div>
 
                 <div
-                  class="text-muted-400 whitespace-pre-wrap break-words text-left italic"
+                  class="text-muted-400 whitespace-pre-wrap break-words text-start italic"
                   v-if="prop.description"
                 >
                   {{ prop.description }}
@@ -381,10 +381,10 @@ function wrapExternalLinks(string: string) {
             >
               <div class="grid grid-cols-1 gap-6 px-2 py-4 lg:grid-cols-12">
                 <div class="col-span-1 lg:col-span-3">
-                  <div class="text-left font-semibold">Name</div>
+                  <div class="text-start font-semibold">Name</div>
                 </div>
                 <div class="col-span-1 lg:col-span-9">
-                  <div class="text-left font-semibold">Emitted Value Type</div>
+                  <div class="text-start font-semibold">Emitted Value Type</div>
                 </div>
               </div>
             </div>
@@ -474,10 +474,10 @@ function wrapExternalLinks(string: string) {
             >
               <div class="grid grid-cols-1 gap-6 px-2 py-4 lg:grid-cols-12">
                 <div class="col-span-1 lg:col-span-3">
-                  <div class="text-left font-semibold">Name</div>
+                  <div class="text-start font-semibold">Name</div>
                 </div>
                 <div class="col-span-1 lg:col-span-9">
-                  <div class="text-left font-semibold">Slot Prop Type</div>
+                  <div class="text-start font-semibold">Slot Prop Type</div>
                 </div>
               </div>
             </div>
@@ -564,10 +564,10 @@ function wrapExternalLinks(string: string) {
             >
               <div class="grid grid-cols-1 gap-6 px-2 py-4 lg:grid-cols-12">
                 <div class="col-span-1 lg:col-span-3">
-                  <div class="text-left font-semibold">Name</div>
+                  <div class="text-start font-semibold">Name</div>
                 </div>
                 <div class="col-span-1 lg:col-span-9">
-                  <div class="text-left font-semibold">Type</div>
+                  <div class="text-start font-semibold">Type</div>
                 </div>
               </div>
             </div>
@@ -590,7 +590,7 @@ function wrapExternalLinks(string: string) {
                   </div>
                 </div>
                 <div
-                  class="text-muted-400 whitespace-pre-wrap break-words text-left italic"
+                  class="text-muted-400 whitespace-pre-wrap break-words text-start italic"
                 >
                   {{ exposed.description }}
                 </div>

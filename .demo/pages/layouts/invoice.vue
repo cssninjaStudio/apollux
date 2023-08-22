@@ -54,7 +54,7 @@ const itemSubtotal = computed(() =>
                 </BaseParagraph>
               </div>
               <div class="ms-auto">
-                <div class="text-right">
+                <div class="text-end">
                   <BaseParagraph size="sm" class="text-muted-400 line-clamp-1">
                     48, Church Street
                   </BaseParagraph>
@@ -457,7 +457,7 @@ const itemSubtotal = computed(() =>
                   (Tax incl.)
                 </BaseText>
               </BaseHeading>
-              <BaseTag shape="full" flavor="pastel" color="muted">
+              <BaseTag shape="full" flavor="pastel" color="danger">
                 Due on Jul 11, 2023
               </BaseTag>
             </div>

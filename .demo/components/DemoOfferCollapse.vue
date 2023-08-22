@@ -28,7 +28,7 @@ onClickOutside(target, (event) => (open.value = false))
       @click="open = !open"
     >
       <Icon :name="props.icon" class="w-8 h-8" />
-      <span class="block text-left">
+      <span class="block text-start">
         <span
           class="block font-heading font-medium text-sm text-muted-800 dark:text-muted-200"
         >
@@ -46,7 +46,7 @@ onClickOutside(target, (event) => (open.value = false))
     </button>
     <AddonCollapseTransition>
       <div v-if="open" class="group flex items-center justify-between pt-4">
-        <DemoLinkArrow to="3" label="Get this offer" />
+        <DemoLinkArrow to="#" label="Get this offer" />
         <span class="font-heading text-xs text-muted-400"
           >{{ props.remaining }} left</span
         >

@@ -141,7 +141,7 @@ function useGaugePersonal() {
         >
           <!-- Fake sidebar -->
           <div
-            class="ltablet:w-16 ltablet:flex dark:bg-muted-950 bg-muted-100 absolute left-0 top-0 hidden h-full w-20 flex-col group-[&.scrolled]/landing:translate-x-0 group-[&:not(.scrolled)]/landing:-translate-x-full group-[&.scrolled]/landing:opacity-100 group-[&:not(.scrolled)]/landing:opacity-0 motion-safe:transition-all motion-safe:duration-200 lg:flex"
+            class="ltablet:w-16 ltablet:flex dark:bg-muted-950 bg-muted-100 absolute start-0 top-0 hidden h-full w-20 flex-col group-[&.scrolled]/landing:translate-x-0 group-[&:not(.scrolled)]/landing:-translate-x-full group-[&.scrolled]/landing:opacity-100 group-[&:not(.scrolled)]/landing:opacity-0 motion-safe:transition-all motion-safe:duration-200 lg:flex"
           >
             <div class="mb-6 flex h-20 w-full items-center justify-center">
               <ApolluxLogo class="text-primary-500 h-8 w-8" />
@@ -210,7 +210,7 @@ function useGaugePersonal() {
           </div>
           <!-- Fake navbar -->
           <div
-            class="ltablet:ps-24 absolute left-0 top-0 flex h-20 w-full pe-6 ps-6 group-[&.scrolled]/landing:translate-y-0 group-[&:not(.scrolled)]/landing:-translate-y-full group-[&.scrolled]/landing:opacity-100 group-[&:not(.scrolled)]/landing:opacity-0 motion-safe:transition-all motion-safe:duration-200 lg:ps-28"
+            class="ltablet:ps-24 absolute start-0 top-0 flex h-20 w-full pe-6 ps-6 group-[&.scrolled]/landing:translate-y-0 group-[&:not(.scrolled)]/landing:-translate-y-full group-[&.scrolled]/landing:opacity-100 group-[&:not(.scrolled)]/landing:opacity-0 motion-safe:transition-all motion-safe:duration-200 lg:ps-28"
           >
             <div
               class="mx-auto flex h-full w-full max-w-4xl items-center justify-between"
