@@ -131,7 +131,7 @@ export function useSidebar() {
 
     // register a watcher to close sidebar when screen become extra large
     const { xl } = useTailwindBreakpoints()
-    // close sidebar when screen become extra large
+    // close sidebar when screen becomes extra large
     watch(xl, (isXl) => {
       if (!isXl) {
         isOpen.value = false

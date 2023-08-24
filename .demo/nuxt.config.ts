@@ -29,6 +29,7 @@ export default defineNuxtConfig({
      */
     '../layers/apollux-layout-sidebar',
     '../layers/apollux-layout-collapse',
+    '../layers/apollux-layout-topnav',
     '../layers/apollux',
 
     /**

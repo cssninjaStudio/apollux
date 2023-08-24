@@ -13,7 +13,7 @@ definePageMeta({
 </script>
 
 <template>
-  <div class="pb-20">
+  <div class="pt-6 pb-20">
     <div class="grid grid-cols-12 gap-6">
       <div
         class="col-span-12 ptablet:col-span-5 ltablet:col-span-4 lg:col-span-4"

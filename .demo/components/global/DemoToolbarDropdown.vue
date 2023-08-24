@@ -5,7 +5,7 @@
     flavor="button"
     shape="full"
     button-color="primary"
-    label="Move Money"
+    label="Actions"
     orientation="end"
     condensed
   >

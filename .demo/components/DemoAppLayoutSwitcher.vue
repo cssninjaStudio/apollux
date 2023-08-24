@@ -1,54 +1,21 @@
 <script setup lang="ts">
+/**
+ * Here we use the useLayoutSwitcher() composable to load available layouts.
+ * We also load colors from Tailwind and Shuriken UI.
+ * We use the switchColorShades() function to dynamically change the colors.
+ */
+
 import colors from 'tailwindcss/colors'
 
+const { layouts, activeLayoutName } = useLayoutSwitcher()
 const isSwitcherOpen = useState('switcher-open', () => false)
-
-const layouts = [
-  {
-    name: 'sidebar',
-    label: 'Sidebar',
-  },
-  {
-    name: 'collapse',
-    label: 'Collapse',
-  },
-]
-
-const route = useRoute()
-const activeLayout = ref()
-
-const defaultLayout = 'sidebar'
-
-watch(
-  () => route.meta.layout,
-  () => {
-    activeLayout.value =
-      route.meta.layout === 'default' ? defaultLayout : route.meta.layout
-  },
-  { immediate: true },
-)
 
 function closeModal() {
   isSwitcherOpen.value = false
 }
 const switchLayout = (layout: string) => {
-  setPageLayout(layout)
-  activeLayout.value = layout
+  activeLayoutName.value = layout
   closeModal()
-}
-
-const mauve = {
-  50: '#EEECF9',
-  100: '#DCD8F3',
-  200: '#B6AEE5',
-  300: '#9488D8',
-  400: '#6E5DCB',
-  500: '#4E3CB9',
-  600: '#3E2F92',
-  700: '#302470',
-  800: '#1F1849',
-  900: '#100C27',
-  950: '#080613',
 }
 
 const primaryPresets = [
@@ -169,12 +136,12 @@ const primaryPresets = [
             class="grid grid-cols-1 sm:grid-cols-2 gap-4 p-4 bg-muted-100 dark:bg-muted-700/40 rounded-xl"
           >
             <BaseCard
-              v-for="layout in layouts"
+              v-for="(layout, index) in layouts"
               :key="layout.name"
               role="button"
               shape="curved"
               class="p-2"
-              :class="activeLayout === layout.name && '!border-primary-500'"
+              :class="activeLayoutName === layout.name && '!border-primary-500'"
               @click="switchLayout(layout.name)"
             >
               <div
@@ -184,7 +151,9 @@ const primaryPresets = [
                   :src="`/img/illustrations/switcher/layout-${layout.name}-default.svg`"
                   class="block dark:hidden max-w-[110px] mx-auto transition-opacity duration-200"
                   :class="
-                    activeLayout === layout.name ? 'opacity-100' : 'opacity-60'
+                    activeLayoutName === layout.name
+                      ? 'opacity-100'
+                      : 'opacity-60'
                   "
                   :alt="`${layout.name} layout`"
                 />
@@ -192,7 +161,9 @@ const primaryPresets = [
                   :src="`/img/illustrations/switcher/layout-${layout.name}-default-dark.svg`"
                   class="hidden dark:block max-w-[110px] mx-auto transition-opacity duration-200"
                   :class="
-                    activeLayout === layout.name ? 'opacity-100' : 'opacity-60'
+                    activeLayoutName === layout.name
+                      ? 'opacity-100'
+                      : 'opacity-60'
                   "
                   :alt="`${layout.name} layout`"
                 />
@@ -202,7 +173,7 @@ const primaryPresets = [
                   size="xs"
                   class="capitalize"
                   :class="
-                    activeLayout === layout.name
+                    activeLayoutName === layout.name
                       ? 'text-muted-600 dark:text-muted-100'
                       : 'text-muted-400 dark:text-muted-500'
                   "
@@ -212,59 +183,16 @@ const primaryPresets = [
                 <Icon
                   name="ph:check-circle-duotone"
                   class="w-5 h-5 text-success-500 transition-opacity duration-200"
-                  :class="
-                    activeLayout === layout.name ? 'opacity-100' : 'opacity-0'
-                  "
+                  :class="[
+                    activeLayoutName === layout.name
+                      ? 'opacity-100'
+                      : 'opacity-0',
+
+                    activeLayoutName === undefined &&
+                      index === 1 &&
+                      'opacity-100',
+                  ]"
                 />
-              </div>
-            </BaseCard>
-            <!-- Coming soon -->
-            <BaseCard shape="curved" class="p-2">
-              <div
-                class="bg-muted-50 dark:bg-muted-700/70 flex items-center justify-center rounded-lg py-6 sm:py-3"
-              >
-                <img
-                  src="/img/illustrations/switcher/layout-collapse-curved.svg"
-                  class="block dark:hidden max-w-[110px] mx-auto opacity-40 transition-opacity duration-200"
-                  alt="Collapse curved layout"
-                />
-                <img
-                  src="/img/illustrations/switcher/layout-collapse-curved-dark.svg"
-                  class="hidden dark:block max-w-[110px] mx-auto opacity-40 transition-opacity duration-200"
-                  alt="Collapse curved layout"
-                />
-              </div>
-              <div class="flex items-center justify-between py-2">
-                <BaseText
-                  size="xs"
-                  class="capitalize text-muted-400 dark:text-muted-500"
-                >
-                  Coming soon
-                </BaseText>
-              </div>
-            </BaseCard>
-            <BaseCard shape="curved" class="p-2">
-              <div
-                class="bg-muted-50 dark:bg-muted-700/70 flex items-center justify-center rounded-lg py-6 sm:py-3"
-              >
-                <img
-                  src="/img/illustrations/switcher/layout-navbar-default.svg"
-                  class="block dark:hidden max-w-[110px] mx-auto opacity-40 transition-opacity duration-200"
-                  alt="Navbar layout"
-                />
-                <img
-                  src="/img/illustrations/switcher/layout-navbar-default-dark.svg"
-                  class="hidden dark:block max-w-[110px] mx-auto opacity-40 transition-opacity duration-200"
-                  alt="Navbar layout"
-                />
-              </div>
-              <div class="flex items-center justify-between py-2">
-                <BaseText
-                  size="xs"
-                  class="capitalize text-muted-400 dark:text-muted-500"
-                >
-                  Coming soon
-                </BaseText>
               </div>
             </BaseCard>
           </div>
@@ -323,7 +251,7 @@ const primaryPresets = [
                   ></button>
                   <button
                     type="button"
-                    class="block h-6 w-6 rounded-full bg-slate-200 dark:bg-slate-900 ring-1 ring-muted-500 ring-offset-2 ring-offset-white dark:ring-offset-muted-800"
+                    class="block h-6 w-6 rounded-full bg-slate-200 dark:bg-slate-900"
                     data-nui-tooltip="Slate"
                     @click="() => switchColorShades('muted', colors.slate)"
                   ></button>
