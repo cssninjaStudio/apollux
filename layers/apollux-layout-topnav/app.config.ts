@@ -6,7 +6,7 @@ export default defineAppConfig({
         logo: {
           component: 'ApolluxLogo',
           resolve: true,
-          props: { class: 'text-primary-600 h-10 w-10' },
+          props: { class: 'text-primary-500 h-10 w-10' },
         },
         items: [],
       },

@@ -18,6 +18,7 @@ const { y } = useNinjaWindowScroll()
     <LandingCustomizer />
     <LandingDemos :limit="12" />
     <LandingLayers />
+    <LandingLayouts />
     <LandingFeatures />
     <LandingBenefits />
     <LandingCta />
