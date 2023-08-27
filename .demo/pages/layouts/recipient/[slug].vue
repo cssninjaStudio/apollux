@@ -1,14 +1,30 @@
 <script setup lang="ts">
 definePageMeta({
   title: 'Recipient',
-  preview: {
-    title: 'Recipient',
-    description: 'For generic things',
-    categories: ['layouts', 'lists'],
-    src: '/img/screens/layouts-list-view-1.png',
-    srcDark: '/img/screens/layouts-list-view-1-dark.png',
-    order: 37,
-  },
+  preview: [
+    {
+      title: 'Company details',
+      description: 'For company recipients',
+      categories: ['layouts', 'lists', 'details'],
+      src: '/img/screens/layouts-recipients-1.png',
+      srcDark: '/img/screens/layouts-recipients-1-dark.png',
+      order: 37,
+      params: {
+        slug: 'airbnb',
+      },
+    },
+    {
+      title: 'Contact details',
+      description: 'For user recipients',
+      categories: ['layouts', 'lists', 'details'],
+      src: '/img/screens/layouts-recipients-2.png',
+      srcDark: '/img/screens/layouts-recipients-2-dark.png',
+      order: 37,
+      params: {
+        slug: 'jackie-strauss',
+      },
+    },
+  ],
 })
 
 const notifications = ref(true)

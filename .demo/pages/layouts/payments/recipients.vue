@@ -1,4 +1,16 @@
 <script setup lang="ts">
+definePageMeta({
+  title: 'Recipients',
+  preview: {
+    title: 'Recipients',
+    description: 'For contacts management',
+    categories: ['layouts', 'lists', 'payments'],
+    src: '/img/screens/layouts-recipients.png',
+    srcDark: '/img/screens/layouts-recipients-dark.png',
+    order: 80,
+  },
+})
+
 const route = useRoute()
 const router = useRouter()
 const page = computed(() => parseInt((route.query.page as string) ?? '1'))

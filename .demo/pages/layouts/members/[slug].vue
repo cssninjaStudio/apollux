@@ -1,14 +1,30 @@
 <script setup lang="ts">
 definePageMeta({
   title: 'Members',
-  preview: {
-    title: 'Members',
-    description: 'For generic things',
-    categories: ['layouts', 'lists'],
-    src: '/img/screens/layouts-list-view-1.png',
-    srcDark: '/img/screens/layouts-list-view-1-dark.png',
-    order: 37,
-  },
+  preview: [
+    {
+      title: 'Member details',
+      description: "For viewing Kendra's details",
+      categories: ['layouts', 'lists', 'details'],
+      src: '/img/screens/layouts-members-1.png',
+      srcDark: '/img/screens/layouts-members-1-dark.png',
+      order: 37,
+      params: {
+        slug: 'kendra-wilson',
+      },
+    },
+    {
+      title: 'Member details',
+      description: "For viewing John's details",
+      categories: ['layouts', 'lists', 'details'],
+      src: '/img/screens/layouts-members-2.png',
+      srcDark: '/img/screens/layouts-members-2-dark.png',
+      order: 37,
+      params: {
+        slug: 'john-baxter',
+      },
+    },
+  ],
 })
 
 const { open } = usePanels()

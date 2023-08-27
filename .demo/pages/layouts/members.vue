@@ -73,7 +73,7 @@ const currentMember = ref()
             <NuxtLink
               :to="`/layouts/members/${member.slug}`"
               class="flex items-center gap-2 p-4 rounded-xl"
-              active-class="bg-muted-100"
+              active-class="bg-muted-100 dark:bg-muted-950/60"
             >
               <BaseAvatar :src="member.picture" :alt="member.name" size="sm" />
               <div>
