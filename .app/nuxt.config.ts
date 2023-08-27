@@ -14,8 +14,8 @@ export default defineNuxtConfig({
     '../layers/apollux',
 
     /**
-     * Uncomment the following line to add the Apollux Layout Sidebar layer
+     * Uncomment the following line to add the Apollux Layout Collapse layer
      */
-    // '../layers/apollux-layout-sidebar',
+    // '../layers/apollux-layout-collapse',
   ],
 })
