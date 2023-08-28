@@ -3,7 +3,7 @@
     <BaseTabSlider
       shape="curved"
       :length="3"
-      selected="team"
+      model-value="team"
       :tabs="[
         { label: 'Team', value: 'team' },
         { label: 'Projects', value: 'projects' },

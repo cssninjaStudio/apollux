@@ -59,6 +59,8 @@ export default defineNuxtConfig({
     writeEarlyHints: true,
     // Render JSON payloads with support for revivifying complex types.
     renderJsonPayloads: true,
+    // Use new experimental head optimisations
+    headNext: true,
   },
 
   // nuxt behavior configuration
