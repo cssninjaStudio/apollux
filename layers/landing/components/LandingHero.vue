@@ -120,7 +120,7 @@ function useGaugePersonal() {
         </BaseParagraph>
         <div class="flex items-center justify-center">
           <BaseButton
-            shape="curved"
+            shape="full"
             color="primary"
             to="https://go.cssninja.io/buy-apollux"
             shadow="hover"

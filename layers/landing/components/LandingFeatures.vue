@@ -68,7 +68,7 @@
       </div>
 
       <div class="mt-16 flex items-center justify-center">
-        <BaseButton to="#" shape="curved" color="primary">
+        <BaseButton to="#" shape="full" color="primary">
           Get Apollux Dashboard System
         </BaseButton>
       </div>
