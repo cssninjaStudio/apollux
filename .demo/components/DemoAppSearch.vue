@@ -125,8 +125,8 @@ const metaKey = useMetaKey()
             color-focus
           >
             <template #label>
-              <span class="flex w-full justify-between">
-                <span>Search</span>
+              <span class="flex w-full items-center justify-between">
+                <span class="pe-2">Search</span>
                 <span v-if="hasResult" class="text-xs opacity-60">
                   navigate with <kbd>↑</kbd> and <kbd>↓</kbd>
                 </span>
@@ -172,7 +172,7 @@ const metaKey = useMetaKey()
             <li v-for="page in demoPagesResults" :key="page?.name" class="">
               <DemoAppSearchResult
                 :to="{
-                  name: page?.name as string
+                  name: page?.name as string,
                 }"
                 :search="search"
                 :title="page?.meta?.preview?.title"

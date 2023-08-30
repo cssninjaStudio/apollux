@@ -20,15 +20,15 @@ const metaKey = useMetaKey()
           aria-label="Go to Apollux homepage"
         >
           <ApolluxLogo
-            class="text-primary-500 group-[&.scrolled]/landing:h-8 group-[&:not(.scrolled)]/landing:h-10 sm:group-[&.scrolled]/landing:h-7 sm:group-[&:not(.scrolled)]/landing:h-8"
+            class="text-primary-500 group-[&.scrolled]/landing:h-8 group-[&:not(.scrolled)]/landing:h-10 sm:group-[&.scrolled]/landing:h-7 sm:group-[&:not(.scrolled)]/landing:h-9"
           />
           <ApolluxLogoText
-            class="text-primary-500 hidden group-[&.scrolled]/landing:h-3 group-[&:not(.scrolled)]/landing:h-3 motion-safe:transition-all motion-safe:duration-200 sm:block sm:group-[&.scrolled]/landing:h-3 sm:group-[&:not(.scrolled)]/landing:h-3"
+            class="text-primary-500 hidden group-[&.scrolled]/landing:h-3 group-[&:not(.scrolled)]/landing:h-3 motion-safe:transition-all motion-safe:duration-200 sm:block sm:group-[&.scrolled]/landing:h-3 sm:group-[&:not(.scrolled)]/landing:h-3.5"
           />
         </NuxtLink>
       </div>
       <div
-        class="ltablet:static ltablet:w-auto ltablet:flex ltablet:flex-row dark:bg-muted-950 ltablet:!bg-transparent ltablet:mx-0 fixed inset-x-0 top-20 mx-auto w-[calc(100%_-_2rem)] items-center bg-white lg:static lg:mx-0 lg:flex lg:w-auto lg:grow lg:flex-row lg:!bg-transparent lg:px-6"
+        class="ltablet:static ltablet:w-auto ltablet:flex ltablet:flex-row dark:bg-muted-950 ltablet:!bg-transparent ltablet:mx-0 fixed inset-x-0 top-20 mx-auto w-[calc(100%_-_2rem)] items-center bg-white lg:static lg:mx-0 lg:flex lg:w-auto lg:grow lg:flex-row lg:!bg-transparent lg:pe-3 lg:ps-6"
         :class="[
           isMobileOpen
             ? 'shadow-muted-300/30 dark:shadow-muted-900/20 group-[&.scrolled]/landing:ltablet:mt-0 group-[&:not(.scrolled)]/landing:ltablet:mt-0 flex flex-col space-y-4 rounded-xl p-6 shadow-xl group-[&.scrolled]/landing:mt-2 group-[&:not(.scrolled)]/landing:mt-4 motion-safe:transition-all motion-safe:duration-200 group-[&.scrolled]/landing:lg:mt-0 group-[&:not(.scrolled)]/landing:lg:mt-0'
