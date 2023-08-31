@@ -10,7 +10,7 @@ definePageMeta({
     description: 'For editing your info',
     categories: ['layouts', 'forms'],
     src: '/img/screens/layouts-profile-edit.png',
-    srcDark: '/img/screens/layouts-profile-dark-edit.png',
+    srcDark: '/img/screens/layouts-profile-edit-dark.png',
     order: 31,
   },
 })
@@ -353,7 +353,7 @@ const onSubmit = handleSubmit(
                         class="absolute bottom-1 end-1 z-20"
                       >
                         <BaseButtonIcon
-                          condensed
+                          size="sm"
                           shape="full"
                           @click="remove(files.item(0)!)"
                           data-tooltip="Remove image"
@@ -364,7 +364,7 @@ const onSubmit = handleSubmit(
                       </div>
                       <div v-else class="absolute bottom-1 end-1 z-20">
                         <div class="relative" data-tooltip="Upload image">
-                          <BaseButtonIcon condensed shape="full" @click="open">
+                          <BaseButtonIcon size="sm" shape="full" @click="open">
                             <Icon name="lucide:plus" class="h-4 w-4" />
                           </BaseButtonIcon>
                         </div>

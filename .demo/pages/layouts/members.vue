@@ -49,11 +49,11 @@ const currentMember = ref()
     <div class="flex items-center justify-end py-6">
       <!--Buttons-->
       <div class="hidden md:flex items-center gap-2">
-        <BaseButton to="/layouts/invite" shape="full" color="muted" condensed>
+        <BaseButton to="/layouts/invite" shape="full" color="muted" size="sm">
           <Icon name="lucide:user" class="w-4 h-4" />
           <span>Invite a Member</span>
         </BaseButton>
-        <BaseButton shape="full" color="muted" condensed>
+        <BaseButton shape="full" color="muted" size="sm">
           <Icon name="lucide:edit-3" class="w-4 h-4" />
           <span>Edit Member</span>
         </BaseButton>

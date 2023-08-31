@@ -132,7 +132,7 @@ definePageMeta({
               <BaseHeading as="h5" size="xl">$3,462.12</BaseHeading>
             </div>
             <div>
-              <BaseButtonIcon condensed>
+              <BaseButtonIcon size="sm">
                 <Icon name="lucide:arrow-right" />
               </BaseButtonIcon>
             </div>
@@ -168,7 +168,7 @@ definePageMeta({
               <BaseHeading as="h5" size="xl">$1,763.49</BaseHeading>
             </div>
             <div>
-              <BaseButtonIcon condensed>
+              <BaseButtonIcon size="sm">
                 <Icon name="lucide:arrow-right" />
               </BaseButtonIcon>
             </div>
@@ -204,7 +204,7 @@ definePageMeta({
               <BaseHeading as="h5" size="xl">$6,729.87</BaseHeading>
             </div>
             <div>
-              <BaseButtonIcon condensed>
+              <BaseButtonIcon size="sm">
                 <Icon name="lucide:arrow-right" />
               </BaseButtonIcon>
             </div>

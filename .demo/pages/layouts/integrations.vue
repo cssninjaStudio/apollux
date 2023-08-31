@@ -85,7 +85,7 @@ definePageMeta({
               </BaseParagraph>
             </div>
             <div class="ltablet:ms-auto lg:ms-auto">
-              <BaseButton shape="full" color="muted" condensed>
+              <BaseButton shape="full" color="muted" size="sm">
                 <Icon name="lucide:link" class="w-4 h-4" />
                 <span>Connect to Quickbooks</span>
               </BaseButton>
@@ -114,7 +114,7 @@ definePageMeta({
               </BaseParagraph>
             </div>
             <div class="ltablet:ms-auto lg:ms-auto">
-              <BaseButton shape="full" color="muted" condensed>
+              <BaseButton shape="full" color="muted" size="sm">
                 <Icon name="lucide:link" class="w-4 h-4" />
                 <span>Connect to Xero</span>
               </BaseButton>
@@ -146,7 +146,7 @@ definePageMeta({
               </BaseParagraph>
             </div>
             <div class="ltablet:ms-auto lg:ms-auto">
-              <BaseButton shape="full" color="muted" condensed>
+              <BaseButton shape="full" color="muted" size="sm">
                 <Icon name="lucide:link" class="w-4 h-4" />
                 <span>Connect to Freshbooks</span>
               </BaseButton>
@@ -197,7 +197,7 @@ definePageMeta({
               </BaseParagraph>
             </div>
             <div class="ltablet:ms-auto lg:ms-auto">
-              <BaseButton shape="full" color="muted" condensed>
+              <BaseButton shape="full" color="muted" size="sm">
                 <Icon name="lucide:link" class="w-4 h-4" />
                 <span>Connect to Zapier</span>
               </BaseButton>
@@ -226,7 +226,7 @@ definePageMeta({
               </BaseParagraph>
             </div>
             <div class="ltablet:ms-auto lg:ms-auto">
-              <BaseButton shape="full" color="muted" condensed>
+              <BaseButton shape="full" color="muted" size="sm">
                 <Icon name="lucide:link" class="w-4 h-4" />
                 <span>Connect to Google</span>
               </BaseButton>
@@ -255,7 +255,7 @@ definePageMeta({
               </BaseParagraph>
             </div>
             <div class="ltablet:ms-auto lg:ms-auto">
-              <BaseButton shape="full" color="muted" condensed>
+              <BaseButton shape="full" color="muted" size="sm">
                 <Icon name="lucide:link" class="w-4 h-4" />
                 <span>Connect to Stripe</span>
               </BaseButton>
@@ -284,7 +284,7 @@ definePageMeta({
               </BaseParagraph>
             </div>
             <div class="ltablet:ms-auto lg:ms-auto">
-              <BaseButton shape="full" color="muted" condensed>
+              <BaseButton shape="full" color="muted" size="sm">
                 <Icon name="lucide:link" class="w-4 h-4" />
                 <span>Connect to Paypal</span>
               </BaseButton>

@@ -7,7 +7,7 @@
     button-color="primary"
     label="Actions"
     orientation="end"
-    condensed
+    size="md"
   >
     <BaseDropdownItem to="/layouts/send" title="Send" text="Send someone money">
       <template #start>

@@ -11,11 +11,12 @@ export default defineEventHandler(async (event) => {
   }
 
   const data = await getDemoData()
+  const recipient = data.find((item) => item.slug === slug)
 
   return {
     total: data.length,
     data: filterDemoData(data, filter, page, perPage),
-    recipient: slug ? data.find((item) => item.slug === slug) : '',
+    recipient,
   }
 })
 

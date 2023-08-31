@@ -87,7 +87,7 @@ function openCardPanel(id: number, cards: any) {
             to="/layouts/card/new"
             shape="full"
             color="muted"
-            condensed
+            size="sm"
           >
             <Icon name="lucide:plus" class="w-4 h-4" />
             <span>New Card</span>

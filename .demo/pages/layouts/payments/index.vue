@@ -113,7 +113,7 @@ const scheduled = computed(() => {
                 </span>
               </div>
               <div class="flex items-center gap-2">
-                <BaseButton color="muted" shape="full" condensed
+                <BaseButton color="muted" shape="full" size="sm"
                   >Cancel</BaseButton
                 >
               </div>
@@ -181,10 +181,10 @@ const scheduled = computed(() => {
                 </span>
               </div>
               <div class="flex items-center gap-2">
-                <BaseButton color="muted" shape="full" condensed
+                <BaseButton color="muted" shape="full" size="sm"
                   >Cancel</BaseButton
                 >
-                <BaseButton shape="full" condensed>Pay Now</BaseButton>
+                <BaseButton shape="full" size="sm">Pay Now</BaseButton>
               </div>
             </div>
           </div>

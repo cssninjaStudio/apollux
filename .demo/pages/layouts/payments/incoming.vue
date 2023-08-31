@@ -168,13 +168,13 @@ function statusColor(itemStatus: string) {
                     flavor="pastel"
                     shape="full"
                     :color="index > 6 ? 'muted' : statusColor(item.status)"
-                    condensed
+                    size="sm"
                   >
                     {{ item.status }}
                   </BaseTag>
                 </td>
                 <td class="p-4 text-end">
-                  <BaseButton shape="full" condensed>Details</BaseButton>
+                  <BaseButton shape="full" size="sm">Details</BaseButton>
                 </td>
               </tr>
             </tbody>
@@ -278,13 +278,13 @@ function statusColor(itemStatus: string) {
                     flavor="pastel"
                     shape="full"
                     :color="index > 6 ? 'muted' : statusColor(item.status)"
-                    condensed
+                    size="sm"
                   >
                     {{ item.status }}
                   </BaseTag>
                 </td>
                 <td class="p-4 text-end">
-                  <BaseButton color="muted" shape="full" condensed
+                  <BaseButton color="muted" shape="full" size="sm"
                     >Cancel</BaseButton
                   >
                 </td>

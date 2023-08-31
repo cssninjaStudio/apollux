@@ -24,7 +24,7 @@ definePageMeta({
             class="text-muted-800 dark:text-muted-100"
             >Your cards</BaseHeading
           >
-          <BaseButtonIcon to="/layouts/card/new" shape="curved" condensed>
+          <BaseButtonIcon to="/layouts/card/new" shape="curved" size="sm">
             <Icon name="lucide:plus" class="w-4 h-4" />
           </BaseButtonIcon>
         </div>
@@ -130,7 +130,7 @@ definePageMeta({
               >
             </div>
             <div class="ms-auto">
-              <BaseButtonIcon shape="curved" condensed>
+              <BaseButtonIcon shape="curved" size="sm">
                 <Icon name="lucide:chevron-right" class="w-4 h-4" />
               </BaseButtonIcon>
             </div>
@@ -163,7 +163,7 @@ definePageMeta({
               >
             </div>
             <div class="ms-auto">
-              <BaseButtonIcon shape="curved" condensed>
+              <BaseButtonIcon shape="curved" size="sm">
                 <Icon name="lucide:chevron-right" class="w-4 h-4" />
               </BaseButtonIcon>
             </div>
@@ -182,7 +182,7 @@ definePageMeta({
               class="text-muted-800 dark:text-muted-100"
               >Quick transaction</BaseHeading
             >
-            <BaseButtonIcon to="/layouts/send" shape="curved" condensed>
+            <BaseButtonIcon to="/layouts/send" shape="curved" size="sm">
               <Icon name="lucide:plus" class="w-4 h-4" />
             </BaseButtonIcon>
           </div>

@@ -10,19 +10,15 @@ import remarkRehype from 'remark-rehype'
 import {
   getHighlighter,
   setCDN,
-  type Highlighter,
   type HighlighterOptions,
   type IThemeRegistration,
   type Lang,
 } from 'shiki'
-import { unified, type Processor } from 'unified'
+import { unified } from 'unified'
 
 export type ProcessorThemes = Record<
   string,
-  {
-    processor: Processor
-    highlighter: Highlighter
-  }
+  Awaited<ReturnType<typeof createProcessor>>
 >
 
 // this is used to cache the markdown processors
@@ -78,9 +74,13 @@ async function createProcessor(options: HighlighterOptions) {
 
   const highlighter = await getHighlighter(options)
   const processor = unified()
+    // @ts-expect-error
     .use(remarkParse)
+    // @ts-expect-error
     .use(remarkGfm)
+    // @ts-expect-error
     .use(remarkShiki, { highlighter })
+    // @ts-expect-error
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
     // this but sanitize html but allow to add
@@ -108,6 +108,7 @@ async function createProcessor(options: HighlighterOptions) {
       },
     })
     // this add noopener, noreferrer and _blank to external links
+    // @ts-expect-error
     .use(rehypeExternalLinks, {
       rel: ['noopener noreferrer'],
       target: '_blank',

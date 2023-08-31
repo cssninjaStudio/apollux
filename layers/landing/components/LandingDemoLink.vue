@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { RouteRecordName } from '.nuxt/vue-router'
+import type { RouteRecordName } from 'vue-router'
 
 const props = defineProps<{
   name?: RouteRecordName

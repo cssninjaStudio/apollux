@@ -22,5 +22,6 @@
   },
   "tailwindCSS.experimental.configFile": ".demo/tailwind.config.ts",
   "typescript.tsdk": "node_modules/typescript/lib",
-  "prettier.prettierPath": "./node_modules/prettier"
+  "prettier.prettierPath": "./node_modules/prettier",
+  "vue.codeActions.enabled": false
 }

@@ -79,7 +79,7 @@ const timeCategoryTo = ref('')
   <div class="group relative hidden md:block">
     <Menu as="div" class="" v-slot="{ close }">
       <MenuButton as="template">
-        <BaseButton shape="full" color="muted" condensed>
+        <BaseButton shape="full" color="muted" size="sm">
           <Icon name="lucide:filter" class="w-4 h-4" />
           <span>Add Filter</span>
         </BaseButton>

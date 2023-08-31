@@ -114,7 +114,7 @@ function openOptionPanel(id: number, options: any) {
                 <div class="flex items-center gap-2">
                   <BaseTag
                     v-for="target in option.targets"
-                    condensed
+                    size="sm"
                     shape="full"
                     :key="target"
                     color="muted"

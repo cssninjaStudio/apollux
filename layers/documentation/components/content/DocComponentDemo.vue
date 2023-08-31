@@ -115,7 +115,6 @@ async function loadDemo() {
       >
         <BaseCheckbox
           v-model="forceDark"
-          condensed
           :classes="{
             label: '!text-xs mt-1',
             wrapper:

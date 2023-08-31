@@ -10,7 +10,7 @@ const staticAssetsRule = isProduction
 
 const staticPageRule = isProduction
   ? {
-      prerender: true,
+      // prerender: true,
       cache: {
         maxAge: 3600,
         swr: true,
@@ -29,7 +29,7 @@ export const demoRules = {
   '/api/**': staticAssetsRule,
   '/dashboards/**': staticPageRule,
   '/layouts/**': staticPageRule,
-  '/wizard/**': staticPageRule,
+  // '/wizard/**': staticPageRule,
   '/auth/**': staticPageRule,
 }
 

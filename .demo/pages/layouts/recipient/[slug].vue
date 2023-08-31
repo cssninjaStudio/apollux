@@ -98,7 +98,7 @@ function statusColor(itemStatus: string) {
           to="/layouts/payments/recipients"
           shape="full"
           color="muted"
-          condensed
+          size="sm"
         >
           <Icon name="lucide:arrow-left" class="w-4 h-4" />
           <span>Go Back</span>
@@ -107,7 +107,7 @@ function statusColor(itemStatus: string) {
           to="/layouts/contacts/create"
           shape="full"
           color="muted"
-          condensed
+          size="sm"
         >
           <Icon name="lucide:plus" class="w-4 h-4" />
           <span>New Contact</span>
@@ -205,7 +205,7 @@ function statusColor(itemStatus: string) {
                   :color="
                     data.recipient.status === 'active' ? 'success' : 'muted'
                   "
-                  condensed
+                  size="sm"
                   >{{ data.recipient.status }}</BaseTag
                 >
               </div>
@@ -334,7 +334,7 @@ function statusColor(itemStatus: string) {
                     lead="none"
                     class="mb-3"
                   >
-                    ${{ totalSent.toFixed(2) }}
+                    ${{ totalSent?.toFixed(2) }}
                   </BaseHeading>
                   <BaseParagraph size="xs" class="text-muted-400 line-clamp-1">
                     Lifetime sent
@@ -359,7 +359,7 @@ function statusColor(itemStatus: string) {
                     lead="none"
                     class="mb-3"
                   >
-                    ${{ totalReceived.toFixed(2) }}
+                    ${{ totalReceived?.toFixed(2) }}
                   </BaseHeading>
                   <BaseParagraph size="xs" class="text-muted-400 line-clamp-1">
                     Lifetime received
@@ -387,7 +387,7 @@ function statusColor(itemStatus: string) {
                   History
                 </BaseHeading>
                 <div>
-                  <BaseButton to="/layouts/send" shape="full" condensed
+                  <BaseButton to="/layouts/send" shape="full" size="sm"
                     >Send Money</BaseButton
                   >
                 </div>
@@ -454,7 +454,7 @@ function statusColor(itemStatus: string) {
                           flavor="pastel"
                           shape="full"
                           :color="statusColor(item.status)"
-                          condensed
+                          size="sm"
                         >
                           {{ item.status }}
                         </BaseTag>

@@ -132,7 +132,7 @@ function statusColor(itemStatus: string) {
                 flavor="pastel"
                 shape="full"
                 :color="statusColor(item.status)"
-                condensed
+                size="sm"
               >
                 {{ item.status }}
               </BaseTag>

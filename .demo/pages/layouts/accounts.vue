@@ -33,11 +33,11 @@ const isRules = computed(() => {
     <div class="flex items-center justify-end py-6">
       <!--Buttons-->
       <div class="hidden md:flex items-center gap-2">
-        <BaseButton shape="full" color="muted" condensed>
+        <BaseButton shape="full" color="muted" size="sm">
           <Icon name="lucide:building" class="w-4 h-4" />
           <span>New Account</span>
         </BaseButton>
-        <BaseButton shape="full" color="muted" condensed>
+        <BaseButton shape="full" color="muted" size="sm">
           <Icon name="lucide:link" class="w-4 h-4" />
           <span>Link Account</span>
         </BaseButton>

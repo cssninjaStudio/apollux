@@ -112,7 +112,7 @@ function openAccountPanel(id: number, accounts: any) {
             </BaseText>
           </div>
           <div class="hidden md:block md:w-1/5">
-            <BaseButton to="/layouts/accounts/rules" shape="full" condensed>
+            <BaseButton to="/layouts/accounts/rules" shape="full" size="sm">
               <Icon name="lucide:edit-3" class="w-4 h-4" />
               <span class="font-heading text-sm">New rule</span>
             </BaseButton>

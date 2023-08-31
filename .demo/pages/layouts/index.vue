@@ -88,7 +88,7 @@ function statusColor(itemStatus: string) {
         </span>
 
         <div class="ms-auto">
-          <BaseButton shape="full" color="muted" condensed>
+          <BaseButton shape="full" color="muted" size="sm">
             <Icon name="lucide:download" class="w-4 h-4" />
             <span>Export All</span>
           </BaseButton>
@@ -181,7 +181,7 @@ function statusColor(itemStatus: string) {
                 flavor="pastel"
                 shape="full"
                 :color="index > 6 ? 'muted' : statusColor(item.status)"
-                condensed
+                size="sm"
               >
                 {{ item.status }}
               </BaseTag>

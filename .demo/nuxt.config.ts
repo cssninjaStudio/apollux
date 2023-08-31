@@ -1,5 +1,3 @@
-import { isProduction } from 'std-env'
-
 import {
   demoRules,
   documentationRules,
@@ -52,9 +50,9 @@ export default defineNuxtConfig({
   css: ['~/assets/css/colors.css'],
 
   experimental: {
-    // using parcel as as watcher run faster
+    // using chokidar-granular as as watcher run faster
     // when using layers and/or in large projects
-    watcher: 'parcel',
+    watcher: 'chokidar-granular',
     // Write early hints when using node server.
     writeEarlyHints: true,
     // Render JSON payloads with support for revivifying complex types.
@@ -83,22 +81,9 @@ export default defineNuxtConfig({
   },
 
   // build configuration
-  hooks: {
-    'vite:extendConfig'(config, { isClient }) {
-      if (isProduction && isClient) {
-        // @ts-ignore
-        config.build.rollupOptions.output.entryFileNames = '_nuxt/e/[hash].js'
-        // @ts-ignore
-        config.build.rollupOptions.output.chunkFileNames = '_nuxt/c/[hash].js'
-        // @ts-ignore
-        config.build.rollupOptions.output.assetFileNames =
-          '_nuxt/a/[hash][extname]'
-      }
-    },
-  },
   nitro: {
     prerender: {
-      crawlLinks: true,
+      crawlLinks: false,
       routes: ['/', '/dashboards', '/layouts'],
     },
     esbuild: {
@@ -118,6 +103,17 @@ export default defineNuxtConfig({
     build: {
       target: 'esnext',
     },
+    // $client: {
+    //   build: {
+    //     rollupOptions: {
+    //       output: {
+    //         entryFileNames: '_nuxt/e/[hash].js',
+    //         chunkFileNames: '_nuxt/c/[hash].js',
+    //         assetFileNames: '_nuxt/a/[hash][extname]',
+    //       },
+    //     },
+    //   },
+    // },
   },
 
   // nuxt modules configuration

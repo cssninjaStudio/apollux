@@ -446,7 +446,7 @@ definePageMeta({
                 >
               </div>
               <div class="ms-auto">
-                <BaseButtonIcon shape="curved" condensed>
+                <BaseButtonIcon shape="curved" size="sm">
                   <Icon name="lucide:chevron-right" class="w-4 h-4" />
                 </BaseButtonIcon>
               </div>
@@ -479,7 +479,7 @@ definePageMeta({
                 >
               </div>
               <div class="ms-auto">
-                <BaseButtonIcon shape="curved" condensed>
+                <BaseButtonIcon shape="curved" size="sm">
                   <Icon name="lucide:chevron-right" class="w-4 h-4" />
                 </BaseButtonIcon>
               </div>

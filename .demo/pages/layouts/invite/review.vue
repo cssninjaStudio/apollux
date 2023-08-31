@@ -73,7 +73,7 @@ useHead({
                     v-if="request.role"
                     shape="curved"
                     class="capitalize"
-                    condensed
+                    size="sm"
                     >{{ request?.role }}</BaseTag
                   >
                 </BaseHeading>

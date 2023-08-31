@@ -124,7 +124,9 @@ if (!data.value?.member) {
                 class="text-muted-800 dark:text-muted-100"
               >
                 {{ data?.member.cards.length }} card{{
-                  data?.member.cards.length > 1 ? 's' : ''
+                  data?.member?.cards?.length && data.member.cards.length > 1
+                    ? 's'
+                    : ''
                 }}
               </BaseHeading>
             </div>
@@ -165,7 +167,7 @@ if (!data.value?.member) {
                       </div>
                     </td>
                     <td class="p-4 xs:hidden">
-                      <BaseButton to="/layouts/cards" shape="full" condensed
+                      <BaseButton to="/layouts/cards" shape="full" size="sm"
                         >View</BaseButton
                       >
                     </td>

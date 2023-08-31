@@ -252,7 +252,7 @@ const itemSubtotal = computed(() =>
                       <BaseButtonIcon
                         to="/layouts/card/new"
                         shape="curved"
-                        condensed
+                        size="sm"
                       >
                         <Icon name="lucide:edit-2" class="w-4 h-4" />
                       </BaseButtonIcon>
@@ -316,7 +316,7 @@ const itemSubtotal = computed(() =>
                         <BaseButtonIcon
                           to="/layouts/card/new"
                           shape="curved"
-                          condensed
+                          size="sm"
                         >
                           <Icon name="lucide:printer" class="w-4 h-4" />
                         </BaseButtonIcon>

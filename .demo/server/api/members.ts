@@ -11,11 +11,12 @@ export default defineEventHandler(async (event) => {
   }
 
   const data = await getDemoData()
+  const member = data.find((item) => item.slug === slug)
 
   return {
     total: data.length,
     data: filterDemoData(data, filter, page, perPage),
-    member: slug ? data.find((item) => item.slug === slug) : 'kendra-wilson',
+    member,
   }
 })
 

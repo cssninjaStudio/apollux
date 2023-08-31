@@ -60,10 +60,10 @@ const companies = computed(() => {
             to="/layouts/contacts/create"
             shape="full"
             color="primary"
-            condensed
+            size="sm"
             data-nui-tooltip="Add recipient"
           >
-            <Icon name="lucide:plus" size="w-2 h-2" />
+            <Icon name="lucide:plus" class="w-2 h-2" />
           </BaseButtonIcon>
           <h3 class="font-heading text-xl text-muted-800 dark:text-muted-200">
             Contacts
