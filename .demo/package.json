@@ -27,7 +27,7 @@
     "magic-string": "0.30.3",
     "nuxt": "3.7.0",
     "nuxt-swiper": "1.2.2",
-    "rehype-external-links": "2.1.0",
+    "rehype-external-links": "3.0.0",
     "rehype-raw": "7.0.0",
     "rehype-sanitize": "6.0.0",
     "rehype-stringify": "10.0.0",
