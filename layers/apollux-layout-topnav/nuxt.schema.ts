@@ -39,7 +39,6 @@ export default defineNuxtSchema({
           enabled: true,
           logo: {
             component: 'ApolluxLogo',
-            resolve: true,
             props: {},
           },
           items: {

@@ -15,7 +15,7 @@ demo: '#examples/icon-button/shapes.vue'
 ---
 Icon buttons are a quick and visual way to express an action. Icon buttons can have different shapes using the `shape` prop.
 :::doc-message{type="muted" icon="ion:shapes-outline"}
-Default shape of all :doc-linker{to="BaseButtonIcon"} can be set in your `app.config.ts`.
+Default shape of all :doc-linker{to="BaseButtonIcon"} can be set in your `.app/app.config.ts`.
 :::
 ::
 
@@ -24,7 +24,7 @@ Default shape of all :doc-linker{to="BaseButtonIcon"} can be set in your `app.co
 title: Small buttons
 demo: '#examples/icon-button/small.vue'
 ---
-Icon buttons can have a smaller size using the `condensed` prop.
+Icon buttons can have a smaller size using the `size` prop with the `sm` value.
 ::
 
 ::doc-component-demo
@@ -56,7 +56,7 @@ Icon buttons can be shown in a loading state. Use the `loading` prop to show a l
 title: Button group
 demo: '#examples/icon-button/group.vue'
 ---
-Icon buttons can be grouped into a single element using a flex container. Adjust border radiuses and borders to create a seamless group.
+Icon buttons can be grouped into a single element using the `BaseButtonGroup` component.
 ::
 
 :doc-component-meta{name="BaseButtonIcon"}

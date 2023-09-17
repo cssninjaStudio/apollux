@@ -29,15 +29,6 @@ export default defineNuxtConfig({
     '../layers/apollux-layout-collapse',
     '../layers/apollux-layout-topnav',
     '../layers/apollux',
-
-    /**
-     * This is an additional layer that adds SEO features.
-     *
-     * Can be used either to prevent indexing,
-     * or to add custom meta tags to improve referencing.
-     * @see https://github.com/harlan-zw/nuxt-seo-kit
-     */
-    'nuxt-seo-kit',
   ],
   modules: [
     /**
@@ -47,7 +38,12 @@ export default defineNuxtConfig({
      */
     'nuxt-swiper',
   ],
-  css: ['~/assets/css/colors.css'],
+  css: [
+    '~/assets/css/colors.css',
+    '@fontsource-variable/fira-code/index.css',
+    '@fontsource-variable/inter/index.css',
+    '@fontsource-variable/karla/index.css',
+  ],
 
   experimental: {
     // using chokidar-granular as as watcher run faster
@@ -57,8 +53,12 @@ export default defineNuxtConfig({
     writeEarlyHints: true,
     // Render JSON payloads with support for revivifying complex types.
     renderJsonPayloads: true,
-    // Use new experimental head optimisations
-    headNext: true,
+  },
+
+  typescript: {
+    tsConfig: {
+      // Here you can customize the generated tsconfig.json file
+    },
   },
 
   // nuxt behavior configuration
@@ -66,12 +66,7 @@ export default defineNuxtConfig({
     public: {
       // mapbox config
       mapboxToken: process.env.NUXT_PUBLIC_MAPBOX_TOKEN,
-      // nuxt-seo-kit config
       siteUrl: process.env.NUXT_PUBLIC_SITE_URL,
-      siteName: 'Apollux by CSS Ninja',
-      siteDescription:
-        'The most advanced Nuxt and Tailwind CSS dashboard template',
-      language: 'en',
     },
   },
   routeRules: {
@@ -80,12 +75,8 @@ export default defineNuxtConfig({
     ...(process.env.ENABLE_DOCUMENTATION ? documentationRules : {}),
   },
 
-  // build configuration
+  // nuxt build configuration
   nitro: {
-    prerender: {
-      crawlLinks: false,
-      routes: ['/', '/dashboards', '/layouts'],
-    },
     esbuild: {
       options: {
         target: 'esnext',
@@ -103,29 +94,5 @@ export default defineNuxtConfig({
     build: {
       target: 'esnext',
     },
-    // $client: {
-    //   build: {
-    //     rollupOptions: {
-    //       output: {
-    //         entryFileNames: '_nuxt/e/[hash].js',
-    //         chunkFileNames: '_nuxt/c/[hash].js',
-    //         assetFileNames: '_nuxt/a/[hash][extname]',
-    //       },
-    //     },
-    //   },
-    // },
-  },
-
-  // nuxt modules configuration
-  unfonts: {
-    google: {
-      families: ['Inter', 'Fira Code'],
-    },
-  },
-  linkChecker: {
-    failOn404: true,
-  },
-  unhead: {
-    seoOptimise: true,
   },
 })

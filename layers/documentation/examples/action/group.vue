@@ -1,5 +1,5 @@
 <template>
-  <div class="flex items-end">
+  <BaseButtonGroup>
     <BaseButtonAction shape="rounded" class="rounded-e-none border-e-0 focus:z-10">
       View
     </BaseButtonAction>
@@ -17,5 +17,5 @@
     <BaseButtonAction shape="rounded" class="rounded-s-none border-s-0 focus:z-10">
       Share
     </BaseButtonAction>
-  </div>
+  </BaseButtonGroup>
 </template>

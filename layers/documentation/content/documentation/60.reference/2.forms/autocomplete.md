@@ -17,7 +17,7 @@ demo: '#examples/autocomplete/shapes.vue'
 ---
 Autocompletes can have different shapes. The default shape is `rounded` but you can also use `straight`, `curved` or `full` shapes.
 :::doc-message{type="muted" icon="ion:shapes-outline"}
-Default shape of all :doc-linker{to="BaseAutocomplete"} can be set in your `app.config.ts`.
+Default shape of all :doc-linker{to="BaseAutocomplete"} can be set in your `.app/app.config.ts`.
 :::
 ::
 
@@ -51,10 +51,10 @@ Autocompletes can have a material design style floating label using the `labelFl
 
 ::doc-component-demo
 ---
-title: Condensed
+title: Small
 demo: '#examples/autocomplete/condensed.vue'
 ---
-Autocompletes can be displayed in a smaller and more compact way using the `condensed` prop.
+Autocompletes can be displayed in a smaller and more compact way using the `size` prop with the `sm` value.
 ::
 
 

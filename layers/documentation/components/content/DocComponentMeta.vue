@@ -44,7 +44,7 @@ function wrapExternalLinks(string: string) {
             class="text-muted-800 dark:text-muted-200"
           >
             <ApolluxTocAnchor
-              :id="`${docs.meta?.kebabName}-usage`"
+              :id="`${docs?.meta?.kebabName}-usage`"
               :level="3"
               prefix=""
               suffix="¶"
@@ -72,10 +72,6 @@ function wrapExternalLinks(string: string) {
                   :lines="false"
                   class="max-w-none"
                   :source="docs.renderNoOptions()"
-                  :theme="{
-                    light: 'cssninja-light-theme',
-                    dark: 'cssninja-dark-theme',
-                  }"
                 />
               </div>
             </div>
@@ -93,7 +89,7 @@ function wrapExternalLinks(string: string) {
             class="text-muted-800 dark:text-muted-200"
           >
             <ApolluxTocAnchor
-              :id="`${docs.meta?.kebabName}-model`"
+              :id="`${docs?.meta?.kebabName}-model`"
               :level="3"
               prefix=""
               suffix="¶"
@@ -177,10 +173,6 @@ function wrapExternalLinks(string: string) {
                     class="inline-sample"
                     :lines="false"
                     :source="`\`\`\`ts\n${docs.model.type}\n\`\`\``"
-                    :theme="{
-                      light: 'cssninja-light-theme',
-                      dark: 'cssninja-dark-theme',
-                    }"
                   />
                 </div>
                 <div class="col-span-1 lg:col-span-9 lg:col-start-4">
@@ -199,10 +191,6 @@ function wrapExternalLinks(string: string) {
                       :lines="false"
                       class="max-w-none"
                       :source="docs.renderModel(docs.model)"
-                      :theme="{
-                        light: 'cssninja-light-theme',
-                        dark: 'cssninja-dark-theme',
-                      }"
                     />
                   </details>
                 </div>
@@ -221,7 +209,7 @@ function wrapExternalLinks(string: string) {
             class="text-muted-800 dark:text-muted-200"
           >
             <ApolluxTocAnchor
-              :id="`${docs.meta?.kebabName}-properties`"
+              :id="`${docs?.meta?.kebabName}-properties`"
               :level="3"
               prefix=""
               suffix="¶"
@@ -307,10 +295,6 @@ function wrapExternalLinks(string: string) {
                   class="inline-sample"
                   :lines="false"
                   :source="`\`\`\`ts\n${prop.type}\n\`\`\``"
-                  :theme="{
-                    light: 'cssninja-light-theme',
-                    dark: 'cssninja-dark-theme',
-                  }"
                 />
               </div>
               <div class="col-span-1 lg:col-span-4">
@@ -322,10 +306,6 @@ function wrapExternalLinks(string: string) {
                       ? 'undefined'
                       : prop.default
                   }\n\`\`\``"
-                  :theme="{
-                    light: 'cssninja-light-theme',
-                    dark: 'cssninja-dark-theme',
-                  }"
                 />
               </div>
               <div class="col-span-1 lg:col-span-9 lg:col-start-4">
@@ -344,10 +324,6 @@ function wrapExternalLinks(string: string) {
                     :lines="false"
                     class="max-w-none"
                     :source="docs.renderProperty(prop)"
-                    :theme="{
-                      light: 'cssninja-light-theme',
-                      dark: 'cssninja-dark-theme',
-                    }"
                   />
                 </details>
               </div>
@@ -365,7 +341,7 @@ function wrapExternalLinks(string: string) {
             class="text-muted-800 dark:text-muted-200"
           >
             <ApolluxTocAnchor
-              :id="`${docs.meta?.kebabName}-events`"
+              :id="`${docs?.meta?.kebabName}-events`"
               :level="3"
               prefix=""
               suffix="¶"
@@ -415,10 +391,6 @@ function wrapExternalLinks(string: string) {
                     ? event.type.slice(1, -1)
                     : event.type
                   ).replace('value?: ', '')}\n\`\`\``"
-                  :theme="{
-                    light: 'cssninja-light-theme',
-                    dark: 'cssninja-dark-theme',
-                  }"
                 />
               </div>
               <div class="col-span-1 lg:col-span-9 lg:col-start-4">
@@ -437,10 +409,6 @@ function wrapExternalLinks(string: string) {
                     :lines="false"
                     class="max-w-none"
                     :source="docs.renderEvents(event)"
-                    :theme="{
-                      light: 'cssninja-light-theme',
-                      dark: 'cssninja-dark-theme',
-                    }"
                   />
                 </details>
               </div>
@@ -458,7 +426,7 @@ function wrapExternalLinks(string: string) {
             class="text-muted-800 dark:text-muted-200"
           >
             <ApolluxTocAnchor
-              :id="`${docs.meta?.kebabName}-slots`"
+              :id="`${docs?.meta?.kebabName}-slots`"
               :level="3"
               prefix=""
               suffix="¶"
@@ -505,10 +473,6 @@ function wrapExternalLinks(string: string) {
                   class="inline-sample max-w-none"
                   :lines="false"
                   :source="`\`\`\`ts\n${slot.type}\n\`\`\``"
-                  :theme="{
-                    light: 'cssninja-light-theme',
-                    dark: 'cssninja-dark-theme',
-                  }"
                 />
               </div>
               <div class="col-span-1 lg:col-span-9 lg:col-start-4">
@@ -527,10 +491,6 @@ function wrapExternalLinks(string: string) {
                     :lines="false"
                     class="max-w-none"
                     :source="docs.renderSlot(slot)"
-                    :theme="{
-                      light: 'cssninja-light-theme',
-                      dark: 'cssninja-dark-theme',
-                    }"
                   />
                 </details>
               </div>
@@ -548,7 +508,7 @@ function wrapExternalLinks(string: string) {
             class="text-muted-800 dark:text-muted-200"
           >
             <ApolluxTocAnchor
-              :id="`${docs.meta?.kebabName}-exposed`"
+              :id="`${docs?.meta?.kebabName}-exposed`"
               :level="3"
               prefix=""
               suffix="¶"
@@ -600,10 +560,6 @@ function wrapExternalLinks(string: string) {
                   class="inline-sample max-w-none"
                   :lines="false"
                   :source="`\`\`\`ts\n${exposed.type}\n\`\`\``"
-                  :theme="{
-                    light: 'cssninja-light-theme',
-                    dark: 'cssninja-dark-theme',
-                  }"
                 />
               </div>
               <div class="col-span-1 lg:col-span-9 lg:col-start-4">
@@ -622,10 +578,6 @@ function wrapExternalLinks(string: string) {
                     :lines="false"
                     class="max-w-none"
                     :source="docs.renderExposed(exposed)"
-                    :theme="{
-                      light: 'cssninja-light-theme',
-                      dark: 'cssninja-dark-theme',
-                    }"
                   />
                 </details>
               </div>

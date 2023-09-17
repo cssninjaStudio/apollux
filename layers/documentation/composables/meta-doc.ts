@@ -7,41 +7,83 @@ import { toRef } from '@vueuse/core'
 
 const excludedProps = ['modelValue', 'modelModifiers']
 
+const useComponentsMetaState = () =>
+  useState('components-meta', () => ({}) as Record<string, Promise<any> | any>)
+
+export async function fetchComponentMeta(name: string) {
+  const state = useComponentsMetaState()
+
+  if (state.value[name]?.then) {
+    await state.value[name]
+    return state.value[name]
+  }
+  if (state.value[name]) {
+    return state.value[name]
+  }
+
+  // Store promise to avoid multiple calls
+
+  // add to nitro prerender
+  if (process.server) {
+    const event = useRequestEvent()
+    event.node.res.setHeader(
+      'x-nitro-prerender',
+      [
+        event.node.res.getHeader('x-nitro-prerender'),
+        `/api/component-meta/${name}.json`,
+      ]
+        .filter(Boolean)
+        .join(','),
+    )
+  }
+  state.value[name] = $fetch(`/api/component-meta/${name}.json`).then(
+    (meta) => {
+      state.value[name] = meta
+    },
+  )
+
+  await state.value[name]
+  return state.value[name]
+}
+
 export async function useDocumentationMeta(
   _name: MaybeRefOrGetter<NuxtComponentMetaNames>,
 ) {
   const name = toRef(_name)
 
-  const meta = await useComponentMeta(name.value)
+  const meta = await fetchComponentMeta(name.value)
 
-  const model = computed(() =>
-    meta?.value?.meta?.props?.find((prop: any) => prop.name === 'modelValue'),
+  const model = computed(
+    () => meta?.meta?.props?.find((prop: any) => prop.name === 'modelValue'),
   )
-  const props = computed(() =>
-    meta?.value?.meta?.props?.filter(
-      (prop: any) => !excludedProps.includes(prop.name),
-    ),
+  const props = computed(
+    () =>
+      meta?.meta?.props?.filter(
+        (prop: any) => !excludedProps.includes(prop.name),
+      ),
   )
-  const events = computed(() =>
-    meta?.value?.meta?.events?.filter(
-      (prop: any) => prop.name !== 'update:modelValue',
-    ),
+  const events = computed(
+    () =>
+      meta?.meta?.events?.filter(
+        (prop: any) => prop.name !== 'update:modelValue',
+      ),
   )
-  const slots = computed(() => meta?.value?.meta?.slots)
-  const exposed = computed(() =>
-    meta?.value?.meta?.exposed.filter((item: any) => {
-      const isProps =
-        props.value?.findIndex((prop: any) => prop.name === item.name) >= 0
-      const isEvent =
-        meta?.value?.meta?.events?.findIndex(
-          (event: any) =>
-            `on${event.name}`.toLowerCase() === item.name?.toLowerCase(),
-        ) >= 0
-      const isExcluded = item.name?.startsWith('$')
-      const isModel = item.name === 'modelValue'
+  const slots = computed(() => meta?.meta?.slots)
+  const exposed = computed(
+    () =>
+      meta?.meta?.exposed.filter((item: any) => {
+        const isProps =
+          props.value?.findIndex((prop: any) => prop.name === item.name) >= 0
+        const isEvent =
+          meta?.meta?.events?.findIndex(
+            (event: any) =>
+              `on${event.name}`.toLowerCase() === item.name?.toLowerCase(),
+          ) >= 0
+        const isExcluded = item.name?.startsWith('$')
+        const isModel = item.name === 'modelValue'
 
-      return !(isProps || isEvent || isExcluded || isModel)
-    }),
+        return !(isProps || isEvent || isExcluded || isModel)
+      }),
   )
 
   const noOptions = computed(() => {

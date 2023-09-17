@@ -92,4 +92,4 @@ Dropdowns menus can have a header. Use the `headerLabel` prop to add a header te
 
 :doc-component-meta{name="BaseDropdown"}
 :doc-component-meta{name="BaseDropdownItem"}
-:doc-component-meta{name="BaseDropdownDivide"}
+:doc-component-meta{name="BaseDropdownDivider"}

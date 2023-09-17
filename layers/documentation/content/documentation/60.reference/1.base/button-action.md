@@ -15,7 +15,7 @@ demo: '#examples/action/shapes.vue'
 ---
 Buttons are an essential part of any application. Actions can have different shapes using the `shape` prop.
 :::doc-message{type="muted" icon="ion:shapes-outline"}
-Default shape of all :doc-linker{to="BaseButtonAction"} can be set in your `app.config.ts`.
+Default shape of all :doc-linker{to="BaseButtonAction"} can be set in your `.app/app.config.ts`.
 :::
 ::
 
@@ -48,7 +48,7 @@ Actions can be shown in a loading state. Use the `loading` prop to show a loadin
 title: Actions group
 demo: '#examples/action/group.vue'
 ---
-Actions can be grouped into a single element using a flex container. Adjust border radiuses and borders to create a seamless group.
+Actions can be grouped into a single element using the `BaseButtonGroup` component.
 ::
 
 :doc-component-meta{name="BaseButtonAction"}

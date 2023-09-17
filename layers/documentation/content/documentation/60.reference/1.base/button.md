@@ -16,7 +16,7 @@ demo: '#examples/button/shapes.vue'
 ---
 Buttons are an essential part of any application. Buttons can have different shapes using the `shape` prop.
 :::doc-message{type="muted" icon="ion:shapes-outline"}
-Default shape of all :doc-linker{to="BaseButton"} can be set in your `app.config.ts`.
+Default shape of all :doc-linker{to="BaseButton"} can be set in your `.app/app.config.ts`.
 :::
 ::
 
@@ -41,7 +41,7 @@ Buttons can have solid background colors. Use the `flavor="solid"` prop and the 
 title: Smaller solid buttons
 demo: '#examples/button/solid-condensed.vue'
 ---
-Buttons can have a smaller size. Use the `condensed` prop to make smaller buttons.
+Buttons can have a smaller size. Use the `size` prop with the `sm` value to make smaller buttons.
 ::
 
 ::doc-component-demo
@@ -57,7 +57,7 @@ Buttons can have pastel background colors. Use the `flavor="pastel"` prop and th
 title: Smaller pastel buttons
 demo: '#examples/button/pastel-condensed.vue'
 ---
-Buttons can have a smaller size. Use the `condensed` prop to make smaller buttons.
+Buttons can have a smaller size. Use the `size` prop with the `sm` value to make smaller buttons.
 ::
 
 ::doc-component-demo
@@ -73,7 +73,7 @@ Buttons can have outline background colors. Use the `flavor="outline"` prop and 
 title: Smaller outline buttons
 demo: '#examples/button/outline-condensed.vue'
 ---
-Buttons can have a smaller size. Use the `condensed` prop to make smaller buttons.
+Buttons can have a smaller size. Use the `size` prop with the `sm` value to make smaller buttons.
 ::
 
 ::doc-component-demo
@@ -121,7 +121,7 @@ Buttons can be shown in a disabled state. Use the `disabled` prop to disable the
 title: Button group
 demo: '#examples/button/group.vue'
 ---
-Buttons can be grouped together. Use them inside a flex container with an optional gap.
+Buttons can be grouped together. Use them inside the `BaseButtonGroup` component.
 ::
 
 :doc-component-meta{name="BaseButton"}

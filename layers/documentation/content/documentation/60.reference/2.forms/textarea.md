@@ -16,7 +16,7 @@ demo: '#examples/textarea/shapes.vue'
 ---
 Textareas can have different shapes. Use the `shape` prop to change the shape of the textarea component.
 :::doc-message{type="muted" icon="ion:shapes-outline"}
-Default shape of all :doc-linker{to="BaseTextarea"} can be set in your `app.config.ts`.
+Default shape of all :doc-linker{to="BaseTextarea"} can be set in your `.app/app.config.ts`.
 :::
 ::
 
@@ -30,10 +30,10 @@ Textareas can have floating labels. Use the `label-float` prop to enable the flo
 
 ::doc-component-demo
 ---
-title: Textarea condensed
+title: Textarea small
 demo: '#examples/textarea/condensed.vue'
 ---
-Textareas can be shown smaller. Use the `condensed` prop to enable the condensed mode.
+Textareas can be shown smaller. Use the `size` prop with the `sm` value to make it smaller.
 ::
 
 ::doc-component-demo

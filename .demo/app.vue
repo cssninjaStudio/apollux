@@ -4,15 +4,18 @@ const app = useAppConfig()
 
 /**
  * Global head configuration
- * @see https://unhead.harlanzw.com/
- * @see https://github.com/unjs/unhead/tree/main
+ * @see https://nuxt.com/docs/getting-started/seo-meta
  */
 useHead({
-  title: route.meta.title,
+  title: () => route.meta?.title ?? '',
   titleTemplate: (titleChunk) => {
     return titleChunk
       ? `${titleChunk} - ${app.apollux.title}`
-      : `${app.apollux.title || 'Apollux'}`
+      : `${app.apollux.title}`
+  },
+  htmlAttrs: {
+    lang: 'en',
+    dir: 'ltr',
   },
   link: [
     {
@@ -23,6 +26,12 @@ useHead({
   ],
 
   meta: [
+    {
+      name: 'description',
+      content: () =>
+        route.meta.description ??
+        'An advanced Nuxt and Tailwind CSS Fintech template',
+    },
     {
       name: 'twitter:card',
       content: 'summary_large_image',
@@ -82,8 +91,7 @@ useHead({
     <VueAxePopup />
 
     <NuxtLayout>
-      <NuxtLoadingIndicator color="var(--color-primary-500)" />
-      <SeoKit />
+      <NuxtLoadingIndicator color="rgb(var(--color-primary-500))" />
       <NuxtPage />
     </NuxtLayout>
   </div>

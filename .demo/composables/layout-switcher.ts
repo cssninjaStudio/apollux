@@ -27,7 +27,7 @@ export function useLayoutSwitcher() {
       label: 'Sidebar',
       component: ApolluxSidebarLayout,
     },
-  ]
+  ] as const
 
   const activeLayoutName = useState('layout-switcher-active', () => 'collapse')
   const activeLayout = computed(() => {

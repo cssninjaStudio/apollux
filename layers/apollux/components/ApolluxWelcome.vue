@@ -6,17 +6,17 @@ const command = 'pnpm dev'
 const nuxtConfig = [
   `export default defineNuxtConfig({`,
   `  extends: [`,
+  `    '../layers/apollux-layout-collapse',`,
   `    '../layers/apollux',`,
-  `    '../layers/apollux-layout-sidebar',`,
   `  ]`,
   `})`,
 ].join('\n')
 
 const codeLayout = [
   `<template>`,
-  `  <ApolluxSidebarLayout>`,
+  `  <ApolluxCollapseLayout>`,
   `    <slot />`,
-  `  </ApolluxSidebarLayout>`,
+  `  </ApolluxCollapseLayout>`,
   `</template>`,
 ].join('\n')
 

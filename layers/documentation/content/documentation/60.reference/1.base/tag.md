@@ -15,16 +15,16 @@ demo: '#examples/tag/shapes.vue'
 ---
 Tags can have different shapes. Use the `shape` prop to display a tag with a rounded or squared shape.
 :::doc-message{type="muted" icon="ion:shapes-outline"}
-Default shape of all :doc-linker{to="BaseTag"} can be set in your `app.config.ts`.
+Default shape of all :doc-linker{to="BaseTag"} can be set in your `.app/app.config.ts`.
 :::
 ::
 
 ::doc-component-demo
 ---
-title: Condensed tags
+title: Small tags
 demo: '#examples/tag/condensed.vue'
 ---
-Tags can have a smaller size. Use the `condensed` prop to display a tag with a smaller size.
+Tags can have a smaller size. Use the `size` prop with the `sm` value to display a tag with a smaller size.
 ::
 
 ::doc-component-demo

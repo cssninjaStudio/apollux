@@ -17,6 +17,7 @@ export default defineNuxtConfig({
   componentMeta: {
     globalsOnly: false,
     exclude: [
+      '@nuxtjs/mdc',
       'nuxt/dist',
       '@nuxt/ui-templates/dist',
       (component: any) => {
@@ -57,11 +58,6 @@ export default defineNuxtConfig({
         // making it possible to use tailwind classes inside the examples
         config.content.push(resolve(__dirname, './examples/**/*.{vue,js,ts}'))
       }
-    },
-  },
-  nitro: {
-    prerender: {
-      routes: ['/documentation'],
     },
   },
   content: {
