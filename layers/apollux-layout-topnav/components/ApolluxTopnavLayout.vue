@@ -24,15 +24,13 @@ const props = withDefaults(
   },
 )
 
-const year = new Date().getFullYear()
 const route = useRoute()
 const app = useAppConfig()
+const config = useAppConfig().apollux.topnav
 const { selectedMenuItem } = useTopnav()
 
 const topnavEnabled = computed(() => {
-  return (
-    app.apollux.topnav?.navigation?.enabled !== false && props.topnav !== false
-  )
+  return config?.navigation?.enabled !== false && props.topnav !== false
 })
 const toolbarEnabled = computed(() => {
   return (
@@ -40,10 +38,7 @@ const toolbarEnabled = computed(() => {
   )
 })
 const circularMenuEnabled = computed(() => {
-  return (
-    app.apollux.topnav?.circularMenu?.enabled !== false &&
-    props.circularMenu !== false
-  )
+  return config?.circularMenu?.enabled !== false && props.circularMenu !== false
 })
 
 const mainClass = computed(() => {
@@ -77,21 +72,19 @@ const mainClass = computed(() => {
           position="fixed"
         >
           <div
-            v-if="app.apollux.topnav?.navigation?.logo?.component"
+            v-if="config?.navigation?.logo?.component"
             class="flex h-16 w-full items-center gap-x-4"
           >
             <NuxtLink to="/" class="flex items-center justify-center">
               <component
                 :is="
-                  resolveComponentOrNative(
-                    app.apollux.topnav?.navigation.logo.component,
-                  )
+                  resolveComponentOrNative(config?.navigation.logo.component)
                 "
-                v-bind="app.apollux.topnav?.navigation.logo.props"
+                v-bind="config?.navigation.logo.props"
               ></component>
             </NuxtLink>
             <BaseHeading
-              v-if="app.apollux.topnav?.toolbar?.showTitle"
+              v-if="config?.toolbar?.showTitle"
               as="h1"
               size="lg"
               weight="light"
@@ -103,7 +96,7 @@ const mainClass = computed(() => {
           <template #toolbar>
             <div v-if="toolbarEnabled">
               <div class="flex items-center justify-end gap-2">
-                <template v-for="tool of app.apollux.topnav?.toolbar?.tools">
+                <template v-for="tool of config?.toolbar?.tools">
                   <component
                     :is="resolveComponentOrNative(tool.component)"
                     v-if="tool.component"
@@ -141,83 +134,9 @@ const mainClass = computed(() => {
       <ApolluxTopnavCircularMenu v-if="circularMenuEnabled" />
     </div>
 
-    <footer
-      class="dark:bg-muted-900 border-muted-200 dark:border-muted-700 relative border-t bg-white"
-    >
-      <NuxtLink
-        to="/"
-        class="dark:bg-muted-900 absolute inset-x-0 -top-4 mx-auto flex h-9 w-14 items-center justify-center bg-white"
-      >
-        <ApolluxLogo class="text-primary-500 h-7 w-7" />
-      </NuxtLink>
-      <div
-        class="ltablet:flex-row mx-auto flex flex-col items-center justify-between px-6 py-8 lg:flex-row"
-        :class="[
-          props.display === 'expanded-sm' && 'mx-auto w-full max-w-5xl',
-          props.display === 'expanded-md' && 'mx-auto w-full max-w-6xl',
-          props.display === 'expanded-lg' && 'mx-auto w-full max-w-7xl',
-          props.display === 'expanded-xl' && 'mx-auto w-full',
-        ]"
-      >
-        <NuxtLink
-          to="/"
-          aria-label="Go to Apollux homepage"
-          class="ltablet:w-1/5 block w-full lg:w-1/5"
-        >
-          <ApolluxLogoText
-            class="text-muted-300 ltablet:mx-0 mx-auto h-4 transition-all duration-200 lg:mx-0"
-          />
-        </NuxtLink>
-        <div
-          class="ltablet:mt-0 ltablet:gap-6 mt-6 flex flex-wrap items-center justify-center gap-4 lg:mt-0 lg:gap-6"
-        >
-          <NuxtLink
-            to="/demos"
-            class="text-muted-600 hover:text-primary-500 dark:text-muted-200 dark:hover:text-primary-400 text-sm transition-colors duration-300"
-          >
-            Demo pages
-          </NuxtLink>
-
-          <NuxtLink
-            to="/documentation"
-            class="text-muted-600 hover:text-primary-500 dark:text-muted-200 dark:hover:text-primary-400 text-sm transition-colors duration-300"
-          >
-            Documentation
-          </NuxtLink>
-          <NuxtLink
-            to="https://github.com/shuriken-ui"
-            target="_blank"
-            rel="noopener"
-            class="text-muted-600 hover:text-primary-500 dark:text-muted-200 dark:hover:text-primary-400 text-sm transition-colors duration-300"
-          >
-            Shuriken UI
-          </NuxtLink>
-          <NuxtLink
-            to="https://cssninja.io/faq/support"
-            target="_blank"
-            rel="noopener"
-            class="text-muted-600 hover:text-primary-500 dark:text-muted-200 dark:hover:text-primary-400 text-sm transition-colors duration-300"
-          >
-            Support
-          </NuxtLink>
-        </div>
-        <div
-          class="text-muted-500 dark:text-muted-400 ltablet:w-1/5 ltablet:justify-end ltablet:mt-0 mt-6 flex w-full items-center justify-center text-sm lg:mt-0 lg:w-1/5 lg:justify-end"
-        >
-          <span>
-            ©
-            <NuxtLink
-              to="https://cssninja.io"
-              target="_blank"
-              rel="noopener"
-              class="text-muted-600 hover:text-primary-500 dark:text-muted-200 dark:hover:text-primary-400 text-sm transition-colors duration-300"
-            >
-              Css Ninja
-            </NuxtLink>
-            2018-{{ year }}.
-          </span>
-        </div>
-      </div>
-    </footer>
+    <ApolluxTopnavFooter
+      v-if="config?.footer?.enabled"
+      :display="props.display"
+    />
   </div>
 </template>

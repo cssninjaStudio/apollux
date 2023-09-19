@@ -576,6 +576,47 @@ export default defineAppConfig({
           },
         ],
       },
+      footer: {
+        enabled: true,
+        logoSeparator: {
+          component: 'ApolluxLogo',
+          props: { class: 'text-primary-500 h-7 w-7' },
+        },
+        logo: {
+          component: 'ApolluxLogoText',
+          props: {
+            class:
+              'text-muted-300 ltablet:mx-0 mx-auto h-4 transition-all duration-200 lg:mx-0',
+          },
+        },
+        copyright: {
+          name: 'Css Ninja',
+          to: 'https://cssninja.io',
+          since: '2018',
+        },
+        links: [
+          {
+            name: 'Demo pages',
+            to: '/demos',
+          },
+          {
+            name: 'Documentation',
+            to: '/documentation',
+          },
+          {
+            name: 'Shuriken UI',
+            to: 'https://github.com/shuriken-ui',
+            rel: 'noopener',
+            target: '_blank',
+          },
+          {
+            name: 'Support',
+            to: 'https://cssninja.io/faq/support',
+            rel: 'noopener',
+            target: '_blank',
+          },
+        ],
+      },
     },
     panels: [
       {

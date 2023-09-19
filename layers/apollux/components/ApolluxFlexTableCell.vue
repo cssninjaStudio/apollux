@@ -4,11 +4,22 @@ export type FlexTableCellType = 'grow' | 'shrink' | 'stable'
 export interface FlexTableCellProps {
   type?: FlexTableCellType
   light?: boolean
+  clamp?: false | 1 | 2 | 3 | 4 | 5 | 6
 }
 
 const props = withDefaults(defineProps<FlexTableCellProps>(), {
   type: 'stable',
+  clamp: 1,
 })
+
+const clampMap = {
+  1: 'md:line-clamp-1',
+  2: 'md:line-clamp-2',
+  3: 'md:line-clamp-3',
+  4: 'md:line-clamp-4',
+  5: 'md:line-clamp-5',
+  6: 'md:line-clamp-6',
+}
 </script>
 
 <template>
@@ -17,8 +28,8 @@ const props = withDefaults(defineProps<FlexTableCellProps>(), {
     :class="[
       props.type === 'grow' && 'md:grow',
       props.type === 'shrink' && 'md:shrink',
-      props.type === 'stable' &&
-        'sm:w-[90px] md:line-clamp-1 md:w-[110px] md:shrink-0',
+      props.type === 'stable' && 'sm:w-[90px] md:w-[110px] md:shrink-0',
+      props.type === 'stable' && props.clamp && clampMap[props.clamp],
       props.light
         ? 'text-muted-500 dark:text-white'
         : 'text-muted-800 dark:text-white',
