@@ -1,4 +1,5 @@
 import { withShurikenUI } from '@shuriken-ui/tailwind'
+import colors from 'tailwindcss/colors'
 
 /**
  * This is the Tailwind config file for the demo.
@@ -28,8 +29,8 @@ export default withShurikenUI({
     extend: {
       // Custom colors
       colors: {
-        // primary: colors.indigo,
-        // muted: colors.slate,
+        primary: colors.indigo,
+        muted: colors.stone,
         // info: colors.sky,
         // success: colors.teal,
         // warning: colors.amber,

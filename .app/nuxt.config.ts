@@ -1,6 +1,11 @@
 export default defineNuxtConfig({
   extends: [
     /**
+     * Uncomment the following line to add the Apollux Layout Collapse layer
+     */
+    // '../layers/apollux-layout-collapse',
+
+    /**
      * This extends the base Apollux layer.
      *
      * Alternatively you can use the following:
@@ -12,11 +17,6 @@ export default defineNuxtConfig({
      * with only your source code and no demo.
      */
     '../layers/apollux',
-
-    /**
-     * Uncomment the following line to add the Apollux Layout Collapse layer
-     */
-    // '../layers/apollux-layout-collapse',
   ],
 
   /**

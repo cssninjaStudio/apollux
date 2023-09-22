@@ -9,10 +9,10 @@
     "pnpm": ">=8"
   },
   "scripts": {
-    "dev": "nuxi dev .app",
+    "dev": "nuxi dev .app --open --no-fork",
     "build": "nuxi build .app",
     "generate": "nuxi generate .app",
-    "demo:dev": "nuxi dev .demo",
+    "demo:dev": "nuxi dev .demo --open --no-fork",
     "demo:build": "nuxi build .demo",
     "clean:all": "pnpm -r clean && rimraf .nuxt .output node_modules",
     "test": "run-p test:*",
@@ -26,10 +26,9 @@
     "lint:eslint:fix-demo": "eslint -c layers/documentation/examples/.eslintrc.cjs --fix --ext .vue layers/documentation/examples"
   },
   "devDependencies": {
-    "@iconify/json": "2.2.113",
-    "@parcel/watcher": "2.3.0",
+    "@iconify/json": "2.2.118",
     "@types/fs-extra": "11.0.1",
-    "@typescript-eslint/eslint-plugin": "6.6.0",
+    "@typescript-eslint/eslint-plugin": "6.7.2",
     "eslint": "8.49.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-prettier-vue": "5.0.0",
