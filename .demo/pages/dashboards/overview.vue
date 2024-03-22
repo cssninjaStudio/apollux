@@ -280,7 +280,7 @@ definePageMeta({
               class="text-muted-800 dark:text-muted-100"
               >Recent Activity</BaseHeading
             >
-            <DemoLinkArrow to="/layouts" />
+            <DemoLinkArrow to="/layouts" label="View all" />
           </div>
           <div class="space-y-6">
             <!--Item-->

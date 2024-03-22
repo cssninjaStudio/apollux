@@ -59,7 +59,7 @@ function statusColor(itemStatus: string) {
       >
         Recent Transactions
       </BaseHeading>
-      <DemoLinkArrow to="#" />
+      <DemoLinkArrow to="#" label="View all" />
     </div>
     <div v-if="!pending && data?.data.length === 0">
       <BasePlaceholderPage

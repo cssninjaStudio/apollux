@@ -420,7 +420,7 @@ function useStockPrice() {
                 >
                   <span>Trending Stocks</span>
                 </BaseHeading>
-                <DemoLinkArrow to="#" />
+                <DemoLinkArrow to="#" label="View all" />
               </div>
               <div
                 class="mb-2 space-y-4 divide-y divide-muted-200 dark:divide-muted-800"

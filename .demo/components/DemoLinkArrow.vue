@@ -5,7 +5,7 @@ const props = withDefaults(
     to: string
   }>(),
   {
-    label: 'View all',
+    label: '',
   },
 )
 </script>
@@ -17,7 +17,7 @@ const props = withDefaults(
   >
     <span
       class="font-sans font-medium text-sm group-hover:underline underline-offset-4"
-      >{{ props.label }}</span
+      ><slot>{{ props.label }}</slot></span
     >
     <Icon
       name="lucide:arrow-right"
