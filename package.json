@@ -28,7 +28,7 @@
   "devDependencies": {
     "@iconify/json": "2.2.118",
     "@types/fs-extra": "11.0.1",
-    "@typescript-eslint/eslint-plugin": "6.7.2",
+    "@typescript-eslint/eslint-plugin": "8.69.0",
     "eslint": "8.49.0",
     "eslint-config-prettier": "9.0.0",
     "eslint-plugin-prettier-vue": "5.0.0",
