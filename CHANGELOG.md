@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [1.1.0](https://github.com/cssninjaStudio/apollux/compare/v1.0.0...v1.1.0) (2026-09-30)
+
+
+### ⚖️ License
+
+* relicense under MIT ([ed4f918](https://github.com/cssninjaStudio/apollux/commit/ed4f918bae107f6e4f211339a75a29d4f9535394))
+
 ## 1.0.0 (2023-09-22)
 
 
