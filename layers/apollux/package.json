@@ -8,8 +8,8 @@
     "clean": "rimraf .nuxt .output node_modules"
   },
   "dependencies": {
-    "@cssninja/nuxt-toaster": "^0.3.12",
-    "@shuriken-ui/nuxt": "1.1.4",
+    "@cssninja/nuxt-toaster": "^0.5.0",
+    "@shuriken-ui/nuxt": "1.9.6",
     "@vee-validate/zod": "^4.11.6",
     "fast-copy": "^3.0.1",
     "nuxt": "^3.6.5",
