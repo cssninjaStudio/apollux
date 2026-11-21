@@ -8,7 +8,7 @@
     "clean": "rimraf .nuxt .output node_modules"
   },
   "devDependencies": {
-    "@nuxt/image-edge": "1.0.0-rc.2-28252196.34e7c67",
-    "nuxt": "3.6.5"
+    "@nuxt/image-edge": "1.0.0-testing",
+    "nuxt": "3.21.11"
   }
 }
